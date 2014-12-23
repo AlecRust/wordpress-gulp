@@ -49,7 +49,7 @@
         <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
         <?php wp_nav_menu( array(
             'theme_location' => 'primary',
-            'menu' => 'Site Nav',
+            'menu' => 'Primary Menu',
             'container' => '',
             'menu_class' => 'SiteNav-list',
             'items_wrap' => '<ul class="%2$s">%3$s</ul>',
