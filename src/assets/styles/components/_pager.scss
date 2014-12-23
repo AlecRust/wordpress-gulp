@@ -1,0 +1,51 @@
+//
+// Pager
+// --------------------------------------------------
+
+.Pager {
+  padding: 20px;
+}
+
+.Pager-list {
+  text-align: center;
+
+  li {
+    display: inline;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      color: #666;
+      background-color: #efefef;
+      padding: 5px 14px;
+
+      &:hover {
+        text-decoration: none;
+        border-color: #ccc;
+        background-color: #fff;
+      }
+
+      &:after {
+        color: #777;
+      }
+    }
+  }
+}
+
+.Pager-next {
+  float: right;
+
+  a:after {
+    content: " →";
+  }
+}
+
+.Pager-previous {
+  float: left;
+
+  a:before {
+    content: "← ";
+  }
+}

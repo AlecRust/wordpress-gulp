@@ -1,0 +1,34 @@
+//
+// Custom base styles on top of SUIT CSS
+// --------------------------------------------------
+
+// Reset the box-sizing
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  color: $text-color;
+  font: $font-size-base $font-family-base;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $link-color;
+  text-decoration: none;
+}
+
+// Allow only vertical resizing of textareas
+textarea {
+  resize: vertical;
+}

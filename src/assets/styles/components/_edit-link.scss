@@ -1,0 +1,14 @@
+//
+// EditLink
+// --------------------------------------------------
+
+.EditLink {
+  text-align: right;
+  margin: 20px 0;
+
+  // Add Lower Right Pencil (U+270E) to button
+  .Button:before {
+    content: "✎";
+    margin-right: 6px;
+  }
+}

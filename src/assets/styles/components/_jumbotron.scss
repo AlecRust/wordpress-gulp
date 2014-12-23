@@ -1,0 +1,63 @@
+//
+// Jumbotron
+// --------------------------------------------------
+
+.Jumbotron {
+  border: 1px solid $color-brand-gray;
+  margin-bottom: 30px;
+
+  img {
+    @include img-responsive();
+  }
+
+  // Remove margin from any <p>'s added by TinyMCE
+  p {
+    padding-bottom: 0;
+  }
+}
+
+.Jumbotron-content {
+  padding: 10px;
+}
+
+.Jumbotron-heading {
+  font-weight: normal;
+  font-size: $font-size-base;
+}
+
+@media (min-width: $screen-sm) {
+  .Jumbotron {
+    position: relative;
+    border: 0;
+    margin-top: -15px;
+    margin-bottom: 50px;
+
+    .Button {
+      color: #fff;
+    }
+  }
+
+  .Jumbotron-content {
+    text-shadow: 1px 1px 1px #111;
+    position: absolute;
+    top: 11%;
+    left: 3%;
+    max-width: 60%;
+  }
+
+  .Jumbotron-heading {
+    font-size: $font-size-base + 5;
+    color: #fff;
+    margin-bottom: 5%;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .Jumbotron {
+    @include remove-gutter();
+  }
+
+  .Jumbotron-heading {
+    font-size: $font-size-large;
+  }
+}

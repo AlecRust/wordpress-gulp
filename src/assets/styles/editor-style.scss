@@ -1,0 +1,46 @@
+/*!
+Editor stylesheet
+*/
+
+// Base
+@import "variables";
+@import "mixins";
+@import "vendor/suit-css";
+@import "fonts";
+@import "base";
+
+// Components
+@import "components/entry";
+@import "components/button";
+@import "components/jumbotron";
+
+// Custom overrides for TinyMCE editor
+body.mce-content-body {
+  color: $text-color;
+  font: $font-size-base $font-family-base;
+  padding: 30px 20px 40px !important;
+}
+
+h2 {
+  padding-bottom: 10px;
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.alignleft {
+  margin: 0 10px 10px 0;
+}
+
+.alignright {
+  margin: 0 0 10px 10px;
+}
+
+// Utilities
+@import "utilities";
