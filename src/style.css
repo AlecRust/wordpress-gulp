@@ -1785,9 +1785,9 @@ textarea {
   }
 }
 .Container {
+  max-width: 62em;
   margin-right: auto;
   margin-left: auto;
-  max-width: 62em;
 }
 
 @media (min-width: 48em) {

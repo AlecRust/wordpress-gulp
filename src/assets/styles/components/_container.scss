@@ -3,9 +3,9 @@
 // --------------------------------------------------
 
 .Container {
+  max-width: $screen-md;
   margin-right: auto;
   margin-left: auto;
-  max-width: $screen-md;
 }
 
 @media (min-width: $screen-sm) {
