@@ -3,15 +3,13 @@
 // --------------------------------------------------
 
 // Reset the box-sizing
-* {
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  box-sizing: border-box;
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   color: $text-color;
   font: $font-size-base $font-family-base;
 }

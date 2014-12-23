@@ -1643,16 +1643,12 @@ form.contact-form input.is-disabled[type='submit'],
   font-weight: normal;
   font-style: normal;
 }
-* {
-  box-sizing: border-box;
-}
-
-*:before,
-*:after {
-  box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   color: #091d5c;
   font: 16px "Raleway Regular", sans-serif;
 }
