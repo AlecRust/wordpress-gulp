@@ -20,13 +20,13 @@
 
       <ul class="SocialIcons-list">
         <li class="SocialIcons-listItem">
-          <a href="https://www.facebook.com/sitename" class="SocialIcons-iconFacebook u-textHide" title="Facebook">Facebook</a>
+          <a href="https://www.facebook.com/wordpress-gulp" class="SocialIcons-iconFacebook u-textHide" title="Facebook">Facebook</a>
         </li>
         <li class="SocialIcons-listItem">
-          <a href="https://twitter.com/sitename" class="SocialIcons-iconTwitter u-textHide" title="Twitter">Twitter</a>
+          <a href="https://twitter.com/wordpress-gulp" class="SocialIcons-iconTwitter u-textHide" title="Twitter">Twitter</a>
         </li>
         <li class="SocialIcons-listItem">
-          <a href="https://www.linkedin.com/in/sitename" class="SocialIcons-iconLinkedin u-textHide" title="LinkedIn">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/wordpress-gulp" class="SocialIcons-iconLinkedin u-textHide" title="LinkedIn">LinkedIn</a>
         </li>
       </ul>
 

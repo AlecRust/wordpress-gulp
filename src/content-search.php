@@ -29,7 +29,7 @@
         if ( $categories_list && wpg_categorized_blog() ) :
       ?>
       <span class="Category-links">
-        <?php printf( __( 'Posted in %1$s' ), $categories_list ); ?>
+        <?php printf( __( 'Posted in %1$s' ), $categories_list ); ?> -
       </span>
       <?php endif; // End if categories ?>
 
@@ -39,7 +39,7 @@
         if ( $tags_list ) :
       ?>
       <span class="Tags-links">
-        <?php printf( __( 'Tagged %1$s' ), $tags_list ); ?>
+        <?php printf( __( 'Tagged %1$s' ), $tags_list ); ?> -
       </span>
       <?php endif; // End if $tags_list ?>
     <?php endif; // End if 'post' == get_post_type() ?>
