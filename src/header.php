@@ -45,7 +45,8 @@
         </div>
       </div>
 
-      <nav class="SiteNav" role="navigation">
+      <nav class="SiteNav" role="navigation" aria-labelledby="site-nav-heading">
+        <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
         <?php wp_nav_menu( array(
             'theme_location' => 'primary',
             'menu' => 'Site Nav',

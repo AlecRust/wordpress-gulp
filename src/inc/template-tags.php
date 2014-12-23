@@ -17,8 +17,8 @@ function wpg_paging_nav() {
     return;
   }
   ?>
-  <nav class="Pager" role="navigation">
-    <h1 class="u-hiddenVisually">Posts navigation</h1>
+  <nav class="Pager" role="navigation" aria-labelledby="posts-nav-heading">
+    <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
     <div class="nav-links">
 
       <?php if ( get_next_posts_link() ) : ?>
@@ -48,8 +48,8 @@ function wpg_post_nav() {
     return;
   }
   ?>
-  <nav class="Pager" role="navigation">
-    <h1 class="u-hiddenVisually">Post navigation</h1>
+  <nav class="Pager" role="navigation" aria-labelledby="posts-nav-heading">
+    <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
     <ul class="Pager-list u-cf">
       <?php
         previous_post_link( '<li class="Pager-previous">%link</li>', _x( '%title', 'Previous post link' ) );
