@@ -44,6 +44,16 @@
     max-width: 100%;
   }
 
+  ul {
+    list-style: disc;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
   // TinyMCE alignment classes
   .alignleft {
     float: left;

@@ -1839,6 +1839,14 @@ textarea {
   height: auto;
   max-width: 100%;
 }
+.Entry-content ul {
+  list-style: disc;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+.Entry-content li {
+  margin-bottom: 10px;
+}
 .Entry-content .alignleft {
   float: left;
   margin: 0 10px 10px 0;
