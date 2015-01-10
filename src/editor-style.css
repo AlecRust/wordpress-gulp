@@ -1692,13 +1692,10 @@ textarea {
 .Entry-content li {
   margin-bottom: 10px;
 }
-.Entry-content .alignleft {
-  float: left;
-  margin: 0 10px 10px 0;
-}
+.Entry-content .alignleft,
 .Entry-content .alignright {
-  float: right;
-  margin: 0 0 10px 10px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 .Entry-footer {
@@ -1708,6 +1705,15 @@ textarea {
 }
 
 @media (min-width: 48em) {
+  .Entry-content .alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+  .Entry-content .alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+  }
+
   .Entry-mainColumn {
     float: left;
     width: 60%;

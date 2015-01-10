@@ -54,15 +54,10 @@
     margin-bottom: 10px;
   }
 
-  // TinyMCE alignment classes
-  .alignleft {
-    float: left;
-    margin: 0 10px 10px 0;
-  }
-
+  .alignleft,
   .alignright {
-    float: right;
-    margin: 0 0 10px 10px;
+    display: block;
+    margin-bottom: 20px;
   }
 }
 
@@ -73,6 +68,18 @@
 }
 
 @media (min-width: $screen-sm) {
+  .Entry-content {
+    .alignleft {
+      float: left;
+      margin: 0 20px 20px 0;
+    }
+
+    .alignright {
+      float: right;
+      margin: 0 0 20px 20px;
+    }
+  }
+
   .Entry-mainColumn {
     float: left;
     width: 60%;
