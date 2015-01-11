@@ -1829,7 +1829,8 @@ textarea {
 .Entry-content {
   padding: 30px 20px 40px;
 }
-.Entry-content h2 {
+.Entry-content h2,
+.Entry-content h3 {
   padding-bottom: 10px;
 }
 .Entry-content p {
