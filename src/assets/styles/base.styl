@@ -1,0 +1,27 @@
+//
+// Custom base styles on top of SUIT CSS
+// --------------------------------------------------
+
+// Reset the box-sizing
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*, *::before, *::after
+  box-sizing inherit
+
+html
+  box-sizing border-box
+  color $text-color
+  font $font-size-base $font-family-base
+
+a
+  color $link-color
+  text-decoration underline
+
+a:hover,
+a:focus,
+a:active
+  color $link-color
+  text-decoration none
+
+// Allow only vertical resizing of textareas
+textarea
+  resize vertical

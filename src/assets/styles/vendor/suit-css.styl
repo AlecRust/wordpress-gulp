@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /**
  * 1. Set default font family to sans-serif.
@@ -28,7 +28,8 @@ body {
 
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
 
@@ -41,6 +42,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -90,7 +92,7 @@ template {
  */
 
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 /**
@@ -1277,11 +1279,9 @@ ul {
   text-rendering: optimizeLegibility;
   /* 1 */
   -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   /* 2 */
   -webkit-font-kerning: normal;
-  -moz-font-kerning: normal;
   font-kerning: normal;
   /* 3 */
 }
@@ -1422,10 +1422,15 @@ ul {
 /**
  * This layout algorithm will create equal-width table cells, irrespective of
  * the width of their content.
+ *
+ * 1. The layout algorithm requires a set width to correctly calculate table
+ *    cell width.
  */
 
 .Arrange--equal {
   table-layout: fixed;
+  width: 100%;
+  /* 1 */
 }
 
 /**

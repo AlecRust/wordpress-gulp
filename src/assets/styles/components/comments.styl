@@ -1,0 +1,64 @@
+//
+// Comments
+// --------------------------------------------------
+
+.Comments
+  padding 30px 20px 40px
+
+  label
+    display block
+    font-weight bold
+    margin-bottom 3px
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  #comment
+    @extend .InputText
+    width 100%
+    margin-bottom 15px
+
+  .form-submit
+    text-align center
+
+  #submit
+    @extend .Button
+    @extend .Button--primary
+
+  .comment-subscription-form
+    padding-top 15px
+
+  .logged-in-as,
+  .comment-notes
+    margin-bottom 10px
+
+.Comments-title
+  margin-bottom 20px
+
+.Comments-list
+  .comment
+    font-size $font-size-base - 1
+    background-color #f9f9f9
+    border 1px solid #ddd
+    border-radius $border-radius-base
+    margin-bottom 20px
+
+  .comment-body,
+  .comment-respond
+    padding 20px
+
+  .children
+    margin-left 30px
+
+    .comment
+      border 0
+      border-top 1px solid #ddd
+      border-radius 0
+      margin-bottom 10px
+
+@media (min-width $screen-sm)
+  .Comments
+    input[type="text"],
+    input[type="email"],
+    input[type="url"]
+      width 60%

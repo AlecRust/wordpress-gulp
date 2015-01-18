@@ -4,12 +4,9 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-  return gulp.src(['src/assets/styles/style.scss', 'src/assets/styles/editor-style.scss'])
-    .pipe($.rubySass({
-      style: 'expanded',
-      'sourcemap=none': true
-    }))
-    .pipe($.autoprefixer({ browsers: ['last 1 version'] }))
+  return gulp.src(['src/assets/styles/style.styl', 'src/assets/styles/editor-style.styl'])
+    .pipe($.stylus())
+    .pipe($.autoprefixer('last 1 version'))
     .pipe(gulp.dest('src'))
     .pipe($.minifyCss({ keepSpecialComments: 1 }))
     .pipe(gulp.dest('dist'));
@@ -55,7 +52,7 @@ gulp.task('extras', function () {
 
 gulp.task('suit-copy', ['suit-build'], function () {
   return gulp.src('node_modules/suitcss/build/build.css')
-    .pipe($.rename('_suit-css.scss'))
+    .pipe($.rename('suit-css.styl'))
     .pipe(gulp.dest('src/assets/styles/vendor'));
 });
 
@@ -70,7 +67,7 @@ gulp.task('serve', ['styles'], function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('src/assets/styles/**/*.scss', ['styles']);
+  gulp.watch('src/assets/styles/**/*.styl', ['styles']);
   gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
   gulp.watch('src/assets/images/**/*', ['images']);
   gulp.watch('src/**/*.php', ['php']);

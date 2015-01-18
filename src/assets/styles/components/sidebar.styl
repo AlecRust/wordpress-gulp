@@ -1,0 +1,58 @@
+//
+// Sidebar
+// --------------------------------------------------
+
+.Sidebar
+  background-color #efefef
+  padding 20px
+
+.Sidebar-widget
+  @extend .u-cf:before
+  @extend .u-cf:after
+  margin-bottom 20px
+
+  &:last-child
+    margin-bottom 0
+
+.Sidebar-title
+  font-size 22px
+
+// Recent posts widget
+.widget_recent_entries
+  ul
+    list-style-type disc
+    padding-left 20px
+
+  li
+    margin-bottom 5px
+
+    &:last-child
+      margin-bottom 0
+
+// Jetpack Subscription Widget
+.jetpack_subscription_widget
+  #subscribe-email
+    width 70%
+    float left
+
+    input[type="email"]
+      @extend .InputText
+      @extend .InputText--sm
+      width 100%
+
+  #subscribe-submit
+    width 30%
+    float right
+
+    input[type="submit"]
+      @extend .Button
+      @extend .Button--sm
+      @extend .Button--default
+      width 100%
+      margin-left 4px
+
+@media (min-width $screen-sm)
+  .Sidebar
+    float right
+    width 25%
+    margin-top 73px
