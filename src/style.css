@@ -15,7 +15,7 @@ html {
 /* 1 */
   -ms-text-size-adjust: 100%;
 /* 2 */
-  -webkit-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%;
 /* 2 */
 }
 body {
@@ -42,7 +42,7 @@ progress,
 video {
   display: inline-block;
 /* 1 */
-  vertical-align: baseline
+  vertical-align: baseline;
 /* 2 */
 }
 audio:not([controls]) {
@@ -126,7 +126,7 @@ textarea {
 /* 1 */
   font: inherit;
 /* 2 */
-  margin: 0
+  margin: 0;
 /* 3 */
 }
 button {
@@ -142,7 +142,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
 /* 2 */
-  cursor: pointer
+  cursor: pointer;
 /* 3 */
 }
 button[disabled],
@@ -161,7 +161,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
 /* 1 */
-  padding: 0
+  padding: 0;
 /* 2 */
 }
 input[type="number"]::-webkit-inner-spin-button,
@@ -186,7 +186,7 @@ fieldset {
 legend {
   border: 0;
 /* 1 */
-  padding: 0
+  padding: 0;
 /* 2 */
 }
 textarea {
@@ -290,7 +290,7 @@ ul {
 }
 .u-inlineBlock {
   display: inline-block !important;
-  max-width: 100%
+  max-width: 100%;
 /* 1 */
 }
 .u-table {
@@ -307,7 +307,7 @@ ul {
 .Sidebar-widget {
   content: " ";
 /* 1 */
-  display: table
+  display: table;
 /* 2 */
 }
 .u-cf:after,
@@ -320,7 +320,7 @@ ul {
 .u-nbfcAlt {
   display: table-cell !important;
 /* 1 */
-  width: 10000px !important
+  width: 10000px !important;
 /* 2 */
 }
 .u-floatLeft {
@@ -543,7 +543,7 @@ ul {
 .u-posFixed {
   position: fixed !important;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden
+  backface-visibility: hidden;
 /* 1 */
 }
 .u-posRelative {
@@ -688,7 +688,7 @@ ul {
 /* 2 */
   -webkit-font-kerning: normal;
   -moz-font-kerning: normal;
-       font-kerning: normal
+       font-kerning: normal;
 /* 3 */
 }
 .u-textNoWrap {
@@ -700,7 +700,7 @@ ul {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
-  word-wrap: normal !important
+  word-wrap: normal !important;
 /* 2 */
 }
 .Arrange {
@@ -714,7 +714,7 @@ ul {
 /* 4 */
   padding: 0;
 /* 3 */
-  table-layout: auto
+  table-layout: auto;
 /* 5 */
 }
 .Arrange-sizeFill,
@@ -722,7 +722,7 @@ ul {
   display: table-cell;
   padding: 0;
 /* 1 */
-  vertical-align: top
+  vertical-align: top;
 /* 2 */
 }
 .Arrange-sizeFill {
@@ -746,7 +746,7 @@ ul {
 }
 .Arrange--equal {
   table-layout: fixed;
-  width: 100%
+  width: 100%;
 /* 1 */
 }
 .Arrange--equal > .Arrange-sizeFill,
@@ -790,7 +790,7 @@ form.contact-form input[type="submit"],
   -ms-user-select: none;
   user-select: none;
 /* 6 */
-  white-space: normal
+  white-space: normal;
 /* 7 */
 }
 .Button::-moz-focus-inner {
@@ -850,7 +850,7 @@ form.contact-form input[type="submit"],
 /* 1 */
   padding: 0;
 /* 1 */
-  text-align: left
+  text-align: left;
 /* 3 */
 }
 .Grid--alignCenter {
@@ -883,7 +883,7 @@ form.contact-form input[type="submit"],
 /* 3 */
   vertical-align: top;
 /* 4 */
-  width: 100%
+  width: 100%;
 /* 5 */
 }
 .Grid-cell--center {
