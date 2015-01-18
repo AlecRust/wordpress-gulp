@@ -3,8 +3,9 @@ Editor stylesheet
 */
 
 // Base
-@import "variables"
+@import "functions"
 @import "mixins"
+@import "variables"
 @import "vendor/suit-css"
 @import "fonts"
 @import "base"
@@ -17,24 +18,24 @@ Editor stylesheet
 // Custom overrides for TinyMCE editor
 body.mce-content-body
   color $text-color
-  font $font-size-base $font-family-base
-  padding 30px 20px 40px !important
+  font ($font-size-base / 16)rem $font-family-base
+  padding px(30) px(20) px(40) !important
 
 h2
-  padding-bottom 10px
+  padding-bottom px(10)
 
 p
-  padding-bottom 20px
+  padding-bottom px(20)
 
 img
   height auto
   max-width 100%
 
 .alignleft
-  margin 0 10px 10px 0
+  margin 0 px(10) px(10) 0
 
 .alignright
-  margin 0 0 10px 10px
+  margin 0 0 px(10) px(10)
 
 // Utilities
 @import "utilities"

@@ -6,7 +6,7 @@
 .InputText
   border 2px solid $color-brand-gray
   border-radius $border-radius-base
-  padding 6px 9px 7px
+  padding px(6) px(9) px(7)
 
   &:hover
     border-color darken($color-brand-gray, 10%)
@@ -16,9 +16,9 @@
     border-color $color-brand-pink
 
 .InputText--sm
-  font-size 14px
+  font-size px($font-size-base - 2)
   border-width 1px
-  padding 3px 6px 4px
+  padding px(3) px(6) px(4)
 
 // Jetpack contact form
 // Additional specificity to override grunion.css
@@ -29,7 +29,7 @@ form.contact-form
     @extend .InputText
     width 100%
     max-width none
-    margin-bottom 15px
+    margin-bottom px(15)
 
   .contact-submit
     text-align center

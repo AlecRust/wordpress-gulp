@@ -3,12 +3,12 @@
 // --------------------------------------------------
 
 .Comments
-  padding 30px 20px 40px
+  padding px(30) px(20) px(40)
 
   label
     display block
     font-weight bold
-    margin-bottom 3px
+    margin-bottom px(3)
 
   input[type="text"],
   input[type="email"],
@@ -16,7 +16,7 @@
   #comment
     @extend .InputText
     width 100%
-    margin-bottom 15px
+    margin-bottom px(15)
 
   .form-submit
     text-align center
@@ -26,35 +26,35 @@
     @extend .Button--primary
 
   .comment-subscription-form
-    padding-top 15px
+    padding-top px(15)
 
   .logged-in-as,
   .comment-notes
-    margin-bottom 10px
+    margin-bottom px(10)
 
 .Comments-title
-  margin-bottom 20px
+  margin-bottom px(20)
 
 .Comments-list
   .comment
-    font-size $font-size-base - 1
+    font-size px($font-size-base - 1)
     background-color #f9f9f9
     border 1px solid #ddd
     border-radius $border-radius-base
-    margin-bottom 20px
+    margin-bottom px(20)
 
   .comment-body,
   .comment-respond
-    padding 20px
+    padding px(20)
 
   .children
-    margin-left 30px
+    margin-left px(30)
 
     .comment
       border 0
       border-top 1px solid #ddd
       border-radius 0
-      margin-bottom 10px
+      margin-bottom px(10)
 
 @media (min-width $screen-sm)
   .Comments

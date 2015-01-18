@@ -4,12 +4,12 @@
 // --------------------------------------------------
 
 .Button
-  font-size $font-size-base
+  font-size px($font-size-base)
   border-width 2px
   border-radius $border-radius-base
 
 .Button--sm
-  font-size $font-size-base - 2
+  font-size px($font-size-base - 2)
   border-width 1px
   padding 0.25em 0.6em
 
@@ -45,4 +45,4 @@
 
 @media (min-width $screen-md)
   .Button--lg
-    font-size $font-size-base + 3
+    font-size px($font-size-base + 3)

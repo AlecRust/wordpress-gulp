@@ -14,7 +14,7 @@
   a
     display block
     text-decoration none
-    padding 5px 20px
+    padding px(5) px(20)
 
     &:hover
       text-decoration underline
@@ -27,24 +27,24 @@
     display inline-block
 
     a
-      padding-left 10px
+      padding-left px(10)
       padding-right @padding-left
 
 @media (min-width $screen-sm)
   .SiteNav-list
     text-align right
-    margin-right 20px - 5 // Minus .SiteNav-listItem padding
+    margin-right px(15)
 
   .SiteNav-listItem
-    font-size $font-size-base + 3
-    margin-left 10px
+    font-size px($font-size-base + 3)
+    margin-left px(10)
 
     a
-      padding 5px
+      padding px(5)
 
 @media (min-width $screen-md)
   .SiteNav-list
     margin-right 0
 
   .SiteNav-listItem
-    margin-left 40px
+    margin-left px(40)

@@ -5,33 +5,33 @@
 .SiteHeader-wrapBranding
   position relative // For absolute positioning at $screen-sm
   text-align center
-  padding 20px 0
+  padding px(20) 0
 
 .SiteHeader-logo
   size(136px, 165px)
   display inline-block
   background url("assets/images/site-logo.svg") no-repeat
   background-size 136px 165px
-  margin-bottom 20px
+  margin-bottom px(20)
 
 .SiteHeader-tagline
-  padding 0 20px
+  padding 0 px(20)
 
 .SiteHeader-search
-  padding-top 20px
+  padding-top px(20)
 
 @media (min-width $screen-sm)
   .SiteHeader-logo
     float left
-    margin 20px 0 -40px 20px // Shift logo down over navigation
+    margin px(20) 0 px(-40) px(20) // Shift logo down over navigation
 
   .SiteHeader-tagline
     position absolute
     top 40px
     right 20px
     text-align right
-    font-size $font-size-large
-    max-width 380px
+    font-size px($font-size-large)
+    max-width px(380)
     padding 0
 
   .SiteHeader-search
