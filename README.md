@@ -3,12 +3,12 @@
 WordPress Gulp
 ==============
 
-A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task running, using [Sass](http://sass-lang.com/) as CSS preprocessor and [SUIT CSS](http://suitcss.github.io/) for UI components. Base WordPress theme files are from [Underscores](http://underscores.me/) and [Jetpack](http://jetpack.me/) support is baked in.
+A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task running, using [Stylus](http://learnboost.github.io/stylus//) as CSS preprocessor and [SUIT CSS](http://suitcss.github.io/) for UI components. Base WordPress theme files are from [Underscores](http://underscores.me/) and [Jetpack](http://jetpack.me/) support is baked in.
 
 ## Setup
 1. Clone this repo to `/theme-name`
 2. Find/replace `WordPress Gulp` with `Theme Name`, `wordpress-gulp` with `theme-name`, and `wpg` with `tn` (your theme's slug)
-3. Customise further theme settings at `/src/assets/styles/style.scss`
+3. Customise further theme settings at `/src/assets/styles/style.styl`
 4. Run `npm install` to fetch dependencies
 5. Run `gulp` to compile theme to `/dist`
 

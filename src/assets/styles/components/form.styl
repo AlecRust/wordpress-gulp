@@ -1,0 +1,42 @@
+//
+// Form styles
+// --------------------------------------------------
+
+// Text input
+.InputText
+  border 2px solid $color-brand-gray
+  border-radius $border-radius-base
+  padding 6px 9px 7px
+
+  &:hover
+    border-color darken($color-brand-gray, 10%)
+
+  &:focus
+    outline 0
+    border-color $color-brand-pink
+
+.InputText--sm
+  font-size 14px
+  border-width 1px
+  padding 3px 6px 4px
+
+// Jetpack contact form
+// Additional specificity to override grunion.css
+form.contact-form
+  input[type="text"],
+  input[type="email"],
+  textarea
+    @extend .InputText
+    width 100%
+    max-width none
+    margin-bottom 15px
+
+  .contact-submit
+    text-align center
+
+  // Custom button styles required here due to lack of
+  // flexibility with Jetpack Contact Form class names
+  input[type="submit"]
+    @extend .Button
+    @extend .Button--lg
+    @extend .Button--success
