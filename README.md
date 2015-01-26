@@ -1,7 +1,7 @@
-![WordPress Gulp Logo](http://i.imgur.com/9427wJ3.png)
-
 WordPress Gulp
 ==============
+
+<img src="http://i.imgur.com/9427wJ3.png" align="right" hspace="10" vspace="6">
 
 A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task running, using [Stylus](http://learnboost.github.io/stylus//) as CSS preprocessor and [SUIT CSS](http://suitcss.github.io/) for UI components. Base WordPress theme files are from [Underscores](http://underscores.me/) and [Jetpack](http://jetpack.me/) support is baked in.
 
@@ -19,7 +19,7 @@ A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task 
 
 ## Distribution
 The distributable folder is compiled by gulp to `/dist`. This is excluded in `.gitignore` by default but you may want this versioned in your theme repo.
- 
+
 ## Extras
 - Add your Google Analytics ID to `extras.php`
 
