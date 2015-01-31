@@ -22,7 +22,3 @@ The distributable folder is compiled by gulp to `/dist`. This is excluded in `.g
 
 ## Extras
 - Add your Google Analytics ID to `extras.php`
-
-### Also see
-- https://github.com/zoerooney/Emi
-- https://github.com/synapticism/wordpress-gulp-bower-sass
