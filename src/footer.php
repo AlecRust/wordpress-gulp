@@ -14,19 +14,24 @@
 
       <p class="SiteFooter-copyright">
         Copyright <time datetime="<?= date( 'Y' ); ?>"><?= date( 'Y' ); ?></time> -
-        <a class="u-linkClean" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> |
+        <a class="u-linkClean" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+          <?php bloginfo( 'name' ); ?>
+        </a> |
         <a class="u-linkClean" href="<?php echo get_permalink(get_page_by_path( 'terms' )); ?>">Terms</a>
       </p>
 
       <ul class="SocialIcons-list">
         <li class="SocialIcons-listItem">
-          <a href="https://www.facebook.com/wordpress-gulp" class="SocialIcons-iconFacebook u-textHide" title="Facebook">Facebook</a>
+          <a href="https://www.facebook.com/wordpress-gulp"
+             class="SocialIcons-iconFacebook u-textHide" title="Facebook">Facebook</a>
         </li>
         <li class="SocialIcons-listItem">
-          <a href="https://twitter.com/wordpress-gulp" class="SocialIcons-iconTwitter u-textHide" title="Twitter">Twitter</a>
+          <a href="https://twitter.com/wordpress-gulp"
+             class="SocialIcons-iconTwitter u-textHide" title="Twitter">Twitter</a>
         </li>
         <li class="SocialIcons-listItem">
-          <a href="https://www.linkedin.com/in/wordpress-gulp" class="SocialIcons-iconLinkedin u-textHide" title="LinkedIn">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/wordpress-gulp"
+             class="SocialIcons-iconLinkedin u-textHide" title="LinkedIn">LinkedIn</a>
         </li>
       </ul>
 
