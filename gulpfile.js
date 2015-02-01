@@ -1,12 +1,14 @@
 'use strict';
 
 var gulp = require('gulp');
+var at2x = require('rework-plugin-at2x');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
   return gulp.src(['src/assets/styles/style.styl', 'src/assets/styles/editor-style.styl'])
     .pipe($.stylus())
     .pipe($.autoprefixer('last 2 versions'))
+    .pipe($.rework(at2x()))
     .pipe(gulp.dest('src'))
     .pipe($.minifyCss({ keepSpecialComments: 1 }))
     .pipe(gulp.dest('dist'));
