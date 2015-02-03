@@ -10,7 +10,7 @@ gulp.task('styles', function () {
     .pipe($.autoprefixer('last 2 versions'))
     .pipe($.rework(at2x()))
     .pipe(gulp.dest('src'))
-    .pipe($.minifyCss({ keepSpecialComments: 1 }))
+    .pipe($.minifyCss())
     .pipe(gulp.dest('dist'));
 });
 
