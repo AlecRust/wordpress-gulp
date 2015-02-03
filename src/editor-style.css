@@ -1198,11 +1198,11 @@ textarea {
 .Button--sm {
   font-size: 0.875rem;
   border-width: 1px;
-  padding: 0.25em 0.6em;
+  padding: 0.25rem 0.563rem;
 }
 
 .Button--lg {
-  padding: 0.6em 1.2em;
+  padding: 0.625rem 1.25rem;
 }
 
 .Button--default {
