@@ -172,12 +172,13 @@ add_action( 'wp_footer', 'wpg_google_analytics' );
  */
 function wpg_login_logo() { ?>
   <style type="text/css">
-    body.login {
+    .login {
       background-color: #fff;
     }
-    #login h1 a {
+    .login #login h1 a {
       width: 190px;
       height: 165px;
+      display: inline-block;
       background: url(<?php echo get_template_directory_uri(); ?>/assets/images/site-logo.svg) no-repeat;
       background-size: 190px 165px;
     }
