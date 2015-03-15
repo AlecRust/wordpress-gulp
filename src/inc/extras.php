@@ -121,9 +121,9 @@ class wpg_walker_nav_menu extends Walker_Nav_Menu {
 
     // depth dependent classes
     $depth_classes = array(
-        ($depth == 0 ? 'SiteNav-listItem' : 'SiteNav-subMenulistItem'),
-        ($depth >= 2 ? 'SiteNav-subSubMenulistItem' : ''),
-        'SiteNav-listItem-depth-' . $depth
+        ($depth == 0 ? 'SiteMenu-listItem' : 'SiteMenu-subMenulistItem'),
+        ($depth >= 2 ? 'SiteMenu-subSubMenulistItem' : ''),
+        'SiteMenu-listItem-depth-' . $depth
     );
     $depth_class_names = esc_attr(implode(' ', $depth_classes));
 
@@ -132,14 +132,14 @@ class wpg_walker_nav_menu extends Walker_Nav_Menu {
     $class_names = esc_attr(implode(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item)));
 
     // build html
-    $output .= $indent . '<li class="' . $depth_class_names . ' ' . $class_names . ' SiteNav-listItem-' . $item->ID . '">';
+    $output .= $indent . '<li class="' . $depth_class_names . ' ' . $class_names . ' SiteMenu-listItem-' . $item->ID . '">';
 
     // link attributes
     $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
     $attributes .= !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
     $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
     $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
-    $attributes .= ' class="' . ($depth > 0 ? 'SiteNav-subMenulistItemLink' : 'SiteNav-listItemLink') . '"';
+    $attributes .= ' class="' . ($depth > 0 ? 'SiteMenu-subMenulistItemLink' : 'SiteMenu-listItemLink') . '"';
 
     $item_output = sprintf('<a%1$s>%2$s</a>',
         $attributes,

@@ -1,8 +1,8 @@
 //
-// SiteNav
+// SiteMenu
 // --------------------------------------------------
 
-.SiteNav-listItem
+.SiteMenu-listItem
   &.current_page_item,
   &.current_page_parent
     border-bottom 3px solid $color-brand-gray
@@ -20,10 +20,10 @@
       text-decoration underline
 
 @media (min-width $screen-xs)
-  .SiteNav-list
+  .SiteMenu-list
     text-align center
 
-  .SiteNav-listItem
+  .SiteMenu-listItem
     display inline-block
 
     a
@@ -31,11 +31,11 @@
       padding-right @padding-left
 
 @media (min-width $screen-sm)
-  .SiteNav-list
+  .SiteMenu-list
     text-align right
     margin-right px(15)
 
-  .SiteNav-listItem
+  .SiteMenu-listItem
     font-size px($font-size-base + 3)
     margin-left px(10)
 
@@ -43,8 +43,8 @@
       padding px(5)
 
 @media (min-width $screen-md)
-  .SiteNav-list
+  .SiteMenu-list
     margin-right 0
 
-  .SiteNav-listItem
+  .SiteMenu-listItem
     margin-left px(40)
