@@ -1,9 +1,10 @@
-var path = require('path');
-var stylesDir = path.resolve('./src/assets/styles');
+var path =       require('path');
+var stylesDir =  path.resolve('./src/assets/styles');
 var scriptsDir = path.resolve('./src/assets/scripts');
-var imagesDir = path.resolve('./src/assets/images');
+var imagesDir =  path.resolve('./src/assets/images');
 
 var paths = {
+  distDir: path.resolve('./dist'),
   styles: {
     stylusSrc: path.join(stylesDir, '**/*.styl'),
     dest: path.resolve('./src'),

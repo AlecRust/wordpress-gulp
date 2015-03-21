@@ -1,6 +1,6 @@
-var gulp = require('gulp');
+var gulp =   require('gulp');
 var jshint = require('gulp-jshint');
-var paths = require('../paths');
+var paths =  require('../paths');
 
 gulp.task('jshint', function () {
   return gulp.src(paths.scripts.jsSrc)

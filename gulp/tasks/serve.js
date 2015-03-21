@@ -1,7 +1,7 @@
 var gulp = require('gulp');
-var opn = require('opn');
+var opn =  require('opn');
 
 gulp.task('serve', function () {
-  opn('http://localhost:8888/wordpress-gulp/')
+  opn('http://localhost:8888/wordpress-gulp/');
   gulp.start('watch');
 });

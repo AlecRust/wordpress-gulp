@@ -1,10 +1,10 @@
-var gulp = require('gulp');
-var cache = require('gulp-cache');
+var gulp =     require('gulp');
+var cache =    require('gulp-cache');
 var imagemin = require('gulp-imagemin');
-var paths = require('../paths');
+var paths =    require('../paths');
 
 gulp.task('images', function () {
-  return gulp.src('app/images/**/*')
+  return gulp.src(paths.images.imgSrc)
     .pipe(cache(imagemin({
       progressive: true,
       interlaced: true,
