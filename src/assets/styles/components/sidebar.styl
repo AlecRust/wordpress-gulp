@@ -2,13 +2,14 @@
 // Sidebar
 // --------------------------------------------------
 
+@require "../base/forms";
+
 .Sidebar
   background-color #efefef
   padding px(20)
 
 .Sidebar-widget
-  @extend .u-cf:before
-  @extend .u-cf:after
+  overflow hidden // Can't extend SUIT's .u-cf
   margin-bottom px(20)
 
   &:last-child

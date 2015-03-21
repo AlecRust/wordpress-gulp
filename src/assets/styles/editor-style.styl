@@ -2,18 +2,16 @@
 Editor stylesheet
 */
 
-// Base
-@import "functions"
-@import "mixins"
-@import "variables"
-@import "vendor/suit-css"
-@import "fonts"
-@import "base"
+@css {
+  @import "./base/base";
+  @import "./base/fonts";
+  @import "./components/entry";
+  @import "./components/button";
+  @import "./components/jumbotron";
+}
 
-// Components
-@import "components/entry"
-@import "components/button"
-@import "components/jumbotron"
+@require "base/functions";
+@require "base/variables";
 
 // Custom overrides for TinyMCE editor
 body.mce-content-body
@@ -36,6 +34,3 @@ img
 
 .alignright
   margin 0 0 px(10) px(10)
-
-// Utilities
-@import "utilities"

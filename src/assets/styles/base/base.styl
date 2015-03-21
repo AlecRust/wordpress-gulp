@@ -1,0 +1,46 @@
+/**
+* Base styles and any SUIT vars
+*/
+
+@css {
+  @custom-media --xs-viewport (min-width: 30em);
+  @custom-media --sm-viewport (min-width: 48em);
+  @custom-media --md-viewport (min-width: 62em);
+  @custom-media --lg-viewport (min-width: 75em);
+
+  @import "suitcss-base";
+  @import "suitcss-utils";
+  @import "suitcss-components";
+  @import "../utils/text";
+}
+
+@require "variables";
+@require "functions";
+
+// Reset the box-sizing
+*, *::before, *::after
+  box-sizing inherit
+
+html
+  box-sizing border-box
+  font-size ($font-size-base / 16)rem
+
+body
+  font-family $font-family-base
+  line-height $line-height-base
+  color $text-color
+  background-color #fff
+
+a
+  color $link-color
+  text-decoration underline
+
+a:hover,
+a:focus,
+a:active
+  color $link-color
+  text-decoration none
+
+// Allow only vertical resizing of textareas
+textarea
+  resize vertical
