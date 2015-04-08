@@ -14,12 +14,12 @@ Text Domain: wpg
 * Base styles and any SUIT vars
 */
 
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 
 html {
@@ -87,7 +87,7 @@ audio:not([controls]) {
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 
 [hidden],
@@ -107,7 +107,8 @@ a {
 }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 
 a:active,
@@ -365,13 +366,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */ /* 2 */
-  box-sizing: content-box;
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
 }
 
 /**
@@ -2909,8 +2909,8 @@ ul {
   border: 0;
 }
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 html {
@@ -3683,7 +3683,7 @@ form.contact-form .contact-submit {
 @media (min-width: 48em) {
   .SiteHeader-logo {
     float: left;
-    margin: 1.25rem 0 -2.5rem 1.25rem;
+    margin: 1.25rem 0 0 1.25rem;
   }
   .SiteHeader-tagline {
     position: absolute;
@@ -3710,9 +3710,12 @@ form.contact-form .contact-submit {
   }
 }
 /** @define SiteMenu */
+.SiteMenu {
+  background-color: #f2f2f2;
+}
 .SiteMenu-listItem.current_page_item,
 .SiteMenu-listItem.current_page_parent {
-  border-bottom: 3px solid #bbb;
+  background-color: #ddd;
 }
 .SiteMenu-listItem.current_page_item a,
 .SiteMenu-listItem.current_page_parent a,
@@ -3723,10 +3726,10 @@ form.contact-form .contact-submit {
 .SiteMenu-listItem a {
   display: block;
   text-decoration: none;
-  padding: 0.313rem 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 .SiteMenu-listItem a:hover {
-  text-decoration: underline;
+  background-color: #ddd;
 }
 @media (min-width: 30em) {
   .SiteMenu-list {
@@ -3736,8 +3739,8 @@ form.contact-form .contact-submit {
     display: inline-block;
   }
   .SiteMenu-listItem a {
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 @media (min-width: 48em) {
@@ -3747,18 +3750,11 @@ form.contact-form .contact-submit {
   }
   .SiteMenu-listItem {
     font-size: 1.188rem;
-    margin-left: 0.625rem;
-  }
-  .SiteMenu-listItem a {
-    padding: 0.313rem;
   }
 }
 @media (min-width: 62em) {
   .SiteMenu-list {
     margin-right: 0;
-  }
-  .SiteMenu-listItem {
-    margin-left: 2.5rem;
   }
 }
 /** @define SocialIcons; use strict */
