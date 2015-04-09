@@ -15,7 +15,7 @@
     "suitcss-components": "^0.3.0"
   },
   "devDependencies": {
-    "cssnext": "^1.1.0",
+    "cssnext": "^1.2.2",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-cache": "^0.2.8",
