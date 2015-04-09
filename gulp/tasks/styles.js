@@ -23,27 +23,29 @@ gulp.task('stylus', function() {
  * Lint all built CSS files individually
  */
 gulp.task('bemlint', ['stylus'], function() {
+  var processors = [
+    bemLinter
+  ];
   return gulp.src(path.join(paths.styles.tmpDir, '**/*.css'))
     .pipe(clip())
-    .pipe(postcss([
-      bemLinter()
-    ]).on('error', notifyError));
+    .pipe(postcss(processors).on('error', notifyError));
 });
 
 /**
  * Process CSS files with PostCSS and generate built files
  */
 gulp.task('postcss', ['stylus', 'bemlint'], function() {
+  var processors = [
+    atImport,
+    cssnext({
+      url: false,
+      features: {
+        rem: false
+      }
+    })
+  ];
   return gulp.src(path.join(paths.styles.tmpDir, '*.css'))
-    .pipe(postcss([
-      atImport(),
-      cssnext({
-        url: false,
-        features: {
-          rem: false
-        }
-      })
-    ]).on('error', notifyError))
+    .pipe(postcss(processors).on('error', notifyError))
     .pipe(gulp.dest(paths.styles.dest));
 });
 
