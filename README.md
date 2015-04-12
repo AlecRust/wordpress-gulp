@@ -18,7 +18,7 @@ A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task 
 3. Navigate to Appearance > Menus in the WordPress Admin Panel and create a menu called "Primary Menu". This is referenced in your theme's `header.php` file
 
 ## Distribution
-The distributable folder is compiled by gulp to `/dist`. This is excluded in `.gitignore` by default but you may want this versioned in your theme repo.
+The distributable folder is compiled by gulp to `/dist`.
 
 ## Extras
 - Add your Google Analytics ID to `extras.php`
