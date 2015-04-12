@@ -9,6 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="Entry-header">
     <?php the_title( '<h1 class="Entry-title">', '</h1>' ); ?>
+    <p class="post-date updated u-hiddenVisually"><?php the_date(); ?></p>
   </header>
 
   <div class="Entry-content u-cf">
@@ -23,5 +24,8 @@
 
   <footer class="Entry-footer">
     <?php edit_post_link( __( 'Edit' ), '<aside class="EditLink">', '</aside>' ); ?>
+    <p class="vcard author u-hiddenVisually">
+      <span class="fn"><?php bloginfo( 'name' ); ?></span>
+    </p>
   </footer>
 </article>
