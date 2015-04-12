@@ -3014,6 +3014,7 @@ textarea {
   padding: 0.25rem 0.563rem;
 }
 .Button--lg {
+  font-size: 1.125rem;
   padding: 0.625rem 1.25rem;
 }
 .Button--default {
@@ -3042,11 +3043,6 @@ textarea {
 .Button--success:hover {
   color: #091d5c;
   background-color: #fff;
-}
-@media (min-width: 62em) {
-  .Button--lg {
-    font-size: 1.188rem;
-  }
 }
 /** @define Jumbotron */
 .Jumbotron {

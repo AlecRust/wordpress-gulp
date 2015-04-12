@@ -2943,8 +2943,7 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-.Button,
-form.contact-form input[type="submit"] {
+.Button {
   font-size: 1rem;
   border-width: 2px;
   border-radius: 5px;
@@ -2954,8 +2953,8 @@ form.contact-form input[type="submit"] {
   border-width: 1px;
   padding: 0.25rem 0.563rem;
 }
-.Button--lg,
-form.contact-form input[type="submit"] {
+.Button--lg {
+  font-size: 1.125rem;
   padding: 0.625rem 1.25rem;
 }
 .Button--default {
@@ -2976,41 +2975,24 @@ form.contact-form input[type="submit"] {
   color: #091d5c;
   background-color: #fff;
 }
-.Button--success,
-form.contact-form input[type="submit"] {
+.Button--success {
   color: #fff;
   border-color: #1aa331;
   background-color: #1aa331;
 }
-.Button--success:hover,
-form.contact-form input[type="submit"]:hover {
+.Button--success:hover {
   color: #091d5c;
   background-color: #fff;
 }
-@media (min-width: 62em) {
-  .Button--lg,
-  form.contact-form input[type="submit"] {
-    font-size: 1.188rem;
-  }
-}
-.InputText,
-form.contact-form input[type="text"],
-form.contact-form input[type="email"],
-form.contact-form textarea {
+.InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
   padding: 0.375rem 0.563rem 0.438rem;
 }
-.InputText:hover,
-form.contact-form input[type="text"]:hover,
-form.contact-form input[type="email"]:hover,
-form.contact-form textarea:hover {
+.InputText:hover {
   border-color: #a8a8a8;
 }
-.InputText:focus,
-form.contact-form input[type="text"]:focus,
-form.contact-form input[type="email"]:focus,
-form.contact-form textarea:focus {
+.InputText:focus {
   outline: 0;
   border-color: #ee5455;
 }
@@ -3022,12 +3004,40 @@ form.contact-form textarea:focus {
 form.contact-form input[type="text"],
 form.contact-form input[type="email"],
 form.contact-form textarea {
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  padding: 0.375rem 0.563rem 0.438rem;
   width: 100%;
   max-width: none;
   margin-bottom: 0.938rem;
 }
+form.contact-form input[type="text"]:hover,
+form.contact-form input[type="email"]:hover,
+form.contact-form textarea:hover {
+  border-color: #a8a8a8;
+}
+form.contact-form input[type="text"]:focus,
+form.contact-form input[type="email"]:focus,
+form.contact-form textarea:focus {
+  outline: 0;
+  border-color: #ee5455;
+}
 form.contact-form .contact-submit {
   text-align: center;
+}
+form.contact-form input[type="submit"] {
+  font-size: 1rem;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding: 0.625rem 1.25rem;
+  color: #fff;
+  border-color: #1aa331;
+  background-color: #1aa331;
+}
+form.contact-form input[type="submit"]:hover {
+  color: #091d5c;
+  background-color: #fff;
 }
 @media print {
   *,
@@ -3090,6 +3100,7 @@ form.contact-form .contact-submit {
   padding: 0.25rem 0.563rem;
 }
 .Button--lg {
+  font-size: 1.125rem;
   padding: 0.625rem 1.25rem;
 }
 .Button--default {
@@ -3119,20 +3130,13 @@ form.contact-form .contact-submit {
   color: #091d5c;
   background-color: #fff;
 }
-@media (min-width: 62em) {
-  .Button--lg {
-    font-size: 1.188rem;
-  }
-}
 /** @define BrowserBar; use strict */
 .BrowserBar {
   text-align: center;
   background-color: #fbb03b;
   padding: 0.625rem;
 }
-.Button,
-form.contact-form input[type="submit"],
-.Comments #submit {
+.Button {
   font-size: 1rem;
   border-width: 2px;
   border-radius: 5px;
@@ -3142,8 +3146,8 @@ form.contact-form input[type="submit"],
   border-width: 1px;
   padding: 0.25rem 0.563rem;
 }
-.Button--lg,
-form.contact-form input[type="submit"] {
+.Button--lg {
+  font-size: 1.125rem;
   padding: 0.625rem 1.25rem;
 }
 .Button--default {
@@ -3155,64 +3159,33 @@ form.contact-form input[type="submit"] {
   color: #444;
   background-color: #c9c9c9;
 }
-.Button--primary,
-.Comments #submit {
+.Button--primary {
   color: #fff;
   border-color: #ee5455;
   background-color: #ee5455;
 }
-.Button--primary:hover,
-.Comments #submit:hover {
+.Button--primary:hover {
   color: #091d5c;
   background-color: #fff;
 }
-.Button--success,
-form.contact-form input[type="submit"] {
+.Button--success {
   color: #fff;
   border-color: #1aa331;
   background-color: #1aa331;
 }
-.Button--success:hover,
-form.contact-form input[type="submit"]:hover {
+.Button--success:hover {
   color: #091d5c;
   background-color: #fff;
 }
-@media (min-width: 62em) {
-  .Button--lg,
-  form.contact-form input[type="submit"] {
-    font-size: 1.188rem;
-  }
-}
-.InputText,
-form.contact-form input[type="text"],
-form.contact-form input[type="email"],
-form.contact-form textarea,
-.Comments input[type="text"],
-.Comments input[type="email"],
-.Comments input[type="url"],
-.Comments #comment {
+.InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
   padding: 0.375rem 0.563rem 0.438rem;
 }
-.InputText:hover,
-form.contact-form input[type="text"]:hover,
-form.contact-form input[type="email"]:hover,
-form.contact-form textarea:hover,
-.Comments input[type="text"]:hover,
-.Comments input[type="email"]:hover,
-.Comments input[type="url"]:hover,
-.Comments #comment:hover {
+.InputText:hover {
   border-color: #a8a8a8;
 }
-.InputText:focus,
-form.contact-form input[type="text"]:focus,
-form.contact-form input[type="email"]:focus,
-form.contact-form textarea:focus,
-.Comments input[type="text"]:focus,
-.Comments input[type="email"]:focus,
-.Comments input[type="url"]:focus,
-.Comments #comment:focus {
+.InputText:focus {
   outline: 0;
   border-color: #ee5455;
 }
@@ -3224,12 +3197,40 @@ form.contact-form textarea:focus,
 form.contact-form input[type="text"],
 form.contact-form input[type="email"],
 form.contact-form textarea {
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  padding: 0.375rem 0.563rem 0.438rem;
   width: 100%;
   max-width: none;
   margin-bottom: 0.938rem;
 }
+form.contact-form input[type="text"]:hover,
+form.contact-form input[type="email"]:hover,
+form.contact-form textarea:hover {
+  border-color: #a8a8a8;
+}
+form.contact-form input[type="text"]:focus,
+form.contact-form input[type="email"]:focus,
+form.contact-form textarea:focus {
+  outline: 0;
+  border-color: #ee5455;
+}
 form.contact-form .contact-submit {
   text-align: center;
+}
+form.contact-form input[type="submit"] {
+  font-size: 1rem;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding: 0.625rem 1.25rem;
+  color: #fff;
+  border-color: #1aa331;
+  background-color: #1aa331;
+}
+form.contact-form input[type="submit"]:hover {
+  color: #091d5c;
+  background-color: #fff;
 }
 .Comments {
   padding: 1.875rem 1.25rem 2.5rem;
@@ -3243,11 +3244,41 @@ form.contact-form .contact-submit {
 .Comments input[type="email"],
 .Comments input[type="url"],
 .Comments #comment {
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  padding: 0.375rem 0.563rem 0.438rem;
   width: 100%;
   margin-bottom: 0.938rem;
 }
+.Comments input[type="text"]:hover,
+.Comments input[type="email"]:hover,
+.Comments input[type="url"]:hover,
+.Comments #comment:hover {
+  border-color: #a8a8a8;
+}
+.Comments input[type="text"]:focus,
+.Comments input[type="email"]:focus,
+.Comments input[type="url"]:focus,
+.Comments #comment:focus {
+  outline: 0;
+  border-color: #ee5455;
+}
 .Comments .form-submit {
   text-align: center;
+}
+.Comments #submit {
+  font-size: 1rem;
+  border-width: 2px;
+  border-radius: 5px;
+  color: #fff;
+  border-color: #ee5455;
+  background-color: #ee5455;
+  border-style: solid;
+  padding: 0.4em 0.75em;
+}
+.Comments #submit:hover {
+  color: #091d5c;
+  background-color: #fff;
 }
 .Comments .comment-subscription-form {
   padding-top: 0.938rem;
@@ -3492,31 +3523,26 @@ form.contact-form .contact-submit {
 .Pager-previous a:before {
   content: "← ";
 }
-.Button,
-form.contact-form input[type="submit"],
-.jetpack_subscription_widget #subscribe-submit input[type="submit"] {
+.Button {
   font-size: 1rem;
   border-width: 2px;
   border-radius: 5px;
 }
-.Button--sm,
-.jetpack_subscription_widget #subscribe-submit input[type="submit"] {
+.Button--sm {
   font-size: 0.875rem;
   border-width: 1px;
   padding: 0.25rem 0.563rem;
 }
-.Button--lg,
-form.contact-form input[type="submit"] {
+.Button--lg {
+  font-size: 1.125rem;
   padding: 0.625rem 1.25rem;
 }
-.Button--default,
-.jetpack_subscription_widget #subscribe-submit input[type="submit"] {
+.Button--default {
   color: #444;
   border-color: #bbb;
   background-color: #fff;
 }
-.Button--default:hover,
-.jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover {
+.Button--default:hover {
   color: #444;
   background-color: #c9c9c9;
 }
@@ -3529,49 +3555,28 @@ form.contact-form input[type="submit"] {
   color: #091d5c;
   background-color: #fff;
 }
-.Button--success,
-form.contact-form input[type="submit"] {
+.Button--success {
   color: #fff;
   border-color: #1aa331;
   background-color: #1aa331;
 }
-.Button--success:hover,
-form.contact-form input[type="submit"]:hover {
+.Button--success:hover {
   color: #091d5c;
   background-color: #fff;
 }
-@media (min-width: 62em) {
-  .Button--lg,
-  form.contact-form input[type="submit"] {
-    font-size: 1.188rem;
-  }
-}
-.InputText,
-form.contact-form input[type="text"],
-form.contact-form input[type="email"],
-form.contact-form textarea,
-.jetpack_subscription_widget #subscribe-email input[type="email"] {
+.InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
   padding: 0.375rem 0.563rem 0.438rem;
 }
-.InputText:hover,
-form.contact-form input[type="text"]:hover,
-form.contact-form input[type="email"]:hover,
-form.contact-form textarea:hover,
-.jetpack_subscription_widget #subscribe-email input[type="email"]:hover {
+.InputText:hover {
   border-color: #a8a8a8;
 }
-.InputText:focus,
-form.contact-form input[type="text"]:focus,
-form.contact-form input[type="email"]:focus,
-form.contact-form textarea:focus,
-.jetpack_subscription_widget #subscribe-email input[type="email"]:focus {
+.InputText:focus {
   outline: 0;
   border-color: #ee5455;
 }
-.InputText--sm,
-.jetpack_subscription_widget #subscribe-email input[type="email"] {
+.InputText--sm {
   font-size: 0.875rem;
   border-width: 1px;
   padding: 0.188rem 0.375rem 0.25rem;
@@ -3579,12 +3584,40 @@ form.contact-form textarea:focus,
 form.contact-form input[type="text"],
 form.contact-form input[type="email"],
 form.contact-form textarea {
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  padding: 0.375rem 0.563rem 0.438rem;
   width: 100%;
   max-width: none;
   margin-bottom: 0.938rem;
 }
+form.contact-form input[type="text"]:hover,
+form.contact-form input[type="email"]:hover,
+form.contact-form textarea:hover {
+  border-color: #a8a8a8;
+}
+form.contact-form input[type="text"]:focus,
+form.contact-form input[type="email"]:focus,
+form.contact-form textarea:focus {
+  outline: 0;
+  border-color: #ee5455;
+}
 form.contact-form .contact-submit {
   text-align: center;
+}
+form.contact-form input[type="submit"] {
+  font-size: 1rem;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding: 0.625rem 1.25rem;
+  color: #fff;
+  border-color: #1aa331;
+  background-color: #1aa331;
+}
+form.contact-form input[type="submit"]:hover {
+  color: #091d5c;
+  background-color: #fff;
 }
 .Sidebar {
   background-color: #efefef;
@@ -3615,15 +3648,41 @@ form.contact-form .contact-submit {
   float: left;
 }
 .jetpack_subscription_widget #subscribe-email input[type="email"] {
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  padding: 0.375rem 0.563rem 0.438rem;
+  font-size: 0.875rem;
+  border-width: 1px;
+  padding: 0.188rem 0.375rem 0.25rem;
   width: 100%;
+}
+.jetpack_subscription_widget #subscribe-email input[type="email"]:hover {
+  border-color: #a8a8a8;
+}
+.jetpack_subscription_widget #subscribe-email input[type="email"]:focus {
+  outline: 0;
+  border-color: #ee5455;
 }
 .jetpack_subscription_widget #subscribe-submit {
   width: 30%;
   float: right;
 }
 .jetpack_subscription_widget #subscribe-submit input[type="submit"] {
+  font-size: 1rem;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  border-width: 1px;
+  padding: 0.25rem 0.563rem;
+  color: #444;
+  border-color: #bbb;
+  background-color: #fff;
   width: 100%;
   margin-left: 0.25rem;
+}
+.jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover {
+  color: #444;
+  background-color: #c9c9c9;
 }
 @media (min-width: 48em) {
   .Sidebar {

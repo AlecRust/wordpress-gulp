@@ -17,7 +17,7 @@
   input[type="email"],
   input[type="url"],
   #comment
-    @extend .InputText
+    InputText()
     width 100%
     margin-bottom px(15)
 
@@ -25,8 +25,10 @@
     text-align center
 
   #submit
-    @extend .Button
-    @extend .Button--primary
+    Button()
+    Button--primary()
+    border-style solid // From SUIT's .Button
+    padding 0.4em 0.75em // From SUIT's .Button
 
   .comment-subscription-form
     padding-top px(15)
