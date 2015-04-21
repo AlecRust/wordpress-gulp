@@ -1,1 +1,0 @@
-"use strict";function externalLinks(){for(var t=document.getElementsByTagName("a"),e=0;e<t.length;e++){var n=t[e];n.getAttribute("href")&&n.hostname!==location.hostname&&(n.target="_blank")}}externalLinks();

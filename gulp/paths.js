@@ -1,18 +1,21 @@
 var path =       require('path');
-var stylesDir =  path.resolve('./src/assets/styles');
-var scriptsDir = path.resolve('./src/assets/scripts');
-var imagesDir =  path.resolve('./src/assets/images');
+var srcDir =     path.resolve('./src');
+var stylesDir =  path.join(srcDir, 'assets/styles');
+var scriptsDir = path.join(srcDir, 'assets/scripts');
+var imagesDir = path.join(srcDir, 'assets/images');
+var bowerSrc =   path.resolve('./bower_components');
 
 var paths = {
   distDir: path.resolve('./dist'),
   styles: {
     stylusSrc: path.join(stylesDir, '**/*.styl'),
-    dest: path.resolve('./src'),
+    dest: srcDir,
     tmpDir: path.resolve('./.css-compiled')
   },
   scripts: {
+    jqueryPath: path.join(bowerSrc, 'jquery/dist/jquery.js'),
     jsSrc: path.join(scriptsDir, '**/*.js'),
-    dest: scriptsDir
+    dest: srcDir
   },
   images: {
     imgSrc: path.join(imagesDir, '**/*'),

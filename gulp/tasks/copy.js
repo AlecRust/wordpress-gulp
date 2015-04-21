@@ -7,6 +7,8 @@ var paths =     require('../paths');
 gulp.task('copy', function () {
   return gulp.src([
     'src/**/*',
+    '!src/assets/scripts',
+    '!src/assets/scripts/**',
     '!src/assets/styles',
     '!src/assets/styles/**'
   ], {

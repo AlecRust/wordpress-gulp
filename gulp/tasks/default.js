@@ -3,7 +3,7 @@ var path =  require('path');
 var size =  require('gulp-size');
 var paths = require('../paths');
 
-gulp.task('build', ['jshint', 'styles', 'images', 'copy'], function () {
+gulp.task('build', ['scripts', 'styles', 'images', 'copy'], function () {
   return gulp.src(path.join(paths.distDir, '**/*')).pipe(size({ title: 'build', gzip: true }));
 });
 
