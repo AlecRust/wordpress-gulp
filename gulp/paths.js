@@ -2,7 +2,7 @@ var path =       require('path');
 var srcDir =     path.resolve('./src');
 var stylesDir =  path.join(srcDir, 'assets/styles');
 var scriptsDir = path.join(srcDir, 'assets/scripts');
-var imagesDir = path.join(srcDir, 'assets/images');
+var imagesDir =  path.join(srcDir, 'assets/images');
 var bowerSrc =   path.resolve('./bower_components');
 
 var paths = {
