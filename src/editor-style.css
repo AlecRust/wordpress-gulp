@@ -2971,6 +2971,11 @@ textarea {
   margin-bottom: 1.25rem;
   padding-left: 1.25rem;
 }
+.Entry-content ol {
+  list-style: decimal;
+  margin-bottom: 1.25rem;
+  padding-left: 1.25rem;
+}
 .Entry-content li {
   margin-bottom: 0.625rem;
 }

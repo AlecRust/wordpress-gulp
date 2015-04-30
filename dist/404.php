@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-  <main class="Container-mainColumn" role="main">
+  <main role="main">
 
     <header class="Entry-header">
       <h1 class="Entry-title">Oops! That page can&rsquo;t be found.</h1>
@@ -20,5 +20,4 @@ get_header(); ?>
 
   </main>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

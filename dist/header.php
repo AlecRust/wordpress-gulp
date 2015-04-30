@@ -46,12 +46,12 @@
       <nav class="SiteMenu" role="navigation" aria-labelledby="site-nav-heading">
         <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
         <?php wp_nav_menu( array(
-            'theme_location' => 'primary',
-            'menu' => 'Primary Menu',
-            'container' => '',
-            'menu_class' => 'SiteMenu-list',
-            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-            'walker' => new wpg_walker_nav_menu
+          'theme_location' => 'primary',
+          'menu' => 'Primary Menu',
+          'container' => '',
+          'menu_class' => 'SiteMenu-list',
+          'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+          'walker' => new wpg_walker_nav_menu
         ) ); ?>
       </nav>
     </header>

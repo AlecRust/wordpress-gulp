@@ -31,8 +31,6 @@ function wpg_slug_body_class( $classes ) {
 }
 add_filter( 'body_class', 'wpg_slug_body_class' );
 
-
-
 /**
  * Adds .Button classes to Edit link
  */
