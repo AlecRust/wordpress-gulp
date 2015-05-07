@@ -3388,6 +3388,11 @@ form.contact-form input[type="submit"]:hover {
   display: block;
   margin-bottom: 1.25rem;
 }
+.Entry-content .aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .Entry-footer {
   font-size: 0.938rem;
   margin-bottom: 1.25rem;
