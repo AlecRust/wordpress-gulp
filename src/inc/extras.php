@@ -163,7 +163,8 @@ function wpg_login_logo_url() {
 add_filter( 'login_headerurl', 'wpg_login_logo_url' );
 
 function wpg_login_logo_url_title() {
-  return get_bloginfo( 'title' );
+  $blog_title = get_bloginfo( 'title' );
+  return 'Back to ' . $blog_title;
 }
 add_filter( 'login_headertitle', 'wpg_login_logo_url_title' );
 
