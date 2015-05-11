@@ -3313,7 +3313,7 @@ form.contact-form input[type="submit"]:hover {
   border-radius: 0;
   margin-bottom: 0.625rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Comments input[type="text"],
   .Comments input[type="email"],
   .Comments input[type="url"] {
@@ -3326,7 +3326,7 @@ form.contact-form input[type="submit"]:hover {
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Container-mainColumn {
     float: left;
     width: 75%;
@@ -3401,7 +3401,7 @@ form.contact-form input[type="submit"]:hover {
   margin-bottom: 1.25rem;
   padding: 0 1.25rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Entry-content .alignleft {
     float: left;
     margin: 0 1.25rem 1.25rem 0;
@@ -3457,7 +3457,7 @@ form.contact-form input[type="submit"]:hover {
   font-weight: normal;
   font-size: 1rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Jumbotron {
     position: relative;
     border: 0;
@@ -3705,7 +3705,7 @@ form.contact-form input[type="submit"]:hover {
   color: #444;
   background-color: #c9c9c9;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Sidebar {
     float: right;
     width: 25%;
@@ -3725,7 +3725,7 @@ form.contact-form input[type="submit"]:hover {
 .SiteFooter-copyright {
   margin-bottom: 1.25rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .SiteFooter {
     padding: 3.125rem 1.25rem 2.5rem;
   }
@@ -3759,7 +3759,7 @@ form.contact-form input[type="submit"]:hover {
 .SiteHeader-search {
   padding-top: 1.25rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .SiteHeader-logo {
     float: left;
     margin: 1.25rem 0 0 1.25rem;
@@ -3822,7 +3822,7 @@ form.contact-form input[type="submit"]:hover {
     padding-right: 1.25rem;
   }
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .SiteMenu-list {
     text-align: right;
     margin-right: 0.938rem;
@@ -3861,7 +3861,7 @@ form.contact-form input[type="submit"]:hover {
 .SocialIcons-iconLinkedin {
   background-image: url("assets/images/social-icon-linkedin.svg");
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .SocialIcons-listItem {
     margin: 0 0.625rem 0 0;
   }

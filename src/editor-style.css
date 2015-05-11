@@ -2997,7 +2997,7 @@ textarea {
   margin-bottom: 1.25rem;
   padding: 0 1.25rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Entry-content .alignleft {
     float: left;
     margin: 0 1.25rem 1.25rem 0;
@@ -3078,7 +3078,7 @@ textarea {
   font-weight: normal;
   font-size: 1rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 48.875em) {
   .Jumbotron {
     position: relative;
     border: 0;
