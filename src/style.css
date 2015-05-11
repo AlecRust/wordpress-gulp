@@ -2936,6 +2936,9 @@ a:active {
 textarea {
   resize: vertical;
 }
+#wpadminbar {
+  background-color: #777;
+}
 @font-face {
   font-family: "Raleway Regular";
   src: url("assets/fonts/raleway-regular-webfont.eot");
