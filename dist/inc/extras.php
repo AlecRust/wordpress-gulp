@@ -120,7 +120,7 @@ class wpg_walker_nav_menu extends Walker_Nav_Menu {
 }
 
 /**
- * Add Google Analytics tracking snippet to footer
+ * Adds Google Analytics tracking snippet to footer
  */
 function wpg_google_analytics() { ?>
   <script>
@@ -136,32 +136,24 @@ function wpg_google_analytics() { ?>
 add_action( 'wp_footer', 'wpg_google_analytics' );
 
 /**
- * Custom Login page logo
+ * Loads main stylesheet containing override styles for login page
  */
-function wpg_login_logo() { ?>
-  <style type="text/css">
-    .login {
-      background-color: #fff;
-    }
-    .login #login h1 a {
-      width: 190px;
-      height: 165px;
-      display: inline-block;
-      background: url(<?php echo get_template_directory_uri(); ?>/assets/images/site-logo.svg) no-repeat;
-      background-size: 190px 165px;
-    }
-  </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'wpg_login_logo' );
+function wpg_login_styles() {
+  wp_enqueue_style( 'wpg-style', get_stylesheet_uri() );
+}
+add_action( 'login_enqueue_scripts', 'wpg_login_styles' );
 
 /**
- * Override WordPress login page logo link
+ * Overrides WordPress login page logo link URL
  */
 function wpg_login_logo_url() {
   return home_url();
 }
 add_filter( 'login_headerurl', 'wpg_login_logo_url' );
 
+/**
+ * Overrides WordPress login page logo link title
+ */
 function wpg_login_logo_url_title() {
   $blog_title = get_bloginfo( 'title' );
   return 'Back to ' . $blog_title;

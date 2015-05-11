@@ -3497,6 +3497,14 @@ form.contact-form input[type="submit"]:hover {
 .PageHeader-title {
   color: #bbb;
 }
+/* WordPress Login Page */
+.login #login h1 a {
+  width: 190px;
+  height: 165px;
+  display: inline-block;
+  background: url("assets/images/site-logo.svg") no-repeat;
+  background-size: 190px 165px;
+}
 /** @define Pager; use strict */
 .Pager {
   padding: 1.25rem;
