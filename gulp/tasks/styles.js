@@ -2,6 +2,7 @@ var path =        require('path');
 var gulp =        require('gulp');
 var stylus =      require('gulp-stylus');
 var postcss =     require('gulp-postcss');
+var at2x =        require('postcss-at2x');
 var clip =        require('gulp-clip-empty-files');
 var bemLinter =   require('postcss-bem-linter');
 var cssnext =     require('cssnext');
@@ -40,7 +41,8 @@ gulp.task('postcss', ['stylus', 'bemlint'], function() {
       features: {
         rem: false
       }
-    })
+    }),
+    at2x()
     ]).on('error', notifyError))
     .pipe(gulp.dest(paths.styles.dest));
 });
