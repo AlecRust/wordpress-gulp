@@ -3837,32 +3837,33 @@ form.contact-form input[type="submit"]:hover {
   }
 }
 /** @define SocialIcons; use strict */
-.SocialIcons-listItem {
+.SocialIcons-list li {
   display: inline-block;
   overflow: hidden;
   margin: 0 0.313rem;
 }
-.SocialIcons-listItem a {
+.SocialIcons-list a {
   width: 35px;
   height: 35px;
   background-size: 35px 35px;
   opacity: 0.7;
   display: block;
+  font: 0/0 a;
 }
-.SocialIcons-listItem a:hover {
+.SocialIcons-list a:hover {
   opacity: 0.75;
 }
-.SocialIcons-iconFacebook {
+.SocialIcons-iconFacebook a {
   background-image: url("assets/images/social-icon-facebook.svg");
 }
-.SocialIcons-iconTwitter {
+.SocialIcons-iconTwitter a {
   background-image: url("assets/images/social-icon-twitter.svg");
 }
-.SocialIcons-iconLinkedin {
+.SocialIcons-iconLinkedin a {
   background-image: url("assets/images/social-icon-linkedin.svg");
 }
 @media (min-width: 48.875em) {
-  .SocialIcons-listItem {
+  .SocialIcons-list li {
     margin: 0 0.625rem 0 0;
   }
 }

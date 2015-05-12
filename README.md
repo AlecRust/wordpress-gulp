@@ -15,7 +15,7 @@ A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task 
 ## Development
 1. You'll want to see your theme changes locally as you develop within the `/src` directory. As an example using [MAMP](http://www.mamp.info/) you could symlink `/projects/theme-name/src` -> `/Applications/MAMP/htdocs/site-name/wp-content/themes/theme-name` to achieve this. When up and running, run `gulp watch` to start watching your files for changes.
 2. Navigate to Appearance > Themes in the WordPress Admin Panel and activate your new theme
-3. Navigate to Appearance > Menus in the WordPress Admin Panel and create a menu called "Primary Menu". This is referenced in your theme's `header.php` file
+3. Navigate to Appearance > Menus in the WordPress Admin Panel and create a menu called "Primary Menu" and a menu called "Social Icons". These are referenced in your theme's `header.php` and `footer.php` files
 
 ## Distribution
 The distributable folder is compiled by gulp to `/dist`.

@@ -33,9 +33,10 @@ function wpg_setup() {
    */
   //add_theme_support( 'post-thumbnails' );
 
-  // This theme uses wp_nav_menu() in one location.
+  // This theme uses wp_nav_menu() for the main menu and social icons.
   register_nav_menus( array(
     'primary' => __( 'Primary Menu' ),
+    'social' => __( 'Social Icons' ),
   ) );
 
   /*

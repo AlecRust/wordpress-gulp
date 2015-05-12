@@ -20,20 +20,13 @@
         <a class="u-linkClean" href="<?php echo get_permalink(get_page_by_path( 'terms' )); ?>">Terms</a>
       </p>
 
-      <ul class="SocialIcons-list">
-        <li class="SocialIcons-listItem">
-          <a href="https://www.facebook.com/wordpress-gulp"
-             class="SocialIcons-iconFacebook u-textHide" title="Facebook">Facebook</a>
-        </li>
-        <li class="SocialIcons-listItem">
-          <a href="https://twitter.com/wordpress-gulp"
-             class="SocialIcons-iconTwitter u-textHide" title="Twitter">Twitter</a>
-        </li>
-        <li class="SocialIcons-listItem">
-          <a href="https://www.linkedin.com/in/wordpress-gulp"
-             class="SocialIcons-iconLinkedin u-textHide" title="LinkedIn">LinkedIn</a>
-        </li>
-      </ul>
+      <?php wp_nav_menu( array(
+        'theme_location' => 'footer',
+        'menu' => 'Social Icons',
+        'container' => '',
+        'menu_class' => 'SocialIcons-list',
+        'items_wrap' => '<ul class="%2$s">%3$s</ul>'
+      ) ); ?>
 
     </footer>
 
