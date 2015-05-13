@@ -59,6 +59,13 @@ endif; // wpg_setup
 add_action( 'after_setup_theme', 'wpg_setup' );
 
 /**
+ * Set theme content width
+ */
+if (!isset($content_width)) {
+  $content_width = 952;
+}
+
+/**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
