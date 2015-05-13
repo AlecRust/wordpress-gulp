@@ -13,7 +13,7 @@
     <footer class="SiteFooter u-cf" role="contentinfo">
 
       <p class="SiteFooter-copyright">
-        Copyright <time datetime="<?= date( 'Y' ); ?>"><?= date( 'Y' ); ?></time> -
+        Copyright <time datetime="<?php echo date( 'Y' ); ?>"><?php echo date( 'Y' ); ?></time> -
         <a class="u-linkClean" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
           <?php bloginfo( 'name' ); ?>
         </a> |
