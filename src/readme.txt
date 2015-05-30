@@ -29,7 +29,7 @@ WordPress Gulp includes support for Jetpack.
 
 == Changelog ==
 
-= 1.4.0 - May 30 2015 =
+= 1.5.0 - May 30 2015 =
 * Initial release
 
 == Credits ==
