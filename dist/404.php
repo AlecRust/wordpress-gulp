@@ -14,7 +14,10 @@ get_header(); ?>
     </header>
 
     <div class="Entry-content">
-      <p>It looks like nothing was found at this location. Maybe searching will help?</p>
+      <p>
+        It looks like nothing was found at this location. Maybe searching will help? Alternatively
+        go <a href="<?php echo esc_url( home_url( '/' ) ); ?>">back to the home page ></a>
+      </p>
       <?php get_search_form(); ?>
     </div>
 
