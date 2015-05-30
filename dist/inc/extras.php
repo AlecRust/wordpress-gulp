@@ -32,15 +32,6 @@ function wpg_slug_body_class( $classes ) {
 add_filter( 'body_class', 'wpg_slug_body_class' );
 
 /**
- * Adds .Button classes to Edit link
- */
-function wpg_edit_post_link($output) {
- $output = str_replace('class="post-edit-link"', 'class="Button Button--success"', $output);
- return $output;
-}
-add_filter('edit_post_link', 'wpg_edit_post_link');
-
-/**
  * Sets the authordata global when viewing an author archive.
  *
  * This provides backwards compatibility with

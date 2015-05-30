@@ -22,9 +22,8 @@
     ?>
   </div>
 
-  <footer class="Entry-footer">
-    <?php edit_post_link( __( 'Edit' ), '<aside class="EditLink">', '</aside>' ); ?>
-    <p class="vcard author u-hiddenVisually">
+  <footer class="Entry-footer u-hiddenVisually">
+    <p class="vcard author">
       <span class="fn"><?php bloginfo( 'name' ); ?></span>
     </p>
   </footer>

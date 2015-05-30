@@ -3333,15 +3333,6 @@ form.contact-form input[type="submit"]:hover {
     padding-right: 1.875rem;
   }
 }
-/** @define EditLink */
-.EditLink {
-  text-align: right;
-  margin: 1.25rem 0;
-}
-.EditLink .Button:before {
-  content: "✎";
-  margin-right: 0.375rem;
-}
 /** @define Entry */
 .Entry-header {
   border-bottom: 3px solid #bbb;

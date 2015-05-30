@@ -56,7 +56,5 @@
         get_permalink()
       );
     ?>
-
-    <?php edit_post_link( __( 'Edit' ), '<aside class="EditLink">', '</aside>' ); ?>
   </footer>
 </article>
