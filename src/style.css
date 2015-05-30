@@ -3091,7 +3091,7 @@ form.contact-form input[type="submit"]:hover {
     page-break-after: avoid;
   }
 }
-/** @define Button; use strict */
+/** @define Button */
 .Button {
   font-size: 1rem;
   border-width: 2px;
@@ -3133,7 +3133,7 @@ form.contact-form input[type="submit"]:hover {
   color: #091d5c;
   background-color: #fff;
 }
-/** @define BrowserBar; use strict */
+/** @define BrowserBar */
 .BrowserBar {
   text-align: center;
   background-color: #fbb03b;
@@ -3320,7 +3320,7 @@ form.contact-form input[type="submit"]:hover {
     width: 60%;
   }
 }
-/** @define Container; use strict */
+/** @define Container */
 .Container {
   max-width: 62em;
   margin-left: auto;
@@ -3333,7 +3333,7 @@ form.contact-form input[type="submit"]:hover {
     padding-right: 1.875rem;
   }
 }
-/** @define Entry */
+/** @define Entry; weak */
 .Entry-header {
   border-bottom: 3px solid #bbb;
   padding: 0.938rem 1.25rem;
@@ -3427,60 +3427,7 @@ form.contact-form input[type="submit"]:hover {
 .form-error .form-errors .form-error-message {
   color: #e7420c;
 }
-/** @define Jumbotron */
-.Jumbotron {
-  border: 1px solid #bbb;
-  margin-bottom: 1.875rem;
-}
-.Jumbotron img {
-  display: block;
-  width: 100% \9;
-  max-width: 100%;
-  height: auto;
-}
-.Jumbotron p {
-  padding-bottom: 0;
-}
-.Jumbotron-content {
-  padding: 0.625rem;
-}
-.Jumbotron-heading {
-  font-weight: normal;
-  font-size: 1rem;
-}
-@media (min-width: 48.875em) {
-  .Jumbotron {
-    position: relative;
-    border: 0;
-    margin-top: -0.937rem;
-    margin-bottom: 3.125rem;
-  }
-  .Jumbotron .Button {
-    color: #fff;
-  }
-  .Jumbotron-content {
-    text-shadow: 1px 1px 1px #111;
-    position: absolute;
-    top: 11%;
-    left: 3%;
-    max-width: 60%;
-  }
-  .Jumbotron-heading {
-    font-size: 1.313rem;
-    color: #fff;
-    margin-bottom: 5%;
-  }
-}
-@media (min-width: 62em) {
-  .Jumbotron {
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-  }
-  .Jumbotron-heading {
-    font-size: 1.688rem;
-  }
-}
-/** @define PageHeader; use strict */
+/** @define PageHeader */
 .PageHeader {
   border-bottom: 3px solid #bbb;
   padding: 1.438rem 1.25rem;
@@ -3496,17 +3443,17 @@ form.contact-form input[type="submit"]:hover {
   background: url("assets/images/site-logo.svg") no-repeat;
   background-size: 190px 165px;
 }
-/** @define Pager; use strict */
+/** @define Pager */
 .Pager {
   padding: 1.25rem;
 }
 .Pager-list {
   text-align: center;
 }
-.Pager-list li {
+.Pager-listItem {
   display: inline;
 }
-.Pager-list li a {
+.Pager-link {
   display: inline-block;
   text-decoration: none;
   border: 1px solid #ddd;
@@ -3515,24 +3462,24 @@ form.contact-form input[type="submit"]:hover {
   background-color: #efefef;
   padding: 0.313rem 0.875rem;
 }
-.Pager-list li a:hover {
+.Pager-link:hover {
   text-decoration: none;
   border-color: #ccc;
   background-color: #fff;
 }
-.Pager-list li a:after {
+.Pager-link:after {
   color: #777;
 }
 .Pager-next {
   float: right;
 }
-.Pager-next a:after {
+.Pager-next .Pager-link:after {
   content: " →";
 }
 .Pager-previous {
   float: left;
 }
-.Pager-previous a:before {
+.Pager-previous .Pager-link:before {
   content: "← ";
 }
 .Button {
@@ -3730,7 +3677,7 @@ form.contact-form input[type="submit"]:hover {
     margin-bottom: 0;
   }
 }
-/** @define SiteHeader; use strict */
+/** @define SiteHeader */
 .SiteHeader-wrapBranding {
   position: relative;
   text-align: center;
@@ -3779,7 +3726,7 @@ form.contact-form input[type="submit"]:hover {
     right: 0;
   }
 }
-/** @define SiteMenu */
+/** @define SiteMenu; weak */
 .SiteMenu {
   background-color: #f2f2f2;
 }
@@ -3827,7 +3774,7 @@ form.contact-form input[type="submit"]:hover {
     margin-right: 0;
   }
 }
-/** @define SocialIcons; use strict */
+/** @define SocialIcons; weak */
 .SocialIcons-list li {
   display: inline-block;
   overflow: hidden;

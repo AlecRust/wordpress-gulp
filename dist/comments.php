@@ -29,11 +29,13 @@ if ( post_password_required() ) {
     </h2>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-    <nav id="comment-nav-above" class="Pager" role="navigation" aria-labelledby="comment-nav-above-heading">
-      <p id="comment-nav-above-heading" class="u-hiddenVisually">Comment navigation</p>
-      <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments' ) ); ?></div>
-      <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;' ) ); ?></div>
-    </nav>
+      <nav id="comment-nav-above" class="Pager" role="navigation" aria-labelledby="comment-nav-above-heading">
+        <p id="comment-nav-above-heading" class="u-hiddenVisually">Comment navigation</p>
+        <ul class="Pager-list u-cf">
+          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( '&larr; Older Comments' ) ); ?></li>
+          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments &rarr;' ) ); ?></li>
+        </ul>
+      </nav>
     <?php endif; // check for comment navigation ?>
 
     <ol class="Comments-list">
@@ -46,13 +48,13 @@ if ( post_password_required() ) {
     </ol>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-    <nav id="comment-nav-below" class="Pager" role="navigation" aria-labelledby="comment-nav-below-heading">
-      <p id="comment-nav-below-heading" class="u-hiddenVisually">Comment navigation</p>
-      <ul class="Pager-list u-cf">
-        <li class="Pager-previous"><?php previous_comments_link( __( 'Older Comments' ) ); ?></li>
-        <li class="Pager-next"><?php next_comments_link( __( 'Newer Comments' ) ); ?></li>
-      </ul>
-    </nav>
+      <nav id="comment-nav-below" class="Pager" role="navigation" aria-labelledby="comment-nav-below-heading">
+        <p id="comment-nav-below-heading" class="u-hiddenVisually">Comment navigation</p>
+        <ul class="Pager-list u-cf">
+          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( '&larr; Older Comments' ) ); ?></li>
+          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments &rarr;' ) ); ?></li>
+        </ul>
+      </nav>
     <?php endif; // check for comment navigation ?>
 
   <?php endif; // have_comments() ?>

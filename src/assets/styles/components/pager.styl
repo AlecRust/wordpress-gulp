@@ -1,4 +1,4 @@
-/** @define Pager; use strict */
+/** @define Pager */
 
 @require "../base/functions";
 
@@ -8,34 +8,34 @@
 .Pager-list
   text-align center
 
-  li
-    display inline
+.Pager-listItem
+  display inline
 
-    a
-      display inline-block
-      text-decoration none
-      border 1px solid #ddd
-      border-radius 15px
-      color #666
-      background-color #efefef
-      padding px(5) px(14)
+.Pager-link
+  display inline-block
+  text-decoration none
+  border 1px solid #ddd
+  border-radius 15px
+  color #666
+  background-color #efefef
+  padding px(5) px(14)
 
-      &:hover
-        text-decoration none
-        border-color #ccc
-        background-color #fff
+  &:hover
+    text-decoration none
+    border-color #ccc
+    background-color #fff
 
-      &:after
-        color #777
+  &:after
+    color #777
 
 .Pager-next
   float right
 
-  a:after
+  .Pager-link:after
     content " →"
 
 .Pager-previous
   float left
 
-  a:before
+  .Pager-link:before
     content "← "

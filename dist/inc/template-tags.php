@@ -19,17 +19,14 @@ function wpg_paging_nav() {
   ?>
   <nav class="Pager" role="navigation" aria-labelledby="posts-nav-heading">
     <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
-    <div class="nav-links">
-
+    <ul class="Pager-list u-cf">
       <?php if ( get_next_posts_link() ) : ?>
-      <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts' ) ); ?></div>
+        <li class="Pager-listItem Pager-previous"><?php next_posts_link( __( '&larr; Older posts' ) ); ?></li>
       <?php endif; ?>
-
       <?php if ( get_previous_posts_link() ) : ?>
-      <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>' ) ); ?></div>
+        <li class="Pager-listItem Pager-next"><?php previous_posts_link( __( 'Newer posts &rarr;' ) ); ?></li>
       <?php endif; ?>
-
-    </div>
+    </ul>
   </nav>
   <?php
 }
@@ -52,8 +49,8 @@ function wpg_post_nav() {
     <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
     <ul class="Pager-list u-cf">
       <?php
-        previous_post_link( '<li class="Pager-previous">%link</li>', _x( '%title', 'Previous post link' ) );
-        next_post_link(     '<li class="Pager-next">%link</li>',     _x( '%title', 'Next post link' ) );
+        previous_post_link( '<li class="Pager-listItem Pager-previous">%link</li>', _x( '%title', 'Previous post link' ) );
+        next_post_link(     '<li class="Pager-listItem Pager-next">%link</li>',     _x( '%title', 'Next post link' ) );
       ?>
     </ul>
   </nav>
