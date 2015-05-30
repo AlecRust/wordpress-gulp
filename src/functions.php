@@ -31,7 +31,7 @@ function wpg_setup() {
    *
    * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
    */
-  //add_theme_support( 'post-thumbnails' );
+  // add_theme_support( 'post-thumbnails' );
 
   // This theme uses wp_nav_menu() for the main menu and social icons.
   register_nav_menus( array(
@@ -44,26 +44,35 @@ function wpg_setup() {
    * to output valid HTML5.
    */
   add_theme_support( 'html5', array(
-    'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
   ) );
 
   /*
    * Enable support for Post Formats.
    * See http://codex.wordpress.org/Post_Formats
    */
-  add_theme_support( 'post-formats', array(
-    'aside', 'image', 'video', 'quote', 'link'
-  ) );
+  // add_theme_support( 'post-formats', array(
+  //   'aside', 'image', 'video', 'quote', 'link'
+  // ) );
 }
 endif; // wpg_setup
 add_action( 'after_setup_theme', 'wpg_setup' );
 
 /**
- * Set theme content width
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
  */
-if (!isset($content_width)) {
-  $content_width = 952;
+function wpg_content_width() {
+  $GLOBALS['content_width'] = apply_filters( 'wpg_content_width', 952 );
 }
+add_action( 'after_setup_theme', 'wpg_content_width', 0 );
 
 /**
  * Register widget area.
@@ -104,3 +113,8 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';

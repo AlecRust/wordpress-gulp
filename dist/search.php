@@ -12,7 +12,7 @@ get_header(); ?>
   <?php if ( have_posts() ) : ?>
 
     <header class="PageHeader">
-      <h1 class="PageHeader-title"><?php printf( __( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+      <h1 class="PageHeader-title"><?php printf( esc_html__( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
     </header>
 
     <?php while ( have_posts() ) : the_post(); ?>
@@ -28,7 +28,7 @@ get_header(); ?>
 
     <?php endwhile; ?>
 
-    <?php wpg_paging_nav(); ?>
+    <?php the_posts_navigation(); ?>
 
   <?php else : ?>
 
