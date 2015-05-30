@@ -3443,7 +3443,7 @@ form.contact-form input[type="submit"]:hover {
   background: url("assets/images/site-logo.svg") no-repeat;
   background-size: 190px 165px;
 }
-/** @define Pager */
+/** @define Pager; weak */
 .Pager {
   padding: 1.25rem;
 }
@@ -3453,7 +3453,7 @@ form.contact-form input[type="submit"]:hover {
 .Pager-listItem {
   display: inline;
 }
-.Pager-link {
+.Pager-listItem a {
   display: inline-block;
   text-decoration: none;
   border: 1px solid #ddd;
@@ -3462,24 +3462,24 @@ form.contact-form input[type="submit"]:hover {
   background-color: #efefef;
   padding: 0.313rem 0.875rem;
 }
-.Pager-link:hover {
+.Pager-listItem a:hover {
   text-decoration: none;
   border-color: #ccc;
   background-color: #fff;
 }
-.Pager-link:after {
+.Pager-listItem a:after {
   color: #777;
 }
 .Pager-next {
   float: right;
 }
-.Pager-next .Pager-link:after {
+.Pager-next a:after {
   content: " →";
 }
 .Pager-previous {
   float: left;
 }
-.Pager-previous .Pager-link:before {
+.Pager-previous a:before {
   content: "← ";
 }
 .Button {

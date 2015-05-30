@@ -32,15 +32,6 @@ function wpg_slug_body_class( $classes ) {
 add_filter( 'body_class', 'wpg_slug_body_class' );
 
 /**
- * Adds custom class to next/previous links
- */
-function wpg_posts_link_attributes() {
-    return 'class="Pager-link"';
-}
-add_filter('next_posts_link_attributes', 'wpg_posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'wpg_posts_link_attributes');
-
-/**
  * Sets the authordata global when viewing an author archive.
  *
  * This provides backwards compatibility with

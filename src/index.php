@@ -28,7 +28,7 @@ get_header(); ?>
 
     <?php endwhile; ?>
 
-    <?php the_posts_navigation(); ?>
+    <?php wpg_posts_navigation(); ?>
 
   <?php else : ?>
 
