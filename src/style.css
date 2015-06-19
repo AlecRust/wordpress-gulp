@@ -3313,7 +3313,7 @@ form.contact-form input[type="submit"]:hover {
   border-radius: 0;
   margin-bottom: 0.625rem;
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .Comments input[type="text"],
   .Comments input[type="email"],
   .Comments input[type="url"] {
@@ -3322,11 +3322,11 @@ form.contact-form input[type="submit"]:hover {
 }
 /** @define Container */
 .Container {
-  max-width: 62em;
+  max-width: 992px;
   margin-left: auto;
   margin-right: auto;
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .Container-mainColumn {
     float: left;
     width: 75%;
@@ -3392,7 +3392,7 @@ form.contact-form input[type="submit"]:hover {
   margin-bottom: 1.25rem;
   padding: 0 1.25rem;
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .Entry-content .alignleft {
     float: left;
     margin: 0 1.25rem 1.25rem 0;
@@ -3643,7 +3643,7 @@ form.contact-form input[type="submit"]:hover {
   color: #444;
   background-color: #c9c9c9;
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .Sidebar {
     float: right;
     width: 25%;
@@ -3651,10 +3651,9 @@ form.contact-form input[type="submit"]:hover {
   }
 }
 .SiteFooter {
-  position: relative;
   text-align: center;
   font-size: 0.938rem;
-  border-top: 3px solid #bbb;
+  background-color: #ee5455;
   padding: 1.875rem 1.25rem;
 }
 .SiteFooter .SocialIcons-list {
@@ -3663,18 +3662,18 @@ form.contact-form input[type="submit"]:hover {
 .SiteFooter-copyright {
   margin-bottom: 1.25rem;
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .SiteFooter {
     padding: 3.125rem 1.25rem 2.5rem;
   }
   .SiteFooter .SocialIcons-list {
-    float: left;
+    float: right;
+    margin-bottom: 0;
   }
   .SiteFooter-copyright {
-    position: absolute;
-    bottom: 40px;
-    left: 20px;
+    float: left;
     margin-bottom: 0;
+    padding-top: 6px;
   }
 }
 /** @define SiteHeader */
@@ -3700,7 +3699,7 @@ form.contact-form input[type="submit"]:hover {
 .SiteHeader-search {
   padding-top: 1.25rem;
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .SiteHeader-logo {
     float: left;
     margin: 1.25rem 0 0 1.25rem;
@@ -3721,7 +3720,7 @@ form.contact-form input[type="submit"]:hover {
     padding-top: 0;
   }
 }
-@media (min-width: 62em) {
+@media (min-width: 992px) {
   .SiteHeader-tagline {
     right: 0;
   }
@@ -3751,7 +3750,7 @@ form.contact-form input[type="submit"]:hover {
 .SiteMenu-listItem a:hover {
   background-color: #ddd;
 }
-@media (min-width: 30em) {
+@media (min-width: 480px) {
   .SiteMenu-list {
     text-align: center;
   }
@@ -3763,7 +3762,7 @@ form.contact-form input[type="submit"]:hover {
     padding-right: 1.25rem;
   }
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .SiteMenu-list {
     text-align: right;
     margin-right: 0.938rem;
@@ -3772,10 +3771,29 @@ form.contact-form input[type="submit"]:hover {
     font-size: 1.188rem;
   }
 }
-@media (min-width: 62em) {
+@media (min-width: 992px) {
   .SiteMenu-list {
     margin-right: 0;
   }
+}
+/** @define Site */
+.Site {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.Site-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /** @define SocialIcons; weak */
 .SocialIcons-list li {
@@ -3803,7 +3821,7 @@ form.contact-form input[type="submit"]:hover {
 .SocialIcons-iconLinkedin a {
   background-image: url("assets/images/social-icon-linkedin.svg");
 }
-@media (min-width: 48.875em) {
+@media (min-width: 768px) {
   .SocialIcons-list li {
     margin: 0 0.625rem 0 0;
   }

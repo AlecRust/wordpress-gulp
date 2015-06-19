@@ -13,30 +13,35 @@
 
 get_header(); ?>
 
-  <main class="Container-mainColumn" role="main">
+  <div class="Container">
 
-  <?php if ( have_posts() ) : ?>
+    <main class="Container-mainColumn" role="main">
 
-    <?php while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : ?>
 
-      <?php
-        /*
-         * Include the Post-Format-specific template for the content
-         */
-        get_template_part( 'template-parts/content', get_post_format() );
-      ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php endwhile; ?>
+          <?php
+            /*
+             * Include the Post-Format-specific template for the content
+             */
+            get_template_part( 'template-parts/content', get_post_format() );
+          ?>
 
-    <?php wpg_posts_navigation(); ?>
+        <?php endwhile; ?>
 
-  <?php else : ?>
+        <?php wpg_posts_navigation(); ?>
 
-    <?php get_template_part( 'template-parts/content', 'none' ); ?>
+      <?php else : ?>
 
-  <?php endif; ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-  </main>
+      <?php endif; ?>
 
-<?php get_sidebar(); ?>
+    </main>
+
+    <?php get_sidebar(); ?>
+
+  </div>
+
 <?php get_footer(); ?>

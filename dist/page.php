@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-  <main role="main">
+  <main class="Container" role="main">
 
     <?php while ( have_posts() ) : the_post(); ?>
 

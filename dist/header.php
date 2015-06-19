@@ -21,41 +21,41 @@
 
 <body <?php body_class(); ?>>
 
-  <!--[if lt IE 9]>
-    <p class="BrowserBar">
-      You are using an <strong>outdated</strong> browser. Please
-      <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-    </p>
-  <![endif]-->
+  <div class="Site">
 
-  <header class="SiteHeader" role="banner">
-    <div class="Container">
-      <div class="SiteHeader-wrapBranding u-cf">
-        <a class="SiteHeader-logo u-textHide" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-          <?php bloginfo( 'name' ); ?>
-        </a>
-        <p class="SiteHeader-tagline">
-          <?php bloginfo( 'description' ); ?>
-        </p>
-        <div class="SiteHeader-search">
-          <?php get_search_form(); ?>
+    <!--[if lt IE 9]>
+      <p class="BrowserBar">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <header class="SiteHeader" role="banner">
+      <div class="Container">
+        <div class="SiteHeader-wrapBranding u-cf">
+          <a class="SiteHeader-logo u-textHide" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <?php bloginfo( 'name' ); ?>
+          </a>
+          <p class="SiteHeader-tagline">
+            <?php bloginfo( 'description' ); ?>
+          </p>
+          <div class="SiteHeader-search">
+            <?php get_search_form(); ?>
+          </div>
         </div>
+
+        <nav class="SiteMenu" role="navigation" aria-labelledby="site-nav-heading">
+          <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
+          <?php wp_nav_menu( array(
+            'theme_location' => 'primary',
+            'menu' => 'Primary Menu',
+            'container' => '',
+            'menu_class' => 'SiteMenu-list',
+            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+            'walker' => new wpg_walker_nav_menu
+          ) ); ?>
+        </nav>
       </div>
+    </header>
 
-      <nav class="SiteMenu" role="navigation" aria-labelledby="site-nav-heading">
-        <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
-        <?php wp_nav_menu( array(
-          'theme_location' => 'primary',
-          'menu' => 'Primary Menu',
-          'container' => '',
-          'menu_class' => 'SiteMenu-list',
-          'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-          'walker' => new wpg_walker_nav_menu
-        ) ); ?>
-      </nav>
-    </div>
-  </header>
-
-  <div class="Container">
-
-    <div class="u-cf">
+    <div class="Site-content">

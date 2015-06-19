@@ -6,10 +6,9 @@
 @require "../base/variables";
 
 .SiteFooter
-  position relative // For absolute positioning at $screen-sm
   text-align center
   font-size px($font-size-base - 1)
-  border-top 3px solid $color-brand-gray
+  background-color $color-brand-primary
   padding px(30) px(20)
 
   .SocialIcons-list
@@ -23,10 +22,10 @@
     padding px(50) px(20) px(40)
 
     .SocialIcons-list
-      float left
+      float right
+      margin-bottom 0
 
   .SiteFooter-copyright
-    position absolute
-    bottom 40px
-    left 20px
+    float left
     margin-bottom 0
+    padding-top 6px

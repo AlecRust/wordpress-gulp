@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-  <main role="main">
+  <main class="Container" role="main">
 
     <header class="Entry-header">
       <h1 class="Entry-title">Oops! That page can&rsquo;t be found.</h1>

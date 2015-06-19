@@ -10,24 +10,24 @@
 
     </div>
 
-    <footer class="SiteFooter u-cf" role="contentinfo">
+    <footer class="SiteFooter" role="contentinfo">
+      <div class="Container u-cf">
+        <p class="SiteFooter-copyright">
+          Copyright <time datetime="<?php echo date( 'Y' ); ?>"><?php echo date( 'Y' ); ?></time> -
+          <a class="u-linkClean" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <?php bloginfo( 'name' ); ?>
+          </a> |
+          <a class="u-linkClean" href="<?php echo get_permalink(get_page_by_path( 'terms' )); ?>">Terms</a>
+        </p>
 
-      <p class="SiteFooter-copyright">
-        Copyright <time datetime="<?php echo date( 'Y' ); ?>"><?php echo date( 'Y' ); ?></time> -
-        <a class="u-linkClean" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-          <?php bloginfo( 'name' ); ?>
-        </a> |
-        <a class="u-linkClean" href="<?php echo get_permalink(get_page_by_path( 'terms' )); ?>">Terms</a>
-      </p>
-
-      <?php wp_nav_menu( array(
-        'theme_location' => 'footer',
-        'menu' => 'Social Icons',
-        'container' => '',
-        'menu_class' => 'SocialIcons-list',
-        'items_wrap' => '<ul class="%2$s">%3$s</ul>'
-      ) ); ?>
-
+        <?php wp_nav_menu( array(
+          'theme_location' => 'footer',
+          'menu' => 'Social Icons',
+          'container' => '',
+          'menu_class' => 'SocialIcons-list',
+          'items_wrap' => '<ul class="%2$s">%3$s</ul>'
+        ) ); ?>
+      </div>
     </footer>
 
   </div>

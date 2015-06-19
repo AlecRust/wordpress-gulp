@@ -7,24 +7,29 @@
 
 get_header(); ?>
 
-  <main class="Container-mainColumn" role="main">
+  <div class="Container">
 
-  <?php while ( have_posts() ) : the_post(); ?>
+    <main class="Container-mainColumn" role="main">
 
-    <?php get_template_part( 'template-parts/content', 'single' ); ?>
+      <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php wpg_post_navigation(); ?>
+        <?php get_template_part( 'template-parts/content', 'single' ); ?>
 
-    <?php
-      // If comments are open or we have at least one comment, load up the comment template
-      if ( comments_open() || get_comments_number() ) :
-        comments_template();
-      endif;
-    ?>
+        <?php wpg_post_navigation(); ?>
 
-  <?php endwhile; ?>
+        <?php
+          // If comments are open or we have at least one comment, load up the comment template
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
+        ?>
 
-  </main>
+      <?php endwhile; ?>
 
-<?php get_sidebar(); ?>
+    </main>
+
+    <?php get_sidebar(); ?>
+
+  </div>
+
 <?php get_footer(); ?>

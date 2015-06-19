@@ -24,4 +24,4 @@ The distributable folder is compiled by gulp to `/dist`.
 - Add your Google Analytics ID to `extras.php`
 
 ## Screenshot
-![screenshot](https://i.imgur.com/O0NVUO8.png)
+![screenshot](https://i.imgur.com/6yjbKYe.png)
