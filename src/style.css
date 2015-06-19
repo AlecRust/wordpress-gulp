@@ -3678,6 +3678,9 @@ form.contact-form input[type="submit"]:hover {
   }
 }
 /** @define SiteHeader */
+.SiteHeader {
+  border-top: 6px solid #fbb03b;
+}
 .SiteHeader-wrapBranding {
   position: relative;
   text-align: center;

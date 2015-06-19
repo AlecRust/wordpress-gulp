@@ -28,9 +28,8 @@
     </p>
   <![endif]-->
 
-  <div class="Container">
-
-    <header class="SiteHeader" role="banner">
+  <header class="SiteHeader" role="banner">
+    <div class="Container">
       <div class="SiteHeader-wrapBranding u-cf">
         <a class="SiteHeader-logo u-textHide" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
           <?php bloginfo( 'name' ); ?>
@@ -54,6 +53,9 @@
           'walker' => new wpg_walker_nav_menu
         ) ); ?>
       </nav>
-    </header>
+    </div>
+  </header>
+
+  <div class="Container">
 
     <div class="u-cf">
