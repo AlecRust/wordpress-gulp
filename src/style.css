@@ -3650,6 +3650,7 @@ form.contact-form input[type="submit"]:hover {
     margin-top: 4.563rem;
   }
 }
+/** @define SiteFooter; weak */
 .SiteFooter {
   color: #fff;
   text-align: center;
@@ -3674,6 +3675,54 @@ form.contact-form input[type="submit"]:hover {
     float: left;
     margin-bottom: 0;
     padding-top: 6px;
+  }
+}
+/** @define SiteHeader-menu; weak */
+.SiteHeader-menu {
+  background-color: #f2f2f2;
+}
+.SiteHeader-menuItem.current_page_item,
+.SiteHeader-menuItem.current_page_parent {
+  background-color: #ddd;
+}
+.SiteHeader-menuItem.current_page_item a,
+.SiteHeader-menuItem.current_page_parent a,
+.SiteHeader-menuItem.current_page_item a:hover,
+.SiteHeader-menuItem.current_page_parent a:hover {
+  text-decoration: none;
+}
+.SiteHeader-menuItem a {
+  display: block;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+}
+.SiteHeader-menuItem a:hover {
+  background-color: #ddd;
+}
+@media (min-width: 480px) {
+  .SiteHeader-menuList {
+    text-align: center;
+  }
+  .SiteHeader-menuItem {
+    display: inline-block;
+  }
+  .SiteHeader-menuItem a {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .SiteHeader-menuList {
+    text-align: right;
+    margin-right: 0.938rem;
+  }
+  .SiteHeader-menuItem {
+    font-size: 1.188rem;
+  }
+}
+@media (min-width: 992px) {
+  .SiteHeader-menuList {
+    margin-right: 0;
   }
 }
 /** @define SiteHeader */
@@ -3726,54 +3775,6 @@ form.contact-form input[type="submit"]:hover {
   }
   .SiteHeader-search {
     right: 0;
-  }
-}
-/** @define SiteMenu; weak */
-.SiteMenu {
-  background-color: #f2f2f2;
-}
-.SiteMenu-listItem.current_page_item,
-.SiteMenu-listItem.current_page_parent {
-  background-color: #ddd;
-}
-.SiteMenu-listItem.current_page_item a,
-.SiteMenu-listItem.current_page_parent a,
-.SiteMenu-listItem.current_page_item a:hover,
-.SiteMenu-listItem.current_page_parent a:hover {
-  text-decoration: none;
-}
-.SiteMenu-listItem a {
-  display: block;
-  text-decoration: none;
-  padding: 0.625rem 1.25rem;
-}
-.SiteMenu-listItem a:hover {
-  background-color: #ddd;
-}
-@media (min-width: 480px) {
-  .SiteMenu-list {
-    text-align: center;
-  }
-  .SiteMenu-listItem {
-    display: inline-block;
-  }
-  .SiteMenu-listItem a {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .SiteMenu-list {
-    text-align: right;
-    margin-right: 0.938rem;
-  }
-  .SiteMenu-listItem {
-    font-size: 1.188rem;
-  }
-}
-@media (min-width: 992px) {
-  .SiteMenu-list {
-    margin-right: 0;
   }
 }
 /** @define Site */

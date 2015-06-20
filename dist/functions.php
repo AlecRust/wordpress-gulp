@@ -35,7 +35,7 @@ function wpg_setup() {
 
   // This theme uses wp_nav_menu() for the main menu and social icons.
   register_nav_menus( array(
-    'primary' => __( 'Primary Menu' ),
+    'header' => __( 'Header Menu' ),
     'social' => __( 'Social Icons' ),
   ) );
 
