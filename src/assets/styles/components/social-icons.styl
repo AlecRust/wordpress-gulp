@@ -3,23 +3,23 @@
 @require "../base/functions";
 @require "../base/mixins";
 
-$SocialIcons-icon-size = 35px
+$SocialIcons-icon-size = 30px
 
 .SocialIcons-list
   li
     display inline-block
     overflow hidden // TODO: Find out why this is necessary
-    margin 0 px(5)
+    margin 0 px(10)
 
   a
     square($SocialIcons-icon-size)
     background-size $SocialIcons-icon-size $SocialIcons-icon-size
-    opacity 0.7
+    opacity 0.6
     display block
     font 0/0 a
 
     &:hover
-      opacity 0.75
+      opacity 0.7
 
 .SocialIcons-iconFacebook a
   background-image url("assets/images/social-icon-facebook.svg")
@@ -27,10 +27,13 @@ $SocialIcons-icon-size = 35px
 .SocialIcons-iconTwitter a
   background-image url("assets/images/social-icon-twitter.svg")
 
-.SocialIcons-iconLinkedin a
-  background-image url("assets/images/social-icon-linkedin.svg")
+.SocialIcons-iconInstagram a
+  background-image url("assets/images/social-icon-instagram.svg")
+
+.SocialIcons-iconPinterest a
+  background-image url("assets/images/social-icon-pinterest.svg")
 
 @media (min-width $screen-sm)
   .SocialIcons-list
     li
-      margin 0 px(10) 0 0
+      margin 0 0 0 px(25)

@@ -3651,13 +3651,14 @@ form.contact-form input[type="submit"]:hover {
   }
 }
 .SiteFooter {
+  color: #fff;
   text-align: center;
   font-size: 0.938rem;
   background-color: #ee5455;
   padding: 1.875rem 1.25rem;
 }
-.SiteFooter .SocialIcons-list {
-  margin-bottom: 1.25rem;
+.SiteFooter a {
+  color: #fff;
 }
 .SiteFooter-copyright {
   margin-bottom: 1.25rem;
@@ -3668,7 +3669,6 @@ form.contact-form input[type="submit"]:hover {
   }
   .SiteFooter .SocialIcons-list {
     float: right;
-    margin-bottom: 0;
   }
   .SiteFooter-copyright {
     float: left;
@@ -3799,18 +3799,18 @@ form.contact-form input[type="submit"]:hover {
 .SocialIcons-list li {
   display: inline-block;
   overflow: hidden;
-  margin: 0 0.313rem;
+  margin: 0 0.625rem;
 }
 .SocialIcons-list a {
-  width: 35px;
-  height: 35px;
-  background-size: 35px 35px;
-  opacity: 0.7;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: 0.6;
   display: block;
   font: 0/0 a;
 }
 .SocialIcons-list a:hover {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 .SocialIcons-iconFacebook a {
   background-image: url("assets/images/social-icon-facebook.svg");
@@ -3818,11 +3818,14 @@ form.contact-form input[type="submit"]:hover {
 .SocialIcons-iconTwitter a {
   background-image: url("assets/images/social-icon-twitter.svg");
 }
-.SocialIcons-iconLinkedin a {
-  background-image: url("assets/images/social-icon-linkedin.svg");
+.SocialIcons-iconInstagram a {
+  background-image: url("assets/images/social-icon-instagram.svg");
+}
+.SocialIcons-iconPinterest a {
+  background-image: url("assets/images/social-icon-pinterest.svg");
 }
 @media (min-width: 768px) {
   .SocialIcons-list li {
-    margin: 0 0.625rem 0 0;
+    margin: 0 0 0 1.563rem;
   }
 }
