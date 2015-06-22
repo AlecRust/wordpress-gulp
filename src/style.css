@@ -3377,6 +3377,9 @@ form.contact-form input[type="submit"]:hover {
 .Entry-content li {
   margin-bottom: 0.625rem;
 }
+.Entry-content .lead {
+  font-size: 1.375rem;
+}
 .Entry-content .alignleft,
 .Entry-content .alignright {
   display: block;
