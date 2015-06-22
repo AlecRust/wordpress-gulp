@@ -3664,7 +3664,7 @@ form.contact-form input[type="submit"]:hover {
 .SiteFooter a {
   color: #fff;
 }
-.SiteFooter-copyright {
+.SiteFooter .SocialIcons-list {
   margin-bottom: 1.25rem;
 }
 @media (min-width: 768px) {
@@ -3673,10 +3673,10 @@ form.contact-form input[type="submit"]:hover {
   }
   .SiteFooter .SocialIcons-list {
     float: right;
+    margin-bottom: 0;
   }
   .SiteFooter-copyright {
     float: left;
-    margin-bottom: 0;
     padding-top: 6px;
   }
 }
