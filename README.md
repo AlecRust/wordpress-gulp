@@ -10,7 +10,7 @@ A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task 
 2. Find/replace `WordPress Gulp` with `Theme Name`, `wordpress-gulp` with `theme-name`, and `wpg` with `tn` (your theme's slug)
 3. Find/replace the current WordPress Gulp version number with your starting version number, e.g. `0.1.0`
 4. Customise further theme settings at `/src/assets/styles/style.styl`
-5. Run `npm install` to fetch dependencies
+5. Run `npm install` and `bower install` to fetch dependencies
 6. Run `gulp` to compile theme to `/dist`
 
 ## Development
