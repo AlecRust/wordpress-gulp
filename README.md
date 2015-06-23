@@ -8,9 +8,10 @@ A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task 
 ## Setup
 1. Clone this repo to `/theme-name`
 2. Find/replace `WordPress Gulp` with `Theme Name`, `wordpress-gulp` with `theme-name`, and `wpg` with `tn` (your theme's slug)
-3. Customise further theme settings at `/src/assets/styles/style.styl`
-4. Run `npm install` to fetch dependencies
-5. Run `gulp` to compile theme to `/dist`
+3. Find/replace the current WordPress Gulp version number with your starting version number, e.g. `0.1.0`
+4. Customise further theme settings at `/src/assets/styles/style.styl`
+5. Run `npm install` to fetch dependencies
+6. Run `gulp` to compile theme to `/dist`
 
 ## Development
 1. You'll want to see your theme changes locally as you develop within the `/src` directory. As an example using [MAMP](http://www.mamp.info/) you could symlink `/projects/theme-name/src` -> `/Applications/MAMP/htdocs/site-name/wp-content/themes/theme-name` to achieve this. When up and running, run `gulp watch` to start watching your files for changes.
