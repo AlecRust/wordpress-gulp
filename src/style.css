@@ -3683,7 +3683,6 @@ form.contact-form input[type="submit"]:hover {
     padding-top: 6px;
   }
 }
-/** @define SiteHeader-menu; weak */
 .SiteHeader-menu {
   background-color: #f2f2f2;
 }
