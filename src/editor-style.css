@@ -3001,6 +3001,9 @@ textarea {
   padding: 0 1.25rem;
 }
 @media (min-width: 768px) {
+  .Entry-content {
+    padding: 3.125rem 2.5rem 3.75rem;
+  }
   .Entry-content .alignleft {
     float: left;
     margin: 0 1.25rem 1.25rem 0;
