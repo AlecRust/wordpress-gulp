@@ -13,7 +13,7 @@
     <footer class="SiteFooter" role="contentinfo">
       <div class="Container u-cf">
         <?php wp_nav_menu( array(
-          'theme_location' => 'footer',
+          'theme_location' => 'site_footer_right',
           'menu' => 'Site Footer - Right',
           'container' => '',
           'menu_class' => 'SocialIcons-list',
