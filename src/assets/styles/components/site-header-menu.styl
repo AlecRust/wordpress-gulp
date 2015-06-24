@@ -1,14 +1,13 @@
-//
-// Site header menu
-// --------------------------------------------------
+/** @define SiteHeaderMenu; weak */
 
 @require "../base/functions";
 @require "../base/variables";
 
-.SiteHeader-menu
+.SiteHeaderMenu
   background-color #f2f2f2
 
-.SiteHeader-menuItem
+/* postcss-bem-linter: ignore */
+.SiteHeaderMenu-item
   &.current_page_item a,
   &.current_page_parent a
     background-color #ddd
@@ -22,10 +21,10 @@
       background-color #ddd
 
 @media (min-width $screen-xs)
-  .SiteHeader-menuList
+  .SiteHeaderMenu-list
     text-align center
 
-  .SiteHeader-menuItem
+  .SiteHeaderMenu-item
     display inline-block
 
     a
@@ -33,13 +32,13 @@
       padding-right @padding-left
 
 @media (min-width $screen-sm)
-  .SiteHeader-menuList
+  .SiteHeaderMenu-list
     text-align right
     margin-right px(15)
 
-  .SiteHeader-menuItem
+  .SiteHeaderMenu-item
     font-size px($font-size-base + 3)
 
 @media (min-width $screen-md)
-  .SiteHeader-menuList
+  .SiteHeaderMenu-list
     margin-right 0

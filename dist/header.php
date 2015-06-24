@@ -44,13 +44,13 @@
           </div>
         </div>
 
-        <nav class="SiteHeader-menu" role="navigation" aria-labelledby="site-nav-heading">
+        <nav class="SiteHeaderMenu" role="navigation" aria-labelledby="site-nav-heading">
           <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
           <?php wp_nav_menu( array(
             'theme_location' => 'header',
             'menu' => 'Header Menu',
             'container' => '',
-            'menu_class' => 'SiteHeader-menuList',
+            'menu_class' => 'SiteHeaderMenu-list',
             'items_wrap' => '<ul class="%2$s">%3$s</ul>'
           ) ); ?>
         </nav>
