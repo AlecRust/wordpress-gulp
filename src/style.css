@@ -3690,18 +3690,18 @@ form.contact-form input[type="submit"]:hover {
 .SiteHeader-menuItem.current_page_parent {
   background-color: #ddd;
 }
-.SiteHeader-menuItem.current_page_item .SiteHeader-menuItemLink,
-.SiteHeader-menuItem.current_page_parent .SiteHeader-menuItemLink,
-.SiteHeader-menuItem.current_page_item .SiteHeader-menuItemLink:hover,
-.SiteHeader-menuItem.current_page_parent .SiteHeader-menuItemLink:hover {
+.SiteHeader-menuItem.current_page_item a,
+.SiteHeader-menuItem.current_page_parent a,
+.SiteHeader-menuItem.current_page_item a:hover,
+.SiteHeader-menuItem.current_page_parent a:hover {
   text-decoration: none;
 }
-.SiteHeader-menuItemLink {
+.SiteHeader-menuItem a {
   display: block;
   text-decoration: none;
   padding: 0.625rem 1.25rem;
 }
-.SiteHeader-menuItemLink:hover {
+.SiteHeader-menuItem a:hover {
   background-color: #ddd;
 }
 @media (min-width: 480px) {
@@ -3711,7 +3711,7 @@ form.contact-form input[type="submit"]:hover {
   .SiteHeader-menuItem {
     display: inline-block;
   }
-  .SiteHeader-menuItemLink {
+  .SiteHeader-menuItem a {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }

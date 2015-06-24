@@ -51,8 +51,7 @@
             'menu' => 'Header Menu',
             'container' => '',
             'menu_class' => 'SiteHeader-menuList',
-            'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-            'walker' => new wpg_walker_nav_menu
+            'items_wrap' => '<ul class="%2$s">%3$s</ul>'
           ) ); ?>
         </nav>
       </div>
