@@ -13,17 +13,17 @@
   &.current_page_parent
     background-color #ddd
 
-    a,
-    a:hover
+    .SiteHeader-menuItemLink,
+    .SiteHeader-menuItemLink:hover
       text-decoration none
 
-  a
-    display block
-    text-decoration none
-    padding px(10) px(20)
+.SiteHeader-menuItemLink
+  display block
+  text-decoration none
+  padding px(10) px(20)
 
-    &:hover
-      background-color #ddd
+  &:hover
+    background-color #ddd
 
 @media (min-width $screen-xs)
   .SiteHeader-menuList
@@ -32,9 +32,9 @@
   .SiteHeader-menuItem
     display inline-block
 
-    a
-      padding-left px(20)
-      padding-right @padding-left
+  .SiteHeader-menuItemLink
+    padding-left px(20)
+    padding-right @padding-left
 
 @media (min-width $screen-sm)
   .SiteHeader-menuList

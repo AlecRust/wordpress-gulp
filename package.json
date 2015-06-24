@@ -33,7 +33,7 @@
     "jshint-stylish": "^2.0.1",
     "opn": "^2.0.1",
     "postcss-at2x": "^1.2.3",
-    "postcss-bem-linter": "^0.3.0",
+    "postcss-bem-linter": "^0.4.0",
     "require-dir": "^0.3.0"
   }
 }

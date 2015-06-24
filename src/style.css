@@ -3441,7 +3441,6 @@ form.contact-form input[type="submit"]:hover {
 .PageHeader-title {
   color: #bbb;
 }
-/* WordPress Login Page */
 .login #login h1 a {
   width: 190px;
   height: 165px;
@@ -3690,18 +3689,18 @@ form.contact-form input[type="submit"]:hover {
 .SiteHeader-menuItem.current_page_parent {
   background-color: #ddd;
 }
-.SiteHeader-menuItem.current_page_item a,
-.SiteHeader-menuItem.current_page_parent a,
-.SiteHeader-menuItem.current_page_item a:hover,
-.SiteHeader-menuItem.current_page_parent a:hover {
+.SiteHeader-menuItem.current_page_item .SiteHeader-menuItemLink,
+.SiteHeader-menuItem.current_page_parent .SiteHeader-menuItemLink,
+.SiteHeader-menuItem.current_page_item .SiteHeader-menuItemLink:hover,
+.SiteHeader-menuItem.current_page_parent .SiteHeader-menuItemLink:hover {
   text-decoration: none;
 }
-.SiteHeader-menuItem a {
+.SiteHeader-menuItemLink {
   display: block;
   text-decoration: none;
   padding: 0.625rem 1.25rem;
 }
-.SiteHeader-menuItem a:hover {
+.SiteHeader-menuItemLink:hover {
   background-color: #ddd;
 }
 @media (min-width: 480px) {
@@ -3711,7 +3710,7 @@ form.contact-form input[type="submit"]:hover {
   .SiteHeader-menuItem {
     display: inline-block;
   }
-  .SiteHeader-menuItem a {
+  .SiteHeader-menuItemLink {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
