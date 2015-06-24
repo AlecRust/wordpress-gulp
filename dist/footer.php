@@ -14,7 +14,7 @@
       <div class="Container u-cf">
         <?php wp_nav_menu( array(
           'theme_location' => 'footer',
-          'menu' => 'Social Icons',
+          'menu' => 'Site Footer - Right',
           'container' => '',
           'menu_class' => 'SocialIcons-list',
           'items_wrap' => '<ul class="%2$s">%3$s</ul>'

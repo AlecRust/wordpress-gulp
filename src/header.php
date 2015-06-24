@@ -48,7 +48,7 @@
           <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
           <?php wp_nav_menu( array(
             'theme_location' => 'header',
-            'menu' => 'Header Menu',
+            'menu' => 'Site Header',
             'container' => '',
             'menu_class' => 'SiteHeaderMenu-list',
             'items_wrap' => '<ul class="%2$s">%3$s</ul>'
