@@ -3686,15 +3686,9 @@ form.contact-form input[type="submit"]:hover {
 .SiteHeader-menu {
   background-color: #f2f2f2;
 }
-.SiteHeader-menuItem.current_page_item,
-.SiteHeader-menuItem.current_page_parent {
-  background-color: #ddd;
-}
 .SiteHeader-menuItem.current_page_item a,
-.SiteHeader-menuItem.current_page_parent a,
-.SiteHeader-menuItem.current_page_item a:hover,
-.SiteHeader-menuItem.current_page_parent a:hover {
-  text-decoration: none;
+.SiteHeader-menuItem.current_page_parent a {
+  background-color: #ddd;
 }
 .SiteHeader-menuItem a {
   display: block;
