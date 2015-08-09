@@ -13,7 +13,7 @@ WordPress starter theme called WordPress Gulp, powered by gulp.
 
 == Description ==
 
-A simple WordPress starter theme powered by gulp for task running, using Stylus as CSS preprocessor and SUIT CSS for UI components. Base WordPress theme files are from Underscores and Jetpack support is baked in. jQuery is provided via Bower.
+A simple WordPress starter theme powered by gulp for task running, using Stylus as CSS preprocessor and SUIT CSS for UI components. Base WordPress theme files are from Underscores and Jetpack support is baked in.
 
 == Installation ==
 

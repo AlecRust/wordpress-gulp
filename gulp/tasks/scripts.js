@@ -10,10 +10,10 @@ gulp.task('jshint', function () {
     .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('bower', ['jshint'], function() {
-  return gulp.src([paths.scripts.jqueryPath, paths.scripts.jsSrc])
+gulp.task('compile', ['jshint'], function() {
+  return gulp.src(paths.scripts.jsSrc)
     .pipe(concat('script.js'))
     .pipe(gulp.dest(paths.scripts.dest));
 });
 
-gulp.task('scripts', ['jshint', 'bower']);
+gulp.task('scripts', ['jshint', 'compile']);
