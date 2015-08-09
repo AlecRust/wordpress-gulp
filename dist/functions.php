@@ -82,7 +82,17 @@ add_action( 'after_setup_theme', 'wpg_content_width', 0 );
 function wpg_widgets_init() {
   register_sidebar( array(
     'name'          => __( 'Blog Sidebar' ),
-    'id'            => 'sidebar-1',
+    'id'            => 'blog-sidebar',
+    'description'   => '',
+    'before_widget' => '<div class="Sidebar-widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2 class="Sidebar-title">',
+    'after_title'   => '</h2>',
+  ) );
+
+  register_sidebar( array(
+    'name'          => __( 'Contact Sidebar' ),
+    'id'            => 'contact-sidebar',
     'description'   => '',
     'before_widget' => '<div class="Sidebar-widget %2$s">',
     'after_widget'  => '</div>',
