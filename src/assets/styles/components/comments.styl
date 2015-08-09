@@ -17,9 +17,18 @@
   input[type="email"],
   input[type="url"],
   #comment
-    InputText()
     width 100%
+    border 2px solid $color-brand-gray
+    border-radius $border-radius-base
     margin-bottom px(15)
+    padding px(6) px(9) px(7)
+
+    &:hover
+      border-color darken($color-brand-gray, 10%)
+
+    &:focus
+      outline 0
+      border-color $color-brand-pink
 
   .form-submit
     text-align center

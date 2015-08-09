@@ -6,11 +6,10 @@
 @require "../components/button";
 
 // Text input
-// TODO: Refactor so these aren't mixins
-InputText()
+.InputText
   border 2px solid $color-brand-gray
   border-radius $border-radius-base
-  padding px(7) px(9)
+  padding px(6) px(9) px(7)
 
   &:hover
     border-color darken($color-brand-gray, 10%)
@@ -19,34 +18,29 @@ InputText()
     outline 0
     border-color $color-brand-pink
 
-.InputText
-  InputText()
-
-InputText--sm()
-  font-size px($font-size-base - 2)
-  border-width 1px
-  padding px(4) px(6)
-
 .InputText--sm
-  InputText--sm()
+  font-size px(13)
+  border-width 1px
+  padding px(3) px(6) px(4)
 
-// Jetpack contact form
-// Additional specificity to override grunion.css
-form.contact-form
-  input[type="text"],
-  input[type="email"],
-  textarea
-    InputText()
+.InputLabel
+  font-weight bold
+
+.InputRequired
+  color $alert-danger-text
+  font-weight normal
+
+// Contact Form 7
+div.wpcf7
+  .InputText
     width 100%
-    max-width none
     margin-bottom px(15)
 
-  .contact-submit
-    text-align center
+  .wpcf7-not-valid-tip
+    font-size 80%
+    color $alert-danger-text
+    margin px(-10) 0 px(10)
 
-  // Custom button styles required here due to lack of
-  // flexibility with Jetpack Contact Form class names
-  input[type="submit"]
-    Button()
-    Button--lg()
-    Button--success()
+  img.ajax-loader
+    display block
+    margin px(10) auto

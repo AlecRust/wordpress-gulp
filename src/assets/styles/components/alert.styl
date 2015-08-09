@@ -1,0 +1,69 @@
+//
+// Alerts
+// --------------------------------------------------
+
+@require "../base/functions";
+@require "../base/variables";
+
+.Alert
+  margin-bottom px(20)
+  padding px(20)
+
+  // Provide class for links that match alerts
+  .Alert-link
+    font-weight bold
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul
+    margin-bottom 0
+
+  > p + p
+    margin-top px(5)
+
+// Modifiers
+.Alert--success
+  color $alert-success-text
+  background-color $alert-success-bg
+
+  .Alert-link
+    color darken($alert-success-text, 10%)
+
+.Alert--info
+  color $alert-info-text
+  background-color $alert-info-bg
+
+  .Alert-link
+    color darken($alert-info-text, 10%)
+
+.Alert--warning
+  color $alert-warning-text
+  background-color $alert-warning-bg
+
+  .Alert-link
+    color darken($alert-warning-text, 10%)
+
+.Alert--danger
+  color $alert-danger-text
+  background-color $alert-danger-bg
+
+  .Alert-link
+    color darken($alert-danger-text, 10%)
+
+// Contact Form 7 alerts
+div.wpcf7-response-output
+  @extend .Alert
+  border 0
+  margin px(20) 0
+
+  &.wpcf7-mail-sent-ok
+    @extend .Alert--success
+
+  &.wpcf7-mail-sent-ng
+    @extend .Alert--info
+
+  &.wpcf7-spam-warning
+    @extend .Alert--warning
+
+  &.wpcf7-validation-errors
+    @extend .Alert--danger
