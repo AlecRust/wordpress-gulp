@@ -15,7 +15,7 @@
     "suitcss-components": "^0.3.0"
   },
   "devDependencies": {
-    "cssnext": "^1.8.2",
+    "cssnext": "^1.8.3",
     "del": "^1.2.0",
     "gulp": "^3.9.0",
     "gulp-cache": "^0.2.10",
@@ -33,7 +33,7 @@
     "jshint-stylish": "^2.0.1",
     "opn": "^3.0.2",
     "postcss-at2x": "^1.4.0",
-    "postcss-bem-linter": "^0.4.0",
+    "postcss-bem-linter": "^0.6.0",
     "require-dir": "^0.3.0"
   }
 }
