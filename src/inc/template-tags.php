@@ -23,10 +23,10 @@ function wpg_posts_navigation() {
     <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
     <ul class="Pager-list u-cf">
       <?php if ( get_next_posts_link() ) : ?>
-        <li class="Pager-listItem Pager-previous"><?php next_posts_link( esc_html__( '&larr; Older posts' ) ); ?></li>
+        <li class="Pager-listItem Pager-previous"><?php next_posts_link( esc_html__( 'Older posts' ) ); ?></li>
       <?php endif; ?>
       <?php if ( get_previous_posts_link() ) : ?>
-        <li class="Pager-listItem Pager-next"><?php previous_posts_link( esc_html__( 'Newer posts &rarr;' ) ); ?></li>
+        <li class="Pager-listItem Pager-next"><?php previous_posts_link( esc_html__( 'Newer posts' ) ); ?></li>
       <?php endif; ?>
     </ul>
   </nav>

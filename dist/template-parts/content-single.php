@@ -8,7 +8,7 @@
   <header class="Entry-header">
     <?php the_title( '<h1 class="Entry-title">', '</h1>' ); ?>
 
-    <div class="Entry-meta u-hiddenVisually">
+    <div class="Entry-meta">
       <?php wpg_posted_on(); ?>
     </div>
   </header>
