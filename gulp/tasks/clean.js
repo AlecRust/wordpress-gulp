@@ -4,6 +4,6 @@ var paths = require('../paths');
 
 gulp.task('clean', function () {
   del([paths.styles.tmpDir, paths.distDir]).then(function () {
-      console.log('Deleted the .css-compiled and /dist directory');
+      console.log('Temp and dist directories deleted.');
   });
 });
