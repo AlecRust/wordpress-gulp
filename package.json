@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "cssnext": "^1.8.4",
-    "del": "^2.0.0",
+    "del": "^2.0.1",
     "gulp": "^3.9.0",
     "gulp-cache": "^0.3.0",
     "gulp-clip-empty-files": "^0.1.1",
