@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "cssnext": "^1.8.4",
-    "del": "^2.0.1",
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-cache": "^0.3.0",
     "gulp-clip-empty-files": "^0.1.1",
@@ -28,12 +28,12 @@
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.0.0",
     "gulp-size": "^2.0.0",
-    "gulp-stylus": "^2.0.6",
-    "gulp-uglify": "^1.4.0",
+    "gulp-stylus": "^2.0.7",
+    "gulp-uglify": "^1.4.1",
     "jshint-stylish": "^2.0.1",
     "opn": "^3.0.2",
-    "postcss-at2x": "^1.4.0",
-    "postcss-bem-linter": "^1.0.1",
+    "postcss-at2x": "^2.0.0",
+    "postcss-bem-linter": "^1.1.0",
     "postcss-import": "^7.0.0",
     "require-dir": "^0.3.0"
   }
