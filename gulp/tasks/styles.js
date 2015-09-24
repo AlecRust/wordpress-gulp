@@ -1,6 +1,7 @@
 var path =             require('path');
 var gulp =             require('gulp');
 var stylus =           require('gulp-stylus');
+var stylint =          require('gulp-stylint');
 var postcss =          require('gulp-postcss');
 var bemLinter =        require('postcss-bem-linter');
 var atImport =         require('postcss-import');
@@ -19,6 +20,8 @@ var paths =            require('../paths');
  */
 gulp.task('stylus', function() {
   return gulp.src(paths.styles.stylusSrc)
+    .pipe(stylint())
+    .pipe(stylint.reporter())
     .pipe(stylus().on('error', notifyError))
     .pipe(gulp.dest(paths.styles.tmpDir));
 });
