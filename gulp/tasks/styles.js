@@ -5,6 +5,7 @@ var postcss =     require('gulp-postcss');
 var at2x =        require('postcss-at2x');
 var clip =        require('gulp-clip-empty-files');
 var bemLinter =   require('postcss-bem-linter');
+var atImport =    require('postcss-import');
 var cssnext =     require('cssnext');
 var del =         require('del');
 var notifyError = require('../notifyError');
@@ -36,13 +37,14 @@ gulp.task('bemlint', ['stylus'], function() {
 gulp.task('postcss', ['stylus', 'bemlint'], function() {
   return gulp.src(path.join(paths.styles.tmpDir, '*.css'))
     .pipe(postcss([
+      atImport(),
+      at2x(),
       cssnext({
-      url: false,
-      features: {
-        rem: false
-      }
-    }),
-    at2x()
+        url: false,
+        features: {
+          rem: false
+        }
+      })
     ]).on('error', notifyError))
     .pipe(gulp.dest(paths.styles.dest));
 });

@@ -3021,6 +3021,21 @@ div.wpcf7 .InputText {
   width: 100%;
   margin-bottom: 0.938rem;
 }
+div.wpcf7 .InputCheckbox {
+  display: block;
+  margin-bottom: 0.938rem;
+}
+div.wpcf7 .InputCheckbox .wpcf7-list-item {
+  margin-left: 0;
+}
+div.wpcf7 .InputCheckbox label {
+  cursor: pointer;
+  padding-left: 1.25rem;
+}
+div.wpcf7 .InputCheckbox input {
+  margin-top: 0.25rem;
+  margin-left: -1.25rem;
+}
 div.wpcf7 .wpcf7-not-valid-tip {
   font-size: 80%;
   color: #a94442;
@@ -3261,6 +3276,21 @@ div.wpcf7-response-output {
 div.wpcf7 .InputText {
   width: 100%;
   margin-bottom: 0.938rem;
+}
+div.wpcf7 .InputCheckbox {
+  display: block;
+  margin-bottom: 0.938rem;
+}
+div.wpcf7 .InputCheckbox .wpcf7-list-item {
+  margin-left: 0;
+}
+div.wpcf7 .InputCheckbox label {
+  cursor: pointer;
+  padding-left: 1.25rem;
+}
+div.wpcf7 .InputCheckbox input {
+  margin-top: 0.25rem;
+  margin-left: -1.25rem;
 }
 div.wpcf7 .wpcf7-not-valid-tip {
   font-size: 80%;
@@ -3579,6 +3609,21 @@ div.wpcf7 img.ajax-loader {
 div.wpcf7 .InputText {
   width: 100%;
   margin-bottom: 0.938rem;
+}
+div.wpcf7 .InputCheckbox {
+  display: block;
+  margin-bottom: 0.938rem;
+}
+div.wpcf7 .InputCheckbox .wpcf7-list-item {
+  margin-left: 0;
+}
+div.wpcf7 .InputCheckbox label {
+  cursor: pointer;
+  padding-left: 1.25rem;
+}
+div.wpcf7 .InputCheckbox input {
+  margin-top: 0.25rem;
+  margin-left: -1.25rem;
 }
 div.wpcf7 .wpcf7-not-valid-tip {
   font-size: 80%;

@@ -34,6 +34,7 @@
     "opn": "^3.0.2",
     "postcss-at2x": "^1.4.0",
     "postcss-bem-linter": "^1.0.1",
+    "postcss-import": "^7.0.0",
     "require-dir": "^0.3.0"
   }
 }
