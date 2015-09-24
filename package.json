@@ -15,7 +15,7 @@
     "suitcss-components": "^0.3.0"
   },
   "devDependencies": {
-    "cssnext": "^1.8.4",
+    "autoprefixer": "^6.0.3",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-cache": "^0.3.0",
@@ -34,6 +34,9 @@
     "opn": "^3.0.2",
     "postcss-at2x": "^2.0.0",
     "postcss-bem-linter": "^1.1.0",
+    "postcss-calc": "^5.0.0",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
     "require-dir": "^0.3.0"
   }

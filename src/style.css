@@ -2462,9 +2462,9 @@ ul {
 
 .u-textKern {
   text-rendering: optimizeLegibility; /* 1 */
-  -webkit-font-feature-settings: "kern" 1, "kern";
-     -moz-font-feature-settings: "kern" 1, "kern";
-          font-feature-settings: "kern" 1, "kern"; /* 2 */
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1; /* 2 */
   -webkit-font-kerning: normal;
      -moz-font-kerning: normal;
           font-kerning: normal; /* 3 */
@@ -2910,8 +2910,8 @@ ul {
   border: 0;
 }
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 html {

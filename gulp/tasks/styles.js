@@ -1,15 +1,18 @@
-var path =        require('path');
-var gulp =        require('gulp');
-var stylus =      require('gulp-stylus');
-var postcss =     require('gulp-postcss');
-var at2x =        require('postcss-at2x');
-var clip =        require('gulp-clip-empty-files');
-var bemLinter =   require('postcss-bem-linter');
-var atImport =    require('postcss-import');
-var cssnext =     require('cssnext');
-var del =         require('del');
-var notifyError = require('../notifyError');
-var paths =       require('../paths');
+var path =             require('path');
+var gulp =             require('gulp');
+var stylus =           require('gulp-stylus');
+var postcss =          require('gulp-postcss');
+var bemLinter =        require('postcss-bem-linter');
+var atImport =         require('postcss-import');
+var at2x =             require('postcss-at2x');
+var customProperties = require('postcss-custom-properties');
+var calc =             require('postcss-calc');
+var customMedia =      require('postcss-custom-media')
+var autoprefixer =     require('autoprefixer');
+var clip =             require('gulp-clip-empty-files');
+var del =              require('del');
+var notifyError =      require('../notifyError');
+var paths =            require('../paths');
 
 /**
  * Compile all Stylus into CSS files, placed in a temp directory
@@ -39,12 +42,10 @@ gulp.task('postcss', ['stylus', 'bemlint'], function() {
     .pipe(postcss([
       atImport(),
       at2x(),
-      cssnext({
-        url: false,
-        features: {
-          rem: false
-        }
-      })
+      customProperties(),
+      calc(),
+      customMedia(),
+      autoprefixer()
     ]).on('error', notifyError))
     .pipe(gulp.dest(paths.styles.dest));
 });
