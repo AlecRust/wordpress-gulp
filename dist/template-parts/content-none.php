@@ -13,7 +13,7 @@
 <div class="Entry-content">
   <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-    <p><?php printf( __( 'Ready to publish the first post? <a href="%1$s">Get started here</a>.' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+    <p><?php printf( __( 'Ready to publish the first post? <a href="%1$s">Get started here</a>.', 'wpg' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
   <?php elseif ( is_search() ) : ?>
 
