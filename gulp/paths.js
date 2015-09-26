@@ -9,7 +9,7 @@ var paths = {
   styles: {
     stylusSrc: path.join(stylesDir, '**/*.styl'),
     dest: srcDir,
-    tmpDir: path.resolve('./.css-compiled')
+    tmpDir: path.resolve('./.temp')
   },
   scripts: {
     jsSrc: path.join(scriptsDir, '**/*.js'),
