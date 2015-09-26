@@ -10,7 +10,9 @@ get_header(); ?>
   <main class="Container" role="main">
 
     <header class="Entry-header">
-      <h1 class="Entry-title">Oops! That page can&rsquo;t be found.</h1>
+      <h1 class="Entry-title">
+        <?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wpg' ); ?>
+      </h1>
     </header>
 
     <div class="Entry-content">

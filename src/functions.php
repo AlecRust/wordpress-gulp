@@ -15,6 +15,14 @@ if ( ! function_exists( 'wpg_setup' ) ) :
  */
 function wpg_setup() {
 
+  /*
+   * Make theme available for translation.
+   * Translations can be filed in the /languages/ directory.
+   * If you're building a theme based on WordPress Gulp, use a find and
+   * replace to change 'wpg' to the name of your theme in all the template files.
+   */
+  load_theme_textdomain( 'wpg', get_template_directory() . '/languages' );
+
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
 
@@ -81,7 +89,7 @@ add_action( 'after_setup_theme', 'wpg_content_width', 0 );
  */
 function wpg_widgets_init() {
   register_sidebar( array(
-    'name'          => __( 'Blog Sidebar' ),
+    'name'          => esc_html__( 'Blog Sidebar', 'wpg' ),
     'id'            => 'blog-sidebar',
     'description'   => '',
     'before_widget' => '<div class="Sidebar-widget %2$s">',
@@ -91,7 +99,7 @@ function wpg_widgets_init() {
   ) );
 
   register_sidebar( array(
-    'name'          => __( 'Contact Sidebar' ),
+    'name'          => esc_html__( 'Contact Sidebar', 'wpg' ),
     'id'            => 'contact-sidebar',
     'description'   => '',
     'before_widget' => '<div class="Sidebar-widget %2$s">',
