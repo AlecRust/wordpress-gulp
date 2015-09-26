@@ -1,7 +1,8 @@
 <?php
 /**
  * Jetpack Compatibility File
- * See: https://jetpack.me/
+ *
+ * @link https://jetpack.me/
  *
  * @package wordpress-gulp
  */
