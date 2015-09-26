@@ -23,7 +23,7 @@ if ( post_password_required() ) {
   <?php if ( have_comments() ) : ?>
     <h2 class="Comments-title">
       <?php
-        printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title' ),
+        printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'wpg' ),
           number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
       ?>
     </h2>
@@ -32,8 +32,8 @@ if ( post_password_required() ) {
       <nav id="comment-nav-above" class="Pager" role="navigation" aria-labelledby="comment-nav-above-heading">
         <p id="comment-nav-above-heading" class="u-hiddenVisually">Comment navigation</p>
         <ul class="Pager-list u-cf">
-          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments' ) ); ?></li>
-          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments' ) ); ?></li>
+          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments', 'wpg' ) ); ?></li>
+          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments', 'wpg' ) ); ?></li>
         </ul>
       </nav>
     <?php endif; // check for comment navigation ?>
@@ -51,8 +51,8 @@ if ( post_password_required() ) {
       <nav id="comment-nav-below" class="Pager" role="navigation" aria-labelledby="comment-nav-below-heading">
         <p id="comment-nav-below-heading" class="u-hiddenVisually">Comment navigation</p>
         <ul class="Pager-list u-cf">
-          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments' ) ); ?></li>
-          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments' ) ); ?></li>
+          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments', 'wpg' ) ); ?></li>
+          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments', 'wpg' ) ); ?></li>
         </ul>
       </nav>
     <?php endif; // check for comment navigation ?>

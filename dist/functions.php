@@ -43,8 +43,8 @@ function wpg_setup() {
 
   // This theme uses wp_nav_menu() for the main menu and social icons.
   register_nav_menus( array(
-    'site_header' => __( 'Site Header' ),
-    'site_footer_right' => __( 'Site Footer - Right' ),
+    'site_header' => __( 'Site Header', 'wpg' ),
+    'site_footer_right' => __( 'Site Footer - Right', 'wpg' ),
   ) );
 
   /*

@@ -23,10 +23,10 @@ function wpg_posts_navigation() {
     <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
     <ul class="Pager-list u-cf">
       <?php if ( get_next_posts_link() ) : ?>
-        <li class="Pager-listItem Pager-previous"><?php next_posts_link( esc_html__( 'Older posts' ) ); ?></li>
+        <li class="Pager-listItem Pager-previous"><?php next_posts_link( esc_html__( 'Older posts', 'wpg' ) ); ?></li>
       <?php endif; ?>
       <?php if ( get_previous_posts_link() ) : ?>
-        <li class="Pager-listItem Pager-next"><?php previous_posts_link( esc_html__( 'Newer posts' ) ); ?></li>
+        <li class="Pager-listItem Pager-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'wpg' ) ); ?></li>
       <?php endif; ?>
     </ul>
   </nav>
@@ -80,12 +80,12 @@ function wpg_posted_on() {
   );
 
   $posted_on = sprintf(
-    esc_html_x( 'Posted on %s', 'post date' ),
+    esc_html_x( 'Posted on %s', 'post date', 'wpg' ),
     '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
   );
 
   $byline = sprintf(
-    esc_html_x( 'by %s', 'post author' ),
+    esc_html_x( 'by %s', 'post author', 'wpg' ),
     '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
   );
 
@@ -102,21 +102,21 @@ function wpg_entry_footer() {
   // Hide category and tag text for pages.
   if ( 'post' == get_post_type() ) {
     /* translators: used between list items, there is a space after the comma */
-    $categories_list = get_the_category_list( esc_html__( ', ' ) );
+    $categories_list = get_the_category_list( esc_html__( ', ', 'wpg' ) );
     if ( $categories_list && wpg_categorized_blog() ) {
-      printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+      printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wpg' ) . '</span>', $categories_list ); // WPCS: XSS OK.
     }
 
     /* translators: used between list items, there is a space after the comma */
-    $tags_list = get_the_tag_list( '', esc_html__( ', ' ) );
+    $tags_list = get_the_tag_list( '', esc_html__( ', ', 'wpg' ) );
     if ( $tags_list ) {
-      printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+      printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wpg' ) . '</span>', $tags_list ); // WPCS: XSS OK.
     }
   }
 
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
     echo '<span class="comments-link">';
-    comments_popup_link( esc_html__( 'Leave a comment' ), esc_html__( '1 Comment' ), esc_html__( '% Comments' ) );
+    comments_popup_link( esc_html__( 'Leave a comment', 'wpg' ), esc_html__( '1 Comment', 'wpg' ), esc_html__( '% Comments', 'wpg' ) );
     echo '</span>';
   }
 }
@@ -135,45 +135,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
   if ( is_category() ) {
-    $title = sprintf( esc_html__( 'Category: %s' ), single_cat_title( '', false ) );
+    $title = sprintf( esc_html__( 'Category: %s', 'wpg' ), single_cat_title( '', false ) );
   } elseif ( is_tag() ) {
-    $title = sprintf( esc_html__( 'Tag: %s' ), single_tag_title( '', false ) );
+    $title = sprintf( esc_html__( 'Tag: %s', 'wpg' ), single_tag_title( '', false ) );
   } elseif ( is_author() ) {
-    $title = sprintf( esc_html__( 'Author: %s' ), '<span class="vcard">' . get_the_author() . '</span>' );
+    $title = sprintf( esc_html__( 'Author: %s', 'wpg' ), '<span class="vcard">' . get_the_author() . '</span>' );
   } elseif ( is_year() ) {
-    $title = sprintf( esc_html__( 'Year: %s' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format' ) ) );
+    $title = sprintf( esc_html__( 'Year: %s', 'wpg' ), get_the_date( esc_html_x( 'Y', 'yearly archives date format', 'wpg' ) ) );
   } elseif ( is_month() ) {
-    $title = sprintf( esc_html__( 'Month: %s' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format' ) ) );
+    $title = sprintf( esc_html__( 'Month: %s', 'wpg' ), get_the_date( esc_html_x( 'F Y', 'monthly archives date format', 'wpg' ) ) );
   } elseif ( is_day() ) {
-    $title = sprintf( esc_html__( 'Day: %s' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format' ) ) );
+    $title = sprintf( esc_html__( 'Day: %s', 'wpg' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'wpg' ) ) );
   } elseif ( is_tax( 'post_format' ) ) {
     if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-      $title = esc_html_x( 'Asides', 'post format archive title' );
+      $title = esc_html_x( 'Asides', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-      $title = esc_html_x( 'Galleries', 'post format archive title' );
+      $title = esc_html_x( 'Galleries', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-      $title = esc_html_x( 'Images', 'post format archive title' );
+      $title = esc_html_x( 'Images', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-      $title = esc_html_x( 'Videos', 'post format archive title' );
+      $title = esc_html_x( 'Videos', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-      $title = esc_html_x( 'Quotes', 'post format archive title' );
+      $title = esc_html_x( 'Quotes', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-      $title = esc_html_x( 'Links', 'post format archive title' );
+      $title = esc_html_x( 'Links', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-      $title = esc_html_x( 'Statuses', 'post format archive title' );
+      $title = esc_html_x( 'Statuses', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-      $title = esc_html_x( 'Audio', 'post format archive title' );
+      $title = esc_html_x( 'Audio', 'post format archive title', 'wpg' );
     } elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-      $title = esc_html_x( 'Chats', 'post format archive title' );
+      $title = esc_html_x( 'Chats', 'post format archive title', 'wpg' );
     }
   } elseif ( is_post_type_archive() ) {
-    $title = sprintf( esc_html__( 'Archives: %s' ), post_type_archive_title( '', false ) );
+    $title = sprintf( esc_html__( 'Archives: %s', 'wpg' ), post_type_archive_title( '', false ) );
   } elseif ( is_tax() ) {
     $tax = get_taxonomy( get_queried_object()->taxonomy );
     /* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-    $title = sprintf( esc_html__( '%1$s: %2$s' ), $tax->labels->singular_name, single_term_title( '', false ) );
+    $title = sprintf( esc_html__( '%1$s: %2$s', 'wpg' ), $tax->labels->singular_name, single_term_title( '', false ) );
   } else {
-    $title = esc_html__( 'Archives' );
+    $title = esc_html__( 'Archives', 'wpg' );
   }
 
   /**
