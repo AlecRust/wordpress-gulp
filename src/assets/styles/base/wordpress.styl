@@ -1,0 +1,82 @@
+//
+// Required WordPress Core classes
+// --------------------------------------------------
+
+@require "mixins"
+@require "variables"
+
+.bypostauthor
+  border-top 10px solid $color-brand-pink
+
+.sticky
+  color $color-brand-pink
+
+.alignleft,
+.alignright
+  display block
+  margin-bottom px(20)
+
+.aligncenter
+  display block
+  margin-left auto
+  margin-right auto
+
+.alignnone
+  margin 5px 20px 20px 0
+
+.wp-caption
+  border 1px solid #f0f0f0
+  max-width 96%; // Image does not overflow the content area
+  padding 5px 3px 10px
+  text-align center
+
+  img
+    square(auto)
+    border 0 none
+    margin 0
+    max-width 98.5%
+    padding 0
+
+.wp-caption p.wp-caption-text
+  font-size 11px
+  line-height 17px
+  margin 0
+  padding 0 4px 5px
+
+.gallery-caption
+  border 1px solid #f0f0f0
+  padding 5px 3px 10px
+
+// Text meant only for screen readers
+.screen-reader-text
+  square(1px)
+	clip rect(1px, 1px, 1px, 1px)
+	position absolute !important
+	overflow hidden
+
+.screen-reader-text:focus
+  square(auto)
+	background-color #f1f1f1
+	border-radius $border-radius-base
+	box-shadow 0 0 2px 2px rgba(0, 0, 0, .6)
+	clip auto !important
+	color $text-color
+	display block
+	font-size px(14)
+	font-size .875rem
+	font-weight bold
+  top 5px
+	left 5px
+	line-height normal
+	text-decoration none
+	z-index 100000 // Above WP toolbar
+  padding px(15) px(23) px(14)
+
+@media (min-width $screen-sm)
+  .alignleft
+    float left
+    margin 0 px(20) px(20) 0
+
+  .alignright
+    float right
+    margin 0 0 px(20) px(20)

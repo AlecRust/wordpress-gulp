@@ -2947,6 +2947,91 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
+.bypostauthor {
+  border-top: 10px solid #ee5455;
+}
+.sticky {
+  color: #ee5455;
+}
+.alignleft,
+.alignright {
+  display: block;
+  margin-bottom: px(20);
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+.wp-caption {
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+.wp-caption img {
+  width: auto;
+  height: auto;
+  border: 0 none;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+.gallery-caption {
+  border: 1px solid #f0f0f0;
+  padding: 5px 3px 10px;
+}
+.screen-reader-text {
+  width: 1px;
+  height: 1px;
+}
+clip rect(1px,
+1px,
+1px) {
+  position: absolute !important;
+  overflow: hidden;
+}
+.screen-reader-text:focus {
+  width: auto;
+  height: auto;
+}
+background-color #f1f1f1 {
+  border-radius: 5px;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+  clip: auto !important;
+  color: #091d5c;
+  display: block;
+  font-size: px(14);
+  font-size: 0.875rem;
+  left: 5px;
+  line-height: normal;
+  text-decoration: none;
+}
+background-color #f1f1f1 font-weight bold {
+  top: 5px;
+}
+background-color #f1f1f1 z-index 100000 {
+  padding: px(15) px(23) px(14);
+}
+@media (min-width: 768px) {
+  .alignleft {
+    float: left;
+    margin: 0 px(20) px(20) 0;
+  }
+  .alignright {
+    float: right;
+    margin: 0 0 px(20) px(20);
+  }
+}
 .Button {
   font-size: 1rem;
   border-width: 2px;
@@ -3446,16 +3531,6 @@ div.wpcf7 img.ajax-loader {
 .Entry-content .lead {
   font-size: 1.375rem;
 }
-.Entry-content .alignleft,
-.Entry-content .alignright {
-  display: block;
-  margin-bottom: 1.25rem;
-}
-.Entry-content .aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 .Entry-footer {
   font-size: 0.938rem;
   margin-bottom: 1.25rem;
@@ -3464,14 +3539,6 @@ div.wpcf7 img.ajax-loader {
 @media (min-width: 768px) {
   .Entry-content {
     padding: 3.125rem 2.5rem 3.75rem;
-  }
-  .Entry-content .alignleft {
-    float: left;
-    margin: 0 1.25rem 1.25rem 0;
-  }
-  .Entry-content .alignright {
-    float: right;
-    margin: 0 0 1.25rem 1.25rem;
   }
   .Entry-mainColumn {
     float: left;

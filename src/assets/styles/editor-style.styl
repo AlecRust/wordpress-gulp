@@ -5,6 +5,7 @@ Editor stylesheet
 @css {
   @import "./base/base";
   @import "./base/fonts";
+  @import "./base/wordpress";
   @import "./components/entry";
   @import "./components/button";
 }
@@ -25,6 +26,23 @@ h3
 p
   padding-bottom px(20)
 
+img
+  height auto
+  max-width 100%
+
+ul
+  list-style disc
+  margin-bottom px(20)
+  padding-left px(20)
+
+ol
+  list-style decimal
+  margin-bottom px(20)
+  padding-left px(20)
+
+li
+  margin-bottom px(10)
+
 .lead
   font-size px(22)
 
@@ -32,10 +50,3 @@ p
 img
   height auto
   max-width 100%
-
-// Alignment utilities
-.alignleft
-  margin 0 px(10) px(10) 0
-
-.alignright
-  margin 0 0 px(10) px(10)
