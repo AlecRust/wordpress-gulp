@@ -1,7 +1,7 @@
 /** @define SiteHeader */
 
-@require "../base/functions"
 @require "../base/mixins"
+@require "../base/variables"
 
 .SiteHeader
   border-top 6px solid $color-brand-secondary
@@ -9,33 +9,33 @@
 .SiteHeader-wrapBranding
   position relative // For absolute positioning at $screen-sm
   text-align center
-  padding px(20) 0
+  padding 20px 0
 
 .SiteHeader-logo
   size(136px, 165px)
   display inline-block
   background url("assets/images/site-logo.svg") no-repeat
   background-size 136px 165px
-  margin-bottom px(20)
+  margin-bottom 20px
 
 .SiteHeader-tagline
-  padding 0 px(20)
+  padding 0 20px
 
 .SiteHeader-search
-  padding-top px(20)
+  padding-top 20px
 
 @media (min-width $screen-sm)
   .SiteHeader-logo
     float left
-    margin px(20) 0 0 px(20)
+    margin 20px 0 0 20px
 
   .SiteHeader-tagline
     position absolute
     top 40px
     right 20px
     text-align right
-    font-size px($font-size-lg)
-    max-width px(380)
+    font-size $font-size-lg
+    max-width 380px
     padding 0
 
   .SiteHeader-search

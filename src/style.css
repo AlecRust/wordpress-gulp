@@ -2917,7 +2917,7 @@ ul {
 }
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 16px;
 }
 body {
   font-family: "Raleway Regular", sans-serif;
@@ -2965,7 +2965,7 @@ textarea {
 .alignleft,
 .alignright {
   display: block;
-  margin-bottom: px(20);
+  margin-bottom: 20px;
 }
 .aligncenter {
   display: block;
@@ -3019,7 +3019,7 @@ background-color #f1f1f1 {
   clip: auto !important;
   color: #091d5c;
   display: block;
-  font-size: px(14);
+  font-size: 14px;
   font-size: 0.875rem;
   left: 5px;
   line-height: normal;
@@ -3029,31 +3029,31 @@ background-color #f1f1f1 font-weight bold {
   top: 5px;
 }
 background-color #f1f1f1 z-index 100000 {
-  padding: px(15) px(23) px(14);
+  padding: 15px 23px 14px;
 }
 @media (min-width: 768px) {
   .alignleft {
     float: left;
-    margin: 0 px(20) px(20) 0;
+    margin: 0 20px 20px 0;
   }
   .alignright {
     float: right;
-    margin: 0 0 px(20) px(20);
+    margin: 0 0 20px 20px;
   }
 }
 .Button {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
 }
 .Button--sm {
-  font-size: 0.875rem;
+  font-size: 14px;
   border-width: 1px;
-  padding: 0.25rem 0.563rem;
+  padding: 4px 9px;
 }
 .Button--lg {
-  font-size: 1.125rem;
-  padding: 0.625rem 1.25rem;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .Button--default {
   color: #444;
@@ -3085,7 +3085,7 @@ background-color #f1f1f1 z-index 100000 {
 .InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
-  padding: 0.375rem 0.563rem 0.438rem;
+  padding: 6px 9px 7px;
 }
 .InputText:hover {
   border-color: #a8a8a8;
@@ -3095,9 +3095,9 @@ background-color #f1f1f1 z-index 100000 {
   border-color: #ee5455;
 }
 .InputText--sm {
-  font-size: 0.813rem;
+  font-size: 13px;
   border-width: 1px;
-  padding: 0.188rem 0.375rem 0.25rem;
+  padding: 3px 6px 4px;
 }
 .InputSelect {
   width: 30%;
@@ -3113,31 +3113,31 @@ background-color #f1f1f1 z-index 100000 {
 }
 div.wpcf7 .InputText {
   width: 100%;
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 div.wpcf7 .InputCheckbox {
   display: block;
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 div.wpcf7 .InputCheckbox .wpcf7-list-item {
   margin-left: 0;
 }
 div.wpcf7 .InputCheckbox label {
   cursor: pointer;
-  padding-left: 1.25rem;
+  padding-left: 20px;
 }
 div.wpcf7 .InputCheckbox input {
   margin-top: 0.25rem;
-  margin-left: -1.25rem;
+  margin-left: -20px;
 }
 div.wpcf7 .wpcf7-not-valid-tip {
   font-size: 80%;
   color: #a94442;
-  margin: -0.625rem 0 0.625rem;
+  margin: -10px 0 10px;
 }
 div.wpcf7 img.ajax-loader {
   display: block;
-  margin: 0.625rem auto;
+  margin: 10px auto;
 }
 @media print {
   *,
@@ -3190,8 +3190,8 @@ div.wpcf7 img.ajax-loader {
 }
 .Alert,
 div.wpcf7-response-output {
-  margin-bottom: 1.25rem;
-  padding: 1.25rem;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 .Alert .Alert-link,
 div.wpcf7-response-output .Alert-link {
@@ -3205,7 +3205,7 @@ div.wpcf7-response-output > ul {
 }
 .Alert > p + p,
 div.wpcf7-response-output > p + p {
-  margin-top: 0.313rem;
+  margin-top: 5px;
 }
 .Alert--success,
 div.wpcf7-response-output.wpcf7-mail-sent-ok {
@@ -3247,22 +3247,22 @@ div.wpcf7-response-output.wpcf7-validation-errors .Alert-link {
 }
 div.wpcf7-response-output {
   border: 0;
-  margin: 1.25rem 0;
+  margin: 20px 0;
 }
 /** @define Button */
 .Button {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
 }
 .Button--sm {
-  font-size: 0.875rem;
+  font-size: 14px;
   border-width: 1px;
-  padding: 0.25rem 0.563rem;
+  padding: 4px 9px;
 }
 .Button--lg {
-  font-size: 1.125rem;
-  padding: 0.625rem 1.25rem;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .Button--default {
   color: #444;
@@ -3295,21 +3295,21 @@ div.wpcf7-response-output {
 .BrowserBar {
   text-align: center;
   background-color: #fbb03b;
-  padding: 0.625rem;
+  padding: 10px;
 }
 .Button {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
 }
 .Button--sm {
-  font-size: 0.875rem;
+  font-size: 14px;
   border-width: 1px;
-  padding: 0.25rem 0.563rem;
+  padding: 4px 9px;
 }
 .Button--lg {
-  font-size: 1.125rem;
-  padding: 0.625rem 1.25rem;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .Button--default {
   color: #444;
@@ -3341,7 +3341,7 @@ div.wpcf7-response-output {
 .InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
-  padding: 0.375rem 0.563rem 0.438rem;
+  padding: 6px 9px 7px;
 }
 .InputText:hover {
   border-color: #a8a8a8;
@@ -3351,9 +3351,9 @@ div.wpcf7-response-output {
   border-color: #ee5455;
 }
 .InputText--sm {
-  font-size: 0.813rem;
+  font-size: 13px;
   border-width: 1px;
-  padding: 0.188rem 0.375rem 0.25rem;
+  padding: 3px 6px 4px;
 }
 .InputSelect {
   width: 30%;
@@ -3369,39 +3369,39 @@ div.wpcf7-response-output {
 }
 div.wpcf7 .InputText {
   width: 100%;
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 div.wpcf7 .InputCheckbox {
   display: block;
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 div.wpcf7 .InputCheckbox .wpcf7-list-item {
   margin-left: 0;
 }
 div.wpcf7 .InputCheckbox label {
   cursor: pointer;
-  padding-left: 1.25rem;
+  padding-left: 20px;
 }
 div.wpcf7 .InputCheckbox input {
   margin-top: 0.25rem;
-  margin-left: -1.25rem;
+  margin-left: -20px;
 }
 div.wpcf7 .wpcf7-not-valid-tip {
   font-size: 80%;
   color: #a94442;
-  margin: -0.625rem 0 0.625rem;
+  margin: -10px 0 10px;
 }
 div.wpcf7 img.ajax-loader {
   display: block;
-  margin: 0.625rem auto;
+  margin: 10px auto;
 }
 .Comments {
-  padding: 1.875rem 1.25rem 2.5rem;
+  padding: 30px 20px 40px;
 }
 .Comments label {
   display: block;
   font-weight: bold;
-  margin-bottom: 0.188rem;
+  margin-bottom: 3px;
 }
 .Comments input[type="text"],
 .Comments input[type="email"],
@@ -3410,8 +3410,8 @@ div.wpcf7 img.ajax-loader {
   width: 100%;
   border: 2px solid #bbb;
   border-radius: 5px;
-  margin-bottom: 0.938rem;
-  padding: 0.375rem 0.563rem 0.438rem;
+  margin-bottom: 15px;
+  padding: 6px 9px 7px;
 }
 .Comments input[type="text"]:hover,
 .Comments input[type="email"]:hover,
@@ -3430,7 +3430,7 @@ div.wpcf7 img.ajax-loader {
   text-align: center;
 }
 .Comments #submit {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
   color: #fff;
@@ -3444,34 +3444,34 @@ div.wpcf7 img.ajax-loader {
   background-color: #fff;
 }
 .Comments .comment-subscription-form {
-  padding-top: 0.938rem;
+  padding-top: 15px;
 }
 .Comments .logged-in-as,
 .Comments .comment-notes {
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 .Comments-title {
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 .Comments-list .comment {
-  font-size: 0.938rem;
+  font-size: 15px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 .Comments-list .comment-body,
 .Comments-list .comment-respond {
-  padding: 1.25rem;
+  padding: 20px;
 }
 .Comments-list .children {
-  margin-left: 1.875rem;
+  margin-left: 30px;
 }
 .Comments-list .children .comment {
   border: 0;
   border-top: 1px solid #ddd;
   border-radius: 0;
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .Comments input[type="text"],
@@ -3490,13 +3490,13 @@ div.wpcf7 img.ajax-loader {
   .Container-mainColumn {
     float: left;
     width: 75%;
-    padding-right: 1.875rem;
+    padding-right: 30px;
   }
 }
 /** @define Entry; weak */
 .Entry-header {
   border-bottom: 3px solid #bbb;
-  padding: 0.938rem 1.25rem;
+  padding: 15px 20px;
 }
 .Entry-title a {
   text-decoration: none;
@@ -3505,20 +3505,20 @@ div.wpcf7 img.ajax-loader {
   text-decoration: underline;
 }
 .Entry-meta {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 .Entry-summary {
-  padding: 1.25rem 1.25rem 1.875rem;
+  padding: 20px 20px 30px;
 }
 .Entry-content {
-  padding: 1.875rem 1.25rem 2.5rem;
+  padding: 30px 20px 40px;
 }
 .Entry-content h2,
 .Entry-content h3 {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 .Entry-content p {
-  padding-bottom: 1.25rem;
+  padding-bottom: 20px;
 }
 .Entry-content img {
   height: auto;
@@ -3526,28 +3526,28 @@ div.wpcf7 img.ajax-loader {
 }
 .Entry-content ul {
   list-style: disc;
-  margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 .Entry-content ol {
   list-style: decimal;
-  margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 .Entry-content li {
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 .Entry-content .lead {
-  font-size: 1.375rem;
+  font-size: 22px;
 }
 .Entry-footer {
-  font-size: 0.938rem;
-  margin-bottom: 1.25rem;
-  padding: 0 1.25rem;
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 @media (min-width: 768px) {
   .Entry-content {
-    padding: 3.125rem 2.5rem 3.75rem;
+    padding: 50px 40px 60px;
   }
   .Entry-mainColumn {
     float: left;
@@ -3561,7 +3561,7 @@ div.wpcf7 img.ajax-loader {
 /** @define PageHeader */
 .PageHeader {
   border-bottom: 3px solid #bbb;
-  padding: 1.438rem 1.25rem;
+  padding: 23px 20px;
 }
 .PageHeader-title {
   color: #bbb;
@@ -3575,7 +3575,7 @@ div.wpcf7 img.ajax-loader {
 }
 /** @define Pager; weak */
 .Pager {
-  padding: 1.25rem;
+  padding: 20px;
 }
 .Pager-list {
   text-align: center;
@@ -3590,7 +3590,7 @@ div.wpcf7 img.ajax-loader {
   border-radius: 15px;
   color: #666;
   background-color: #efefef;
-  padding: 0.313rem 0.875rem;
+  padding: 5px 14px;
 }
 .Pager-listItem a:hover {
   text-decoration: none;
@@ -3613,18 +3613,18 @@ div.wpcf7 img.ajax-loader {
   content: "← ";
 }
 .Button {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
 }
 .Button--sm {
-  font-size: 0.875rem;
+  font-size: 14px;
   border-width: 1px;
-  padding: 0.25rem 0.563rem;
+  padding: 4px 9px;
 }
 .Button--lg {
-  font-size: 1.125rem;
-  padding: 0.625rem 1.25rem;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .Button--default {
   color: #444;
@@ -3656,7 +3656,7 @@ div.wpcf7 img.ajax-loader {
 .InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
-  padding: 0.375rem 0.563rem 0.438rem;
+  padding: 6px 9px 7px;
 }
 .InputText:hover {
   border-color: #a8a8a8;
@@ -3666,9 +3666,9 @@ div.wpcf7 img.ajax-loader {
   border-color: #ee5455;
 }
 .InputText--sm {
-  font-size: 0.813rem;
+  font-size: 13px;
   border-width: 1px;
-  padding: 0.188rem 0.375rem 0.25rem;
+  padding: 3px 6px 4px;
 }
 .InputSelect {
   width: 30%;
@@ -3684,52 +3684,52 @@ div.wpcf7 img.ajax-loader {
 }
 div.wpcf7 .InputText {
   width: 100%;
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 div.wpcf7 .InputCheckbox {
   display: block;
-  margin-bottom: 0.938rem;
+  margin-bottom: 15px;
 }
 div.wpcf7 .InputCheckbox .wpcf7-list-item {
   margin-left: 0;
 }
 div.wpcf7 .InputCheckbox label {
   cursor: pointer;
-  padding-left: 1.25rem;
+  padding-left: 20px;
 }
 div.wpcf7 .InputCheckbox input {
   margin-top: 0.25rem;
-  margin-left: -1.25rem;
+  margin-left: -20px;
 }
 div.wpcf7 .wpcf7-not-valid-tip {
   font-size: 80%;
   color: #a94442;
-  margin: -0.625rem 0 0.625rem;
+  margin: -10px 0 10px;
 }
 div.wpcf7 img.ajax-loader {
   display: block;
-  margin: 0.625rem auto;
+  margin: 10px auto;
 }
 .Sidebar {
   background-color: #efefef;
-  padding: 1.25rem;
+  padding: 20px;
 }
 .Sidebar-widget {
   overflow: hidden;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 .Sidebar-widget:last-child {
   margin-bottom: 0;
 }
 .Sidebar-title {
-  font-size: 1.375rem;
+  font-size: 22px;
 }
 .widget_recent_entries ul {
   list-style-type: disc;
-  padding-left: 1.25rem;
+  padding-left: 20px;
 }
 .widget_recent_entries li {
-  margin-bottom: 0.313rem;
+  margin-bottom: 5px;
 }
 .widget_recent_entries li:last-child {
   margin-bottom: 0;
@@ -3742,8 +3742,8 @@ div.wpcf7 img.ajax-loader {
   width: 100%;
   border: 1px solid #bbb;
   border-radius: 5px;
-  font-size: 0.813rem;
-  padding: 0.188rem 0.375rem 0.25rem;
+  font-size: 13px;
+  padding: 3px 6px 4px;
 }
 .jetpack_subscription_widget #subscribe-email input[type="email"]:hover {
   border-color: #a8a8a8;
@@ -3757,17 +3757,17 @@ div.wpcf7 img.ajax-loader {
   float: right;
 }
 .jetpack_subscription_widget #subscribe-submit input[type="submit"] {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
-  font-size: 0.875rem;
+  font-size: 14px;
   border-width: 1px;
-  padding: 0.25rem 0.563rem;
+  padding: 4px 9px;
   color: #444;
   border-color: #bbb;
   background-color: #fff;
   width: 100%;
-  margin-left: 0.25rem;
+  margin-left: 4px;
 }
 .jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover {
   color: #444;
@@ -3777,26 +3777,26 @@ div.wpcf7 img.ajax-loader {
   .Sidebar {
     float: right;
     width: 25%;
-    margin-top: 4.563rem;
+    margin-top: 73px;
   }
 }
 /** @define SiteFooter; weak */
 .SiteFooter {
   color: #fff;
   text-align: center;
-  font-size: 0.938rem;
+  font-size: 15px;
   background-color: #ee5455;
-  padding: 1.875rem 1.25rem;
+  padding: 30px 20px;
 }
 .SiteFooter a {
   color: #fff;
 }
 .SiteFooter .SocialIcons-list {
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .SiteFooter {
-    padding: 3.125rem 1.25rem 2.5rem;
+    padding: 50px 20px 40px;
   }
   .SiteFooter .SocialIcons-list {
     float: right;
@@ -3819,7 +3819,7 @@ div.wpcf7 img.ajax-loader {
 .SiteHeaderMenu-item a {
   display: block;
   text-decoration: none;
-  padding: 0.625rem 1.25rem;
+  padding: 10px 20px;
 }
 .SiteHeaderMenu-item a:hover {
   background-color: #ddd;
@@ -3832,17 +3832,17 @@ div.wpcf7 img.ajax-loader {
     display: inline-block;
   }
   .SiteHeaderMenu-item a {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 768px) {
   .SiteHeaderMenu-list {
     text-align: right;
-    margin-right: 0.938rem;
+    margin-right: 15px;
   }
   .SiteHeaderMenu-item {
-    font-size: 1.188rem;
+    font-size: 19px;
   }
 }
 @media (min-width: 992px) {
@@ -3857,7 +3857,7 @@ div.wpcf7 img.ajax-loader {
 .SiteHeader-wrapBranding {
   position: relative;
   text-align: center;
-  padding: 1.25rem 0;
+  padding: 20px 0;
 }
 .SiteHeader-logo {
   width: 136px;
@@ -3865,26 +3865,26 @@ div.wpcf7 img.ajax-loader {
   display: inline-block;
   background: url("assets/images/site-logo.svg") no-repeat;
   background-size: 136px 165px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 .SiteHeader-tagline {
-  padding: 0 1.25rem;
+  padding: 0 20px;
 }
 .SiteHeader-search {
-  padding-top: 1.25rem;
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
   .SiteHeader-logo {
     float: left;
-    margin: 1.25rem 0 0 1.25rem;
+    margin: 20px 0 0 20px;
   }
   .SiteHeader-tagline {
     position: absolute;
     top: 40px;
     right: 20px;
     text-align: right;
-    font-size: 1.688rem;
-    max-width: 23.75rem;
+    font-size: 27px;
+    max-width: 380px;
     padding: 0;
   }
   .SiteHeader-search {
@@ -3925,7 +3925,7 @@ div.wpcf7 img.ajax-loader {
 .SocialIcons-list li {
   display: inline-block;
   overflow: hidden;
-  margin: 0 0.625rem;
+  margin: 0 10px;
 }
 .SocialIcons-list a {
   width: 30px;
@@ -3952,6 +3952,6 @@ div.wpcf7 img.ajax-loader {
 }
 @media (min-width: 768px) {
   .SocialIcons-list li {
-    margin: 0 0 0 1.563rem;
+    margin: 0 0 0 25px;
   }
 }

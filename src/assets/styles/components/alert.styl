@@ -2,12 +2,11 @@
 // Alerts
 // --------------------------------------------------
 
-@require "../base/functions"
 @require "../base/variables"
 
 .Alert
-  margin-bottom px(20)
-  padding px(20)
+  margin-bottom 20px
+  padding 20px
 
   // Provide class for links that match alerts
   .Alert-link
@@ -19,7 +18,7 @@
     margin-bottom 0
 
   > p + p
-    margin-top px(5)
+    margin-top 5px
 
 // Modifiers
 .Alert--success
@@ -54,7 +53,7 @@
 div.wpcf7-response-output
   @extend .Alert
   border 0
-  margin px(20) 0
+  margin 20px 0
 
   &.wpcf7-mail-sent-ok
     @extend .Alert--success

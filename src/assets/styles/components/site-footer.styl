@@ -1,24 +1,23 @@
 /** @define SiteFooter; weak */
 
-@require "../base/functions"
 @require "../base/variables"
 
 .SiteFooter
   color #fff
   text-align center
-  font-size px($font-size-base - 1)
+  font-size $font-size-base - 1px
   background-color $color-brand-primary
-  padding px(30) px(20)
+  padding 30px 20px
 
   a
     color #fff
 
   .SocialIcons-list
-    margin-bottom px(20)
+    margin-bottom 20px
 
 @media (min-width $screen-sm)
   .SiteFooter
-    padding px(50) px(20) px(40)
+    padding 50px 20px 40px
 
     .SocialIcons-list
       float right

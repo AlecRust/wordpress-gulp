@@ -2,11 +2,10 @@
 
 // TODO: Refactor so these aren't mixins
 
-@require "../base/functions"
 @require "../base/variables"
 
 Button()
-  font-size px($font-size-base)
+  font-size $font-size-base
   border-width 2px
   border-radius $border-radius-base
 
@@ -14,16 +13,16 @@ Button()
   Button()
 
 Button--sm()
-  font-size px($font-size-base - 2)
+  font-size $font-size-base - 2px
   border-width 1px
-  padding px(4) px(9)
+  padding 4px 9px
 
 .Button--sm
   Button--sm()
 
 Button--lg()
-  font-size px($font-size-base + 2)
-  padding px(10) px(20)
+  font-size $font-size-base + 2px
+  padding 10px 20px
 
 .Button--lg
   Button--lg()

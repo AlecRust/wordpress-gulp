@@ -2908,7 +2908,7 @@ ul {
 }
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: 16px;
 }
 body {
   font-family: "Raleway Regular", sans-serif;
@@ -2956,7 +2956,7 @@ textarea {
 .alignleft,
 .alignright {
   display: block;
-  margin-bottom: px(20);
+  margin-bottom: 20px;
 }
 .aligncenter {
   display: block;
@@ -3010,7 +3010,7 @@ background-color #f1f1f1 {
   clip: auto !important;
   color: #091d5c;
   display: block;
-  font-size: px(14);
+  font-size: 14px;
   font-size: 0.875rem;
   left: 5px;
   line-height: normal;
@@ -3020,22 +3020,22 @@ background-color #f1f1f1 font-weight bold {
   top: 5px;
 }
 background-color #f1f1f1 z-index 100000 {
-  padding: px(15) px(23) px(14);
+  padding: 15px 23px 14px;
 }
 @media (min-width: 768px) {
   .alignleft {
     float: left;
-    margin: 0 px(20) px(20) 0;
+    margin: 0 20px 20px 0;
   }
   .alignright {
     float: right;
-    margin: 0 0 px(20) px(20);
+    margin: 0 0 20px 20px;
   }
 }
 /** @define Entry; weak */
 .Entry-header {
   border-bottom: 3px solid #bbb;
-  padding: 0.938rem 1.25rem;
+  padding: 15px 20px;
 }
 .Entry-title a {
   text-decoration: none;
@@ -3044,20 +3044,20 @@ background-color #f1f1f1 z-index 100000 {
   text-decoration: underline;
 }
 .Entry-meta {
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 .Entry-summary {
-  padding: 1.25rem 1.25rem 1.875rem;
+  padding: 20px 20px 30px;
 }
 .Entry-content {
-  padding: 1.875rem 1.25rem 2.5rem;
+  padding: 30px 20px 40px;
 }
 .Entry-content h2,
 .Entry-content h3 {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 .Entry-content p {
-  padding-bottom: 1.25rem;
+  padding-bottom: 20px;
 }
 .Entry-content img {
   height: auto;
@@ -3065,28 +3065,28 @@ background-color #f1f1f1 z-index 100000 {
 }
 .Entry-content ul {
   list-style: disc;
-  margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 .Entry-content ol {
   list-style: decimal;
-  margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 .Entry-content li {
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 .Entry-content .lead {
-  font-size: 1.375rem;
+  font-size: 22px;
 }
 .Entry-footer {
-  font-size: 0.938rem;
-  margin-bottom: 1.25rem;
-  padding: 0 1.25rem;
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }
 @media (min-width: 768px) {
   .Entry-content {
-    padding: 3.125rem 2.5rem 3.75rem;
+    padding: 50px 40px 60px;
   }
   .Entry-mainColumn {
     float: left;
@@ -3099,18 +3099,18 @@ background-color #f1f1f1 z-index 100000 {
 }
 /** @define Button */
 .Button {
-  font-size: 1rem;
+  font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
 }
 .Button--sm {
-  font-size: 0.875rem;
+  font-size: 14px;
   border-width: 1px;
-  padding: 0.25rem 0.563rem;
+  padding: 4px 9px;
 }
 .Button--lg {
-  font-size: 1.125rem;
-  padding: 0.625rem 1.25rem;
+  font-size: 18px;
+  padding: 10px 20px;
 }
 .Button--default {
   color: #444;
@@ -3141,15 +3141,15 @@ background-color #f1f1f1 z-index 100000 {
 }
 body.mce-content-body {
   color: #091d5c;
-  font: 1rem "Raleway Regular", sans-serif;
-  padding: 1.875rem 1.25rem 2.5rem !important;
+  font: 16px "Raleway Regular", sans-serif;
+  padding: 30px 20px 40px !important;
 }
 h2,
 h3 {
-  padding-bottom: 0.625rem;
+  padding-bottom: 10px;
 }
 p {
-  padding-bottom: 1.25rem;
+  padding-bottom: 20px;
 }
 img {
   height: auto;
@@ -3157,19 +3157,19 @@ img {
 }
 ul {
   list-style: disc;
-  margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 ol {
   list-style: decimal;
-  margin-bottom: 1.25rem;
-  padding-left: 1.25rem;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 li {
-  margin-bottom: 0.625rem;
+  margin-bottom: 10px;
 }
 .lead {
-  font-size: 1.375rem;
+  font-size: 22px;
 }
 img {
   height: auto;

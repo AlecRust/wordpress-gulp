@@ -1,7 +1,7 @@
 /** @define SocialIcons; weak */
 
-@require "../base/functions"
 @require "../base/mixins"
+@require "../base/variables"
 
 $SocialIcons-icon-size = 30px
 
@@ -9,7 +9,7 @@ $SocialIcons-icon-size = 30px
   li
     display inline-block
     overflow hidden // TODO: Find out why this is necessary
-    margin 0 px(10)
+    margin 0 10px
 
   a
     square($SocialIcons-icon-size)
@@ -36,4 +36,4 @@ $SocialIcons-icon-size = 30px
 @media (min-width $screen-sm)
   .SocialIcons-list
     li
-      margin 0 0 0 px(25)
+      margin 0 0 0 25px

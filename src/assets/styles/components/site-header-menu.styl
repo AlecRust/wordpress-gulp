@@ -1,6 +1,5 @@
 /** @define SiteHeaderMenu; weak */
 
-@require "../base/functions"
 @require "../base/variables"
 
 .SiteHeaderMenu
@@ -15,7 +14,7 @@
   a
     display block
     text-decoration none
-    padding px(10) px(20)
+    padding 10px 20px
 
     &:hover
       background-color #ddd
@@ -28,16 +27,16 @@
     display inline-block
 
     a
-      padding-left px(20)
+      padding-left 20px
       padding-right @padding-left
 
 @media (min-width $screen-sm)
   .SiteHeaderMenu-list
     text-align right
-    margin-right px(15)
+    margin-right 15px
 
   .SiteHeaderMenu-item
-    font-size px($font-size-base + 3)
+    font-size $font-size-base + 3px
 
 @media (min-width $screen-md)
   .SiteHeaderMenu-list

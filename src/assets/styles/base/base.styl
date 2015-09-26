@@ -15,7 +15,6 @@
 }
 
 @require "variables"
-@require "functions"
 
 // Reset the box-sizing
 *, *::before, *::after
@@ -23,7 +22,7 @@
 
 html
   box-sizing border-box
-  font-size ($font-size-base / 16)rem
+  font-size $font-size-base
 
 body
   font-family $font-family-base

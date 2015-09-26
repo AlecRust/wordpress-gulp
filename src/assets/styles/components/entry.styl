@@ -1,10 +1,10 @@
 /** @define Entry; weak */
 
-@require "../base/functions"
+@require "../base/variables"
 
 .Entry-header
   border-bottom 3px solid $color-brand-gray
-  padding px(15) px(20)
+  padding 15px 20px
 
 .Entry-title
   a
@@ -14,20 +14,20 @@
       text-decoration underline
 
 .Entry-meta
-  font-size px($font-size-base - 2)
+  font-size $font-size-base - 2px
 
 .Entry-summary
-  padding px(20) px(20) px(30)
+  padding 20px 20px 30px
 
 .Entry-content
-  padding px(30) px(20) px(40)
+  padding 30px 20px 40px
 
   h2,
   h3
-    padding-bottom px(10)
+    padding-bottom 10px
 
   p
-    padding-bottom px(20)
+    padding-bottom 20px
 
   img
     height auto
@@ -35,28 +35,28 @@
 
   ul
     list-style disc
-    margin-bottom px(20)
-    padding-left px(20)
+    margin-bottom 20px
+    padding-left 20px
 
   ol
     list-style decimal
-    margin-bottom px(20)
-    padding-left px(20)
+    margin-bottom 20px
+    padding-left 20px
 
   li
-    margin-bottom px(10)
+    margin-bottom 10px
 
   .lead
-    font-size px(22)
+    font-size 22px
 
 .Entry-footer
-  font-size px($font-size-base - 1)
-  margin-bottom px(20)
-  padding 0 px(20)
+  font-size $font-size-base - 1px
+  margin-bottom 20px
+  padding 0 20px
 
 @media (min-width $screen-sm)
   .Entry-content
-    padding px(50) px(40) px(60)
+    padding 50px 40px 60px
 
   .Entry-mainColumn
     float left

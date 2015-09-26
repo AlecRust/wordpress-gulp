@@ -6,12 +6,12 @@
 @require "../base/forms"
 
 .Comments
-  padding px(30) px(20) px(40)
+  padding 30px 20px 40px
 
   label
     display block
     font-weight bold
-    margin-bottom px(3)
+    margin-bottom 3px
 
   input[type="text"],
   input[type="email"],
@@ -20,8 +20,8 @@
     width 100%
     border 2px solid $color-brand-gray
     border-radius $border-radius-base
-    margin-bottom px(15)
-    padding px(6) px(9) px(7)
+    margin-bottom 15px
+    padding 6px 9px 7px
 
     &:hover
       border-color darken($color-brand-gray, 10%)
@@ -40,35 +40,35 @@
     padding .4em .75em // From SUIT's .Button
 
   .comment-subscription-form
-    padding-top px(15)
+    padding-top 15px
 
   .logged-in-as,
   .comment-notes
-    margin-bottom px(10)
+    margin-bottom 10px
 
 .Comments-title
-  margin-bottom px(20)
+  margin-bottom 20px
 
 .Comments-list
   .comment
-    font-size px($font-size-base - 1)
+    font-size $font-size-base - 1px
     background-color #f9f9f9
     border 1px solid #ddd
     border-radius $border-radius-base
-    margin-bottom px(20)
+    margin-bottom 20px
 
   .comment-body,
   .comment-respond
-    padding px(20)
+    padding 20px
 
   .children
-    margin-left px(30)
+    margin-left 30px
 
     .comment
       border 0
       border-top 1px solid #ddd
       border-radius 0
-      margin-bottom px(10)
+      margin-bottom 10px
 
 @media (min-width $screen-sm)
   .Comments
