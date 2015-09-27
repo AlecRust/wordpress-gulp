@@ -2943,6 +2943,9 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+iframe {
+  max-width: 100%;
+}
 textarea {
   resize: vertical;
 }
@@ -2960,7 +2963,7 @@ textarea {
   border-top: 10px solid #ee5455;
 }
 .sticky {
-  color: #ee5455;
+  border-left: 3px solid #ee5455;
 }
 .alignleft,
 .alignright {
@@ -2976,10 +2979,10 @@ textarea {
   margin: 5px 20px 20px 0;
 }
 .wp-caption {
-  border: 1px solid #f0f0f0;
-  max-width: 96%;
-  padding: 5px 3px 10px;
   text-align: center;
+  max-width: 96%;
+  background-color: #eee;
+  padding: 5px 3px 10px;
 }
 .wp-caption img {
   width: auto;
