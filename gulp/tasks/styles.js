@@ -56,8 +56,8 @@ gulp.task('postcss', ['stylus', 'bemlint'], function() {
 /**
  * Nuke temp CSS files
  * */
-gulp.task('clean-css', ['stylus', 'bemlint', 'postcss'], function(cb) {
-  del(paths.styles.tmpDir, cb);
+gulp.task('clean-css', ['stylus', 'bemlint', 'postcss'], function() {
+  return del(paths.styles.tmpDir);
 });
 
 gulp.task('styles', ['stylus', 'bemlint', 'postcss', 'clean-css']);

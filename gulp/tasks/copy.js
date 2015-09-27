@@ -4,7 +4,7 @@ var uglify =    require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var paths =     require('../paths');
 
-gulp.task('copy', function () {
+gulp.task('copy', ['styles'], function () {
   return gulp.src([
     'src/**/*',
     '!src/assets/scripts',
