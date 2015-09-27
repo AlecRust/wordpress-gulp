@@ -33,7 +33,7 @@ gulp.task('bemlint', ['stylus'], function() {
   return gulp.src(path.join(paths.styles.tmpDir, '**/*.css'))
     .pipe(clip())
     .pipe(postcss([
-      bemLinter(),
+      bemLinter('suit')
     ]).on('error', notifyError));
 });
 
