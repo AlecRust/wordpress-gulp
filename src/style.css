@@ -3476,6 +3476,11 @@ div.wpcf7 img.ajax-loader {
   border-radius: 0;
   margin-bottom: 10px;
 }
+.Comments-closed {
+  color: #31708f;
+  background-color: #d9edf7;
+  padding: 20px;
+}
 @media (min-width: 768px) {
   .Comments input[type="text"],
   .Comments input[type="email"],
