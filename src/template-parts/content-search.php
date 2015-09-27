@@ -10,7 +10,7 @@
   <header class="Entry-header">
     <?php the_title( sprintf( '<h1 class="Entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-    <?php if ( 'post' == get_post_type() ) : ?>
+    <?php if ( 'post' === get_post_type() ) : ?>
       <div class="Entry-meta u-hiddenVisually">
         <?php wpg_posted_on(); ?>
       </div>
