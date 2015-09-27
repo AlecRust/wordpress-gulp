@@ -5,9 +5,9 @@ gulp.task('serve', function () {
   browserSync({
     proxy: 'local.dev:8888/wordpress-gulp',
     files: [
-      "./src/style.css",
-      "./src/script.js",
-      "./src/*.php",
+      './src/style.css',
+      './src/script.js',
+      './src/*.php'
     ]
   });
 });
