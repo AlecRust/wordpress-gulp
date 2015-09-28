@@ -30,7 +30,7 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <?php wpg_posts_navigation(); ?>
+        <?php the_posts_navigation(); ?>
 
       <?php else : ?>
 

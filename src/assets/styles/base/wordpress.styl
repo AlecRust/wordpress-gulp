@@ -1,16 +1,18 @@
 //
-// Required WordPress Core classes
+// Required WordPress classes
 // --------------------------------------------------
 
 @require "mixins"
 @require "variables"
 
+// Core features
 .bypostauthor
   border-top 10px solid $color-brand-pink
 
 .sticky
   border-left 3px solid $color-brand-pink
 
+// Alignment
 .alignleft,
 .alignright
   display block
@@ -24,6 +26,7 @@
 .alignnone
   margin 5px 20px 20px 0
 
+// Captions
 .wp-caption
   text-align center
   max-width 96% // Image does not overflow the content area
@@ -47,29 +50,64 @@
   border 1px solid #f0f0f0
   padding 5px 3px 10px
 
+// Pagination
+.nav-links
+  overflow hidden
+  margin-bottom 20px
+  padding 20px
+
+  > div a
+    display block
+    text-decoration none
+    border 1px solid #ddd
+    border-radius 15px
+    color #666
+    background-color #efefef
+    padding 5px 14px
+
+    &:hover
+      text-decoration none
+      border-color #ccc
+      background-color #fff
+
+    &:after
+      color #777
+
+  .nav-previous
+    float left
+
+    a:before
+      content "← "
+
+  .nav-next
+    float right
+
+    a:after
+      content " →"
+
 // Text meant only for screen readers
 .screen-reader-text
   square(1px)
-	clip rect(1px, 1px, 1px, 1px)
-	position absolute !important
-	overflow hidden
+  clip rect(1px, 1px, 1px, 1px)
+  position absolute !important
+  overflow hidden
 
 .screen-reader-text:focus
   square(auto)
-	background-color #f1f1f1
-	border-radius $border-radius-base
-	box-shadow 0 0 2px 2px rgba(0, 0, 0, .6)
-	clip auto !important
-	color $text-color
-	display block
-	font-size 14px
-	font-size .875rem
-	font-weight bold
+  background-color #f1f1f1
+  border-radius $border-radius-base
+  box-shadow 0 0 2px 2px rgba(0, 0, 0, .6)
+  clip auto !important
+  color $text-color
+  display block
+  font-size 14px
+  font-size .875rem
+  font-weight bold
   top 5px
-	left 5px
-	line-height normal
-	text-decoration none
-	z-index 100000 // Above WP toolbar
+  left 5px
+  line-height normal
+  text-decoration none
+  z-index 100000 // Above WP toolbar
   padding 15px 23px 14px
 
 @media (min-width $screen-sm)

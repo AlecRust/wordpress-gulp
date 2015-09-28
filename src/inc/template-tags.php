@@ -7,61 +7,6 @@
  * @package wordpress-gulp
  */
 
-if ( ! function_exists( 'wpg_posts_navigation' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- *
- * @todo Remove this function when WordPress 4.3 is released.
- */
-function wpg_posts_navigation() {
-  // Don't print empty markup if there's only one page.
-  if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-    return;
-  }
-  ?>
-  <nav class="Pager" role="navigation" aria-labelledby="posts-nav-heading">
-    <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
-    <ul class="Pager-list u-cf">
-      <?php if ( get_next_posts_link() ) : ?>
-        <li class="Pager-listItem Pager-previous"><?php next_posts_link( esc_html__( 'Older posts', 'wpg' ) ); ?></li>
-      <?php endif; ?>
-      <?php if ( get_previous_posts_link() ) : ?>
-        <li class="Pager-listItem Pager-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'wpg' ) ); ?></li>
-      <?php endif; ?>
-    </ul>
-  </nav>
-  <?php
-}
-endif;
-
-if ( ! function_exists( 'wpg_post_navigation' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @todo Remove this function when WordPress 4.3 is released.
- */
-function wpg_post_navigation() {
-  // Don't print empty markup if there's nowhere to navigate.
-  $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-  $next     = get_adjacent_post( false, '', false );
-
-  if ( ! $next && ! $previous ) {
-    return;
-  }
-  ?>
-  <nav class="Pager" role="navigation" aria-labelledby="posts-nav-heading">
-    <p id="posts-nav-heading" class="u-hiddenVisually">Posts navigation</p>
-    <ul class="Pager-list u-cf">
-      <?php
-        previous_post_link( '<li class="Pager-listItem Pager-previous">%link</li>', '%title' );
-        next_post_link( '<li class="Pager-listItem Pager-next">%link</li>', '%title' );
-      ?>
-    </ul>
-  </nav>
-  <?php
-}
-endif;
-
 if ( ! function_exists( 'wpg_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.

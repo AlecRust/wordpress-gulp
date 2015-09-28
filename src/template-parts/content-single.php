@@ -23,7 +23,7 @@
     ?>
   </div>
 
-  <footer class="entry-footer">
+  <footer class="Entry-footer">
     <?php wpg_entry_footer(); ?>
   </footer>
 </article>

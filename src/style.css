@@ -3002,21 +3002,51 @@ textarea {
   border: 1px solid #f0f0f0;
   padding: 5px 3px 10px;
 }
+.nav-links {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.nav-links > div a {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  color: #666;
+  background-color: #efefef;
+  padding: 5px 14px;
+}
+.nav-links > div a:hover {
+  text-decoration: none;
+  border-color: #ccc;
+  background-color: #fff;
+}
+.nav-links > div a:after {
+  color: #777;
+}
+.nav-links .nav-previous {
+  float: left;
+}
+.nav-links .nav-previous a:before {
+  content: "← ";
+}
+.nav-links .nav-next {
+  float: right;
+}
+.nav-links .nav-next a:after {
+  content: " →";
+}
 .screen-reader-text {
   width: 1px;
   height: 1px;
-}
-clip rect(1px,
-1px,
-1px) {
+  clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   overflow: hidden;
 }
 .screen-reader-text:focus {
   width: auto;
   height: auto;
-}
-background-color #f1f1f1 {
+  background-color: #f1f1f1;
   border-radius: 5px;
   box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
   clip: auto !important;
@@ -3024,14 +3054,12 @@ background-color #f1f1f1 {
   display: block;
   font-size: 14px;
   font-size: 0.875rem;
+  font-weight: bold;
+  top: 5px;
   left: 5px;
   line-height: normal;
   text-decoration: none;
-}
-background-color #f1f1f1 font-weight bold {
-  top: 5px;
-}
-background-color #f1f1f1 z-index 100000 {
+  z-index: 100000;
   padding: 15px 23px 14px;
 }
 @media (min-width: 768px) {
@@ -3580,45 +3608,6 @@ div.wpcf7 img.ajax-loader {
   display: inline-block;
   background: url("assets/images/site-logo.svg") no-repeat;
   background-size: 190px 165px;
-}
-/** @define Pager; weak */
-.Pager {
-  padding: 20px;
-}
-.Pager-list {
-  text-align: center;
-}
-.Pager-listItem {
-  display: inline;
-}
-.Pager-listItem a {
-  display: inline-block;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  color: #666;
-  background-color: #efefef;
-  padding: 5px 14px;
-}
-.Pager-listItem a:hover {
-  text-decoration: none;
-  border-color: #ccc;
-  background-color: #fff;
-}
-.Pager-listItem a:after {
-  color: #777;
-}
-.Pager-next {
-  float: right;
-}
-.Pager-next a:after {
-  content: " →";
-}
-.Pager-previous {
-  float: left;
-}
-.Pager-previous a:before {
-  content: "← ";
 }
 .Button {
   font-size: 16px;
