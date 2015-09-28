@@ -2959,12 +2959,6 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-.bypostauthor {
-  border-top: 10px solid #ee5455;
-}
-.sticky {
-  border-left: 3px solid #ee5455;
-}
 .alignleft,
 .alignright {
   display: block;
@@ -2977,6 +2971,16 @@ textarea {
 }
 .alignnone {
   margin: 5px 20px 20px 0;
+}
+@media (min-width: 768px) {
+  .alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+  .alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+  }
 }
 .wp-caption {
   text-align: center;
@@ -3001,6 +3005,12 @@ textarea {
 .gallery-caption {
   border: 1px solid #f0f0f0;
   padding: 5px 3px 10px;
+}
+.bypostauthor {
+  border-top: 10px solid #ee5455;
+}
+.sticky {
+  border-left: 3px solid #ee5455;
 }
 .nav-links {
   overflow: hidden;
@@ -3061,16 +3071,6 @@ textarea {
   text-decoration: none;
   z-index: 100000;
   padding: 15px 23px 14px;
-}
-@media (min-width: 768px) {
-  .alignleft {
-    float: left;
-    margin: 0 20px 20px 0;
-  }
-  .alignright {
-    float: right;
-    margin: 0 0 20px 20px;
-  }
 }
 .Button {
   font-size: 16px;

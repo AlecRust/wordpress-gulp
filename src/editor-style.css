@@ -2950,12 +2950,6 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
-.bypostauthor {
-  border-top: 10px solid #ee5455;
-}
-.sticky {
-  border-left: 3px solid #ee5455;
-}
 .alignleft,
 .alignright {
   display: block;
@@ -2968,6 +2962,16 @@ textarea {
 }
 .alignnone {
   margin: 5px 20px 20px 0;
+}
+@media (min-width: 768px) {
+  .alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+  .alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+  }
 }
 .wp-caption {
   text-align: center;
@@ -2992,76 +2996,6 @@ textarea {
 .gallery-caption {
   border: 1px solid #f0f0f0;
   padding: 5px 3px 10px;
-}
-.nav-links {
-  overflow: hidden;
-  margin-bottom: 20px;
-  padding: 20px;
-}
-.nav-links > div a {
-  display: block;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  color: #666;
-  background-color: #efefef;
-  padding: 5px 14px;
-}
-.nav-links > div a:hover {
-  text-decoration: none;
-  border-color: #ccc;
-  background-color: #fff;
-}
-.nav-links > div a:after {
-  color: #777;
-}
-.nav-links .nav-previous {
-  float: left;
-}
-.nav-links .nav-previous a:before {
-  content: "← ";
-}
-.nav-links .nav-next {
-  float: right;
-}
-.nav-links .nav-next a:after {
-  content: " →";
-}
-.screen-reader-text {
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  overflow: hidden;
-}
-.screen-reader-text:focus {
-  width: auto;
-  height: auto;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
-  clip: auto !important;
-  color: #091d5c;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  top: 5px;
-  left: 5px;
-  line-height: normal;
-  text-decoration: none;
-  z-index: 100000;
-  padding: 15px 23px 14px;
-}
-@media (min-width: 768px) {
-  .alignleft {
-    float: left;
-    margin: 0 20px 20px 0;
-  }
-  .alignright {
-    float: right;
-    margin: 0 0 20px 20px;
-  }
 }
 /** @define Entry; weak */
 .Entry-header {
