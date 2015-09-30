@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
       <nav id="comment-nav-above" class="Pager" role="navigation" aria-labelledby="comment-nav-above-heading">
-        <p id="comment-nav-above-heading" class="u-hiddenVisually">Comment navigation</p>
+        <p id="comment-nav-above-heading" class="screen-reader-text">Comment navigation</p>
         <ul class="Pager-list u-cf">
           <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments', 'wpg' ) ); ?></li>
           <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments', 'wpg' ) ); ?></li>
@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
       <nav id="comment-nav-below" class="Pager" role="navigation" aria-labelledby="comment-nav-below-heading">
-        <p id="comment-nav-below-heading" class="u-hiddenVisually">Comment navigation</p>
+        <p id="comment-nav-below-heading" class="screen-reader-text">Comment navigation</p>
         <ul class="Pager-list u-cf">
           <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments', 'wpg' ) ); ?></li>
           <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments', 'wpg' ) ); ?></li>

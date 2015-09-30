@@ -45,7 +45,7 @@
         </div>
 
         <nav class="SiteHeaderMenu" role="navigation" aria-labelledby="site-nav-heading">
-          <p id="site-nav-heading" class="u-hiddenVisually">Site navigation</p>
+          <p id="site-nav-heading" class="screen-reader-text">Site navigation</p>
           <?php wp_nav_menu( array(
             'theme_location' => 'site_header',
             'menu' => 'Site Header',

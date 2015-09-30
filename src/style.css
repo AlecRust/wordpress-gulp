@@ -3009,8 +3009,8 @@ textarea {
 .bypostauthor {
   border-top: 10px solid #ee5455;
 }
-.sticky {
-  border-left: 3px solid #ee5455;
+.sticky .Entry-header {
+  border-bottom-color: #ee5455;
 }
 .nav-links {
   overflow: hidden;
