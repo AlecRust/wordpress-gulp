@@ -3602,6 +3602,11 @@ div.wpcf7 img.ajax-loader {
 .PageHeader-title {
   color: #bbb;
 }
+.PageHeader-description {
+  color: #bbb;
+  font-size: 15px;
+  padding-top: 5px;
+}
 .login #login h1 a {
   width: 190px;
   height: 165px;
