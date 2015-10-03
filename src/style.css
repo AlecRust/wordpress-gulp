@@ -3736,45 +3736,6 @@ div.wpcf7 img.ajax-loader {
 .widget_recent_entries li:last-child {
   margin-bottom: 0;
 }
-.jetpack_subscription_widget #subscribe-email {
-  width: 70%;
-  float: left;
-}
-.jetpack_subscription_widget #subscribe-email input[type="email"] {
-  width: 100%;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  font-size: 13px;
-  padding: 3px 6px 4px;
-}
-.jetpack_subscription_widget #subscribe-email input[type="email"]:hover {
-  border-color: #a8a8a8;
-}
-.jetpack_subscription_widget #subscribe-email input[type="email"]:focus {
-  outline: 0;
-  border-color: #ee5455;
-}
-.jetpack_subscription_widget #subscribe-submit {
-  width: 30%;
-  float: right;
-}
-.jetpack_subscription_widget #subscribe-submit input[type="submit"] {
-  font-size: 16px;
-  border-width: 2px;
-  border-radius: 5px;
-  font-size: 14px;
-  border-width: 1px;
-  padding: 4px 9px;
-  color: #444;
-  border-color: #bbb;
-  background-color: #fff;
-  width: 100%;
-  margin-left: 4px;
-}
-.jetpack_subscription_widget #subscribe-submit input[type="submit"]:hover {
-  color: #444;
-  background-color: #c9c9c9;
-}
 @media (min-width: 768px) {
   .Sidebar {
     float: right;
