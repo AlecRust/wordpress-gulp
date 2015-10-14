@@ -2455,10 +2455,8 @@ ul {
 .u-textKern {
   text-rendering: optimizeLegibility; /* 1 */
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1; /* 2 */
   -webkit-font-kerning: normal;
-     -moz-font-kerning: normal;
           font-kerning: normal; /* 3 */
 }
 

@@ -2464,10 +2464,8 @@ ul {
 .u-textKern {
   text-rendering: optimizeLegibility; /* 1 */
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1; /* 2 */
   -webkit-font-kerning: normal;
-     -moz-font-kerning: normal;
           font-kerning: normal; /* 3 */
 }
 
@@ -3613,104 +3611,6 @@ div.wpcf7 img.ajax-loader {
   display: inline-block;
   background: url("assets/images/site-logo.svg") no-repeat;
   background-size: 190px 165px;
-}
-.Button {
-  font-size: 16px;
-  border-width: 2px;
-  border-radius: 5px;
-}
-.Button--sm {
-  font-size: 14px;
-  border-width: 1px;
-  padding: 4px 9px;
-}
-.Button--lg {
-  font-size: 18px;
-  padding: 10px 20px;
-}
-.Button--default {
-  color: #444;
-  border-color: #bbb;
-  background-color: #fff;
-}
-.Button--default:hover {
-  color: #444;
-  background-color: #c9c9c9;
-}
-.Button--primary {
-  color: #fff;
-  border-color: #ee5455;
-  background-color: #ee5455;
-}
-.Button--primary:hover {
-  color: #091d5c;
-  background-color: #fff;
-}
-.Button--success {
-  color: #fff;
-  border-color: #1aa331;
-  background-color: #1aa331;
-}
-.Button--success:hover {
-  color: #091d5c;
-  background-color: #fff;
-}
-.InputText {
-  border: 2px solid #bbb;
-  border-radius: 5px;
-  padding: 6px 9px 7px;
-}
-.InputText:hover {
-  border-color: #a8a8a8;
-}
-.InputText:focus {
-  outline: 0;
-  border-color: #ee5455;
-}
-.InputText--sm {
-  font-size: 13px;
-  border-width: 1px;
-  padding: 3px 6px 4px;
-}
-.InputSelect {
-  width: 30%;
-  height: 34px;
-  border: 1px solid #bbb;
-}
-.InputLabel {
-  font-weight: bold;
-}
-.InputRequired {
-  color: #a94442;
-  font-weight: normal;
-}
-div.wpcf7 .InputText {
-  width: 100%;
-  margin-bottom: 15px;
-}
-div.wpcf7 .InputCheckbox {
-  display: block;
-  margin-bottom: 15px;
-}
-div.wpcf7 .InputCheckbox .wpcf7-list-item {
-  margin-left: 0;
-}
-div.wpcf7 .InputCheckbox label {
-  cursor: pointer;
-  padding-left: 20px;
-}
-div.wpcf7 .InputCheckbox input {
-  margin-top: 0.25rem;
-  margin-left: -20px;
-}
-div.wpcf7 .wpcf7-not-valid-tip {
-  font-size: 80%;
-  color: #a94442;
-  margin: -10px 0 10px;
-}
-div.wpcf7 img.ajax-loader {
-  display: block;
-  margin: 10px auto;
 }
 .Sidebar {
   background-color: #efefef;
