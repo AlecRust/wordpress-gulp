@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'Entry' ); ?>>
   <header class="Entry-header">
     <?php the_title( '<h1 class="Entry-title">', '</h1>' ); ?>
 
