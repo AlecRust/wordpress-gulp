@@ -3260,7 +3260,6 @@ div.wpcf7 img.ajax-loader {
 }
 .Alert,
 div.wpcf7-response-output {
-  margin-bottom: 20px;
   padding: 20px;
 }
 .Alert .Alert-link,
@@ -3360,12 +3359,6 @@ div.wpcf7-response-output {
 .Button--success:hover {
   color: #091d5c;
   background-color: #fff;
-}
-/** @define BrowserBar */
-.BrowserBar {
-  text-align: center;
-  background-color: #fbb03b;
-  padding: 10px;
 }
 .Button {
   font-size: 16px;
