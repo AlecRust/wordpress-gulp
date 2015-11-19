@@ -432,8 +432,28 @@ th {
 }
 /**
  * A thin layer on top of normalize.css that provides a starting point more
- * suitable for web applications. Removes the default spacing and border for
- * appropriate elements.
+ * suitable for web applications.
+ */
+
+/**
+ * Prevent margin and border from affecting element width.
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ * `input[type="search"]` overrides normalize.css more specific rule.
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after,
+input[type="search"] {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
  */
 
 blockquote,
@@ -485,7 +505,7 @@ ul {
 }
 
 /**
- * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
  * This prevents an unwanted focus outline from appearing around elements that
  * might still respond to pointer events.
  */
@@ -2567,13 +2587,13 @@ ul {
 /* Vertical alignment modifiers
    ========================================================================== */
 
-.Arrange--middle .Arrange-sizeFill,
-.Arrange--middle .Arrange-sizeFit {
+.Arrange--middle > .Arrange-sizeFill,
+.Arrange--middle > .Arrange-sizeFit {
   vertical-align: middle;
 }
 
-.Arrange--bottom .Arrange-sizeFill,
-.Arrange--bottom .Arrange-sizeFit {
+.Arrange--bottom > .Arrange-sizeFill,
+.Arrange--bottom > .Arrange-sizeFit {
   vertical-align: bottom;
 }
 
@@ -2775,7 +2795,7 @@ ul {
   top: 0;
   width: 100%;
 }
-/** @define Grid; use strict */
+/** @define Grid */
 
 /**
  * Core grid component
@@ -2792,17 +2812,19 @@ ul {
  *
  * 1. Account for browser defaults of elements that might be the root node of
  *    the component.
- * 2. Remove inter-cell whitespace that appears between `inline-block` child
- *    elements.
- * 3. Ensure consistent default alignment.
  */
 
 .Grid {
-  display: block; /* 1 */
-  font-size: 0; /* 2 */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; /* 1 */
+  box-sizing: border-box;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   margin: 0; /* 1 */
   padding: 0; /* 1 */
-  text-align: left; /* 3 */
 }
 
 /**
@@ -2810,7 +2832,10 @@ ul {
  */
 
 .Grid--alignCenter {
-  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /**
@@ -2818,31 +2843,61 @@ ul {
  */
 
 .Grid--alignRight {
-  text-align: right;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 /**
  * Modifier: middle-align grid cells
  */
 
-.Grid--alignMiddle > .Grid-cell {
-  vertical-align: middle;
+.Grid--alignMiddle {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /**
  * Modifier: bottom-align grid cells
  */
 
-.Grid--alignBottom > .Grid-cell {
-  vertical-align: bottom;
+.Grid--alignBottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/**
+ * Modifier: allow cells to equal distribute width
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ */
+
+.Grid--fit > .Grid-cell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%; /* 1 */
+}
+
+/**
+ * Modifier: all cells match height of tallest cell in a row
+ */
+
+.Grid--equalHeight > .Grid-cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /**
  * Modifier: gutters
- *
- * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
- * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
- * against it.
  */
 
 .Grid--withGutter {
@@ -2858,24 +2913,17 @@ ul {
 
 /**
  * No explicit width by default. Rely on combining `Grid-cell` with a dimension
- * utility or a component class that extends 'grid'.
+ * utility or a component class that extends 'Grid'.
  *
- * 1. Fundamentals of the non-float grid layout.
- * 2. Reset font size change made in `Grid`.
- * 3. Keeps content correctly aligned with the grid direction.
- * 4. Controls vertical positioning of units.
- * 5. Make cells full-width by default.
+ * 1. Set flex items to full width by default
  */
 
 .Grid-cell {
-  box-sizing: border-box;
-  display: inline-block; /* 1 */
-  font-size: 1rem; /* 2 */
-  margin: 0;
-  padding: 0;
-  text-align: left; /* 3 */
-  vertical-align: top; /* 4 */
-  width: 100%; /* 5 */
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%; /* 1 */
+  box-sizing: inherit;
 }
 
 /**
@@ -2885,7 +2933,6 @@ ul {
  */
 
 .Grid-cell--center {
-  display: block;
   margin: 0 auto;
 }
 /**
@@ -2899,13 +2946,7 @@ ul {
   background-color: transparent;
   border: 0;
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 html {
-  box-sizing: border-box;
   font-size: 16px;
 }
 body {

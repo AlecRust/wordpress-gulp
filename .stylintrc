@@ -27,7 +27,7 @@
     "semicolons": false,
     "sortOrder": false,
     "stackedProperties": "never",
-    "trailingWhitespace": "never",
+    "trailingWhitespace": false,
     "universal": false,
     "valid": true,
     "zeroUnits": "never",
