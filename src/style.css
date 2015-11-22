@@ -3612,10 +3612,7 @@ div.wpcf7 img.ajax-loader {
   font-size: 15px;
   background-color: #eee;
   margin-bottom: 20px;
-  padding: 15px 20px 10px;
-}
-.Entry-footer p {
-  margin-bottom: 5px;
+  padding: 15px 20px;
 }
 @media (min-width: 768px) {
   .Entry-content {
@@ -3862,7 +3859,7 @@ div.wpcf7 img.ajax-loader {
 }
 .TagList-item {
   display: inline-block;
-  margin: 0 5px 5px 0;
+  margin: 5px 5px 0 0;
 }
 .TagList-item:last-child {
   margin-right: 0;

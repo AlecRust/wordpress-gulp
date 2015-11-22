@@ -60,9 +60,9 @@ function wpg_entry_footer() {
   }
 
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-    echo '<span class="comments-link">';
+    echo '<p>';
     comments_popup_link( esc_html__( 'Leave a comment', 'wpg' ), esc_html__( '1 Comment', 'wpg' ), esc_html__( '% Comments', 'wpg' ) );
-    echo '</span>';
+    echo '</p>';
   }
 }
 endif;
