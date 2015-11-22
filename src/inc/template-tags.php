@@ -64,16 +64,6 @@ function wpg_entry_footer() {
     comments_popup_link( esc_html__( 'Leave a comment', 'wpg' ), esc_html__( '1 Comment', 'wpg' ), esc_html__( '% Comments', 'wpg' ) );
     echo '</span>';
   }
-
-  edit_post_link(
-    sprintf(
-      /* translators: %s: Name of current post */
-      esc_html__( 'Edit %s', 'wpg' ),
-      the_title( '<span class="screen-reader-text">"', '"</span>', false )
-    ),
-    '<span class="edit-link u-floatRight">',
-    '</span>'
-  );
 }
 endif;
 
