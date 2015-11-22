@@ -13,16 +13,16 @@
 <div class="Entry-content">
   <?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-    <p><?php printf( __( 'Ready to publish the first post? <a href="%1$s">Get started here</a>.', 'wpg' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+    <p><?php printf( wp_kses( __( 'Ready to publish the first post? <a href="%1$s">Get started here</a>.', 'wpg' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
   <?php elseif ( is_search() ) : ?>
 
-    <p>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
+    <p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'wpg' ); ?></p>
     <?php get_search_form(); ?>
 
   <?php else : ?>
 
-    <p>It seems what you&rsquo;re looking for can&rsquo;t be found. Perhaps searching can help.</p>
+    <p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'wpg' ); ?></p>
     <?php get_search_form(); ?>
 
   <?php endif; ?>
