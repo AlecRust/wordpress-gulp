@@ -3610,8 +3610,12 @@ div.wpcf7 img.ajax-loader {
 }
 .Entry-footer {
   font-size: 15px;
+  background-color: #eee;
   margin-bottom: 20px;
-  padding: 0 20px;
+  padding: 15px 20px 10px;
+}
+.Entry-footer p {
+  margin-bottom: 5px;
 }
 @media (min-width: 768px) {
   .Entry-content {
@@ -3851,4 +3855,24 @@ div.wpcf7 img.ajax-loader {
   .SocialIcons-list li {
     margin: 0 0 0 25px;
   }
+}
+/** @define TagList; weak */
+.TagList {
+  display: inline;
+}
+.TagList-item {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+.TagList-item:last-child {
+  margin-right: 0;
+}
+.TagList-item a {
+  display: block;
+  text-decoration: none;
+  background-color: #fbb03b;
+  padding: 3px 6px;
+}
+.TagList-item a:hover {
+  background-color: #fbb84f;
 }

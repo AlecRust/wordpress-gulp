@@ -49,13 +49,13 @@ function wpg_entry_footer() {
     /* translators: used between list items, there is a space after the comma */
     $categories_list = get_the_category_list( esc_html__( ', ', 'wpg' ) );
     if ( $categories_list && wpg_categorized_blog() ) {
-      printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wpg' ) . '</span>', $categories_list );
+      printf( '<p>' . esc_html__( 'Posted in %1$s', 'wpg' ) . '</p>', $categories_list );
     }
 
     /* translators: used between list items, there is a space after the comma */
-    $tags_list = get_the_tag_list( '', esc_html__( ', ', 'wpg' ) );
+    $tags_list = get_the_tag_list('<ul class="TagList"><li class="TagList-item">','</li><li class="TagList-item">','</li></ul>');
     if ( $tags_list ) {
-      printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wpg' ) . '</span>', $tags_list );
+      printf( '<div>' . esc_html__( 'Tags: %1$s', 'wpg' ) . '</div>', $tags_list );
     }
   }
 
