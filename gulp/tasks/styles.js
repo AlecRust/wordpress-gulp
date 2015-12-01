@@ -8,7 +8,7 @@ var atImport =         require('postcss-import');
 var at2x =             require('postcss-at2x');
 var customProperties = require('postcss-custom-properties');
 var calc =             require('postcss-calc');
-var customMedia =      require('postcss-custom-media')
+var customMedia =      require('postcss-custom-media');
 var autoprefixer =     require('autoprefixer');
 var clip =             require('gulp-clip-empty-files');
 var del =              require('del');
@@ -55,7 +55,7 @@ gulp.task('postcss', ['stylus', 'bemlint'], function() {
 
 /**
  * Nuke temp CSS files
- * */
+ */
 gulp.task('clean-css', ['stylus', 'bemlint', 'postcss'], function() {
   return del(paths.styles.tmpDir);
 });
