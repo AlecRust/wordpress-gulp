@@ -55,8 +55,8 @@ add_filter( 'login_headerurl', 'wpg_login_logo_url' );
  * Overrides WordPress login page logo link title
  */
 function wpg_login_logo_url_title() {
-  $blog_title = get_bloginfo( 'title' );
-  return 'Back to ' . $blog_title;
+  $site_title = get_bloginfo( 'title' );
+  return 'Back to ' . $site_title;
 }
 add_filter( 'login_headertitle', 'wpg_login_logo_url_title' );
 
