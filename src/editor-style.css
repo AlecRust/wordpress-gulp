@@ -1748,6 +1748,7 @@ ul {
  */
 
 /* postcss-bem-linter: ignore */
+
 [class*="u-size"] {
   -webkit-flex-basis: auto !important;
       -ms-flex-preferred-size: auto !important;
@@ -1931,6 +1932,7 @@ ul {
    */
 
   /* postcss-bem-linter: ignore */
+
   [class*="u-sm-size"] {
     -webkit-flex-basis: auto !important;
         -ms-flex-preferred-size: auto !important;
@@ -2116,6 +2118,7 @@ ul {
    */
 
   /* postcss-bem-linter: ignore */
+
   [class*="u-md-size"] {
     -webkit-flex-basis: auto !important;
         -ms-flex-preferred-size: auto !important;
@@ -2301,6 +2304,7 @@ ul {
    */
 
   /* postcss-bem-linter: ignore */
+
   [class*="u-lg-size"] {
     -webkit-flex-basis: auto !important;
         -ms-flex-preferred-size: auto !important;
@@ -3906,8 +3910,9 @@ ul {
 }
 
 /**
- * There are two possible types of child. `sizeFill` will expand to fill all
- * of the remaining space not filled by `sizeFit` elements.
+ * There are three possible types of child. `sizeFill` will expand to fill all
+ * of the remaining space not filled by `sizeFit` elements. `row` will begin a
+ * new row context, keeping columns the same size.
  *
  * 1. Zero out any default spacing that might be on an element (e.g., `li`);
  *    Margin has no effect when coupled with `display: table-cell`.
@@ -3954,6 +3959,14 @@ ul {
   width: auto !important;
 }
 
+/**
+ * Start a new row context.
+ */
+
+.Arrange-row {
+  display: table-row;
+}
+
 /* Vertical alignment modifiers
    ========================================================================== */
 
@@ -3992,7 +4005,9 @@ ul {
  */
 
 .Arrange--equal > .Arrange-sizeFill,
-.Arrange--equal > .Arrange-sizeFit {
+.Arrange--equal > .Arrange-sizeFit,
+.Arrange--equal > .Arrange-row > .Arrange-sizeFill,
+.Arrange--equal > .Arrange-row > .Arrange-sizeFit {
   width: 1%;
 }
 
@@ -4012,7 +4027,9 @@ ul {
 }
 
 .Arrange--withGutter > .Arrange-sizeFit,
-.Arrange--withGutter > .Arrange-sizeFill {
+.Arrange--withGutter > .Arrange-sizeFill,
+.Arrange--withGutter > .Arrange-row > .Arrange-sizeFit,
+.Arrange--withGutter > .Arrange-row > .Arrange-sizeFill {
   padding: 0 5px;
 }
 /** @define Button; use strict */
@@ -4092,7 +4109,7 @@ ul {
   cursor: default;
   opacity: 0.6;
 }
-/** @define FlexEmbed; use strict */
+/** @define FlexEmbed */
 
 /**
  * Flexible media embeds
@@ -4185,11 +4202,11 @@ ul {
  */
 
 .Grid {
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; /* 1 */
-  box-sizing: border-box;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -4289,11 +4306,11 @@ ul {
  */
 
 .Grid-cell {
+  box-sizing: inherit;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%; /* 1 */
-  box-sizing: inherit;
 }
 
 /**

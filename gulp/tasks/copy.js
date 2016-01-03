@@ -1,7 +1,7 @@
 var gulp =      require('gulp');
 var gulpIf =    require('gulp-if');
 var uglify =    require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
+var minifyCss = require('gulp-cssnano');
 var paths =     require('../paths');
 
 gulp.task('copy', ['styles'], function () {
