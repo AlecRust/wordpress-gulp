@@ -6,14 +6,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'Entry' ); ?>>
   <header class="Entry-header">
-    <?php the_title( '<h1 class="Entry-title">', '</h1>' ); ?>
+    <?php the_title( '<h1 class="Entry-title entry-title">', '</h1>' ); ?>
 
     <div class="Entry-meta">
       <?php wpg_posted_on(); ?>
     </div>
   </header>
 
-  <div class="Entry-content">
+  <div class="Entry-content entry-content">
     <?php the_content(); ?>
     <?php
       wp_link_pages( array(

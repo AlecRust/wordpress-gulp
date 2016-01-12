@@ -8,16 +8,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'Entry' ); ?>>
   <header class="Entry-header">
-    <?php the_title( sprintf( '<h1 class="Entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+    <?php the_title( sprintf( '<h1 class="Entry-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-    <?php if ( 'post' === get_post_type() ) : ?>
-      <div class="Entry-meta">
-        <?php wpg_posted_on(); ?>
-      </div>
-    <?php endif; ?>
+    <div class="Entry-meta u-hiddenVisually">
+      <?php wpg_posted_on(); ?>
+    </div>
   </header>
 
-  <div class="Entry-summary">
+  <div class="Entry-summary entry-summary">
     <?php the_excerpt(); ?>
   </div>
 

@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-  <div class="Container">
+  <div class="Container u-cf">
 
     <main class="Container-mainColumn" role="main">
 
