@@ -7,7 +7,7 @@
 ?>
 
 <header class="Entry-header">
-  <h1 class="Entry-title">Nothing Found</h1>
+  <h1 class="Entry-title"><?php esc_html_e( 'Nothing Found', 'wpg' ); ?></h1>
 </header>
 
 <div class="Entry-content">

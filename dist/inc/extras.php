@@ -8,16 +8,27 @@
  */
 
 /**
- * Adds page slug to body_class output
+ * Adds custom classes to the array of body classes.
+ *
+ * @param array $classes Classes for the body element.
+ * @return array
  */
-function wpg_slug_body_class( $classes ) {
+function wpg_body_classes( $classes ) {
   global $post;
+
+  // Adds page slug to body_class output
   if ( isset( $post ) ) {
     $classes[] = $post->post_type . '-' . $post->post_name;
   }
+
+  // Adds a class of hfeed to non-singular pages
+  if ( ! is_singular() ) {
+    $classes[] = 'hfeed';
+  }
+
   return $classes;
 }
-add_filter( 'body_class', 'wpg_slug_body_class' );
+add_filter( 'body_class', 'wpg_body_classes' );
 
 /**
  * Adds Google Analytics tracking snippet to footer
