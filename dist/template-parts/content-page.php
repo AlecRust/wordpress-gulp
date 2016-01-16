@@ -24,10 +24,4 @@
       ) );
     ?>
   </div>
-
-  <footer class="Entry-footer screen-reader-text">
-    <p class="vcard author">
-      <span class="fn"><?php bloginfo( 'name' ); ?></span>
-    </p>
-  </footer>
 </article>
