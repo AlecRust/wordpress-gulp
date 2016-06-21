@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "suitcss-base": "^2.0.0",
-    "suitcss-utils": "^1.0.0",
-    "suitcss-components": "^1.0.1"
+    "suitcss-components-button": "^5.0.0",
+    "suitcss-utils-display": "^1.0.2",
+    "suitcss-utils-layout": "^1.0.1",
+    "suitcss-utils-text": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
