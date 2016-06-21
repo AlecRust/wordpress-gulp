@@ -2,16 +2,11 @@
 Editor stylesheet
 */
 
-/**
-* Base styles and any SUIT vars
-*/
-
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
 html {
@@ -21,7 +16,7 @@ html {
 }
 
 /**
- * Remove default margin.
+ * Remove the margin in all browsers (opinionated).
  */
 
 body {
@@ -32,44 +27,39 @@ body {
    ========================================================================== */
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
  */
 
 article,
 aside,
-details,
+details, /* 1 */
 figcaption,
 figure,
 footer,
 header,
-hgroup,
-main,
+main, /* 2 */
 menu,
 nav,
 section,
-summary {
+summary { /* 1 */
   display: block;
 }
 
 /**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * Add the correct display in IE 9-.
  */
 
 audio,
 canvas,
 progress,
 video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
+  display: inline-block;
 }
 
 /**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
+ * Add the correct display in iOS 4-7.
  */
 
 audio:not([controls]) {
@@ -78,12 +68,20 @@ audio:not([controls]) {
 }
 
 /**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
-[hidden],
-template {
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+
+template, /* 1 */
+[hidden] {
   display: none;
 }
 
@@ -91,45 +89,59 @@ template {
    ========================================================================== */
 
 /**
- * Remove the gray background color from active links in IE 10.
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
-  background-color: transparent;
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
 }
 
 /**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
  */
 
 a:active,
 a:hover {
-  outline: 0;
+  outline-width: 0;
 }
 
 /* Text-level semantics
    ========================================================================== */
 
 /**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: inherit;
 }
 
 /**
- * Address styling not present in Safari and Chrome.
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
  */
 
 dfn {
@@ -137,8 +149,8 @@ dfn {
 }
 
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
  */
 
 h1 {
@@ -147,16 +159,16 @@ h1 {
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Add the correct background and color in IE 9-.
  */
 
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000;
 }
 
 /**
- * Address inconsistent and variable font size in all browsers.
+ * Add the correct font size in all browsers.
  */
 
 small {
@@ -164,7 +176,8 @@ small {
 }
 
 /**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
  */
 
 sub,
@@ -175,27 +188,27 @@ sup {
   vertical-align: baseline;
 }
 
-sup {
-  top: -0.5em;
-}
-
 sub {
   bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
 }
 
 /* Embedded content
    ========================================================================== */
 
 /**
- * Remove border when inside `a` element in IE 8/9/10.
+ * Remove the border on images inside links in IE 10-.
  */
 
 img {
-  border: 0;
+  border-style: none;
 }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
+ * Hide the overflow in IE.
  */
 
 svg:not(:root) {
@@ -206,7 +219,20 @@ svg:not(:root) {
    ========================================================================== */
 
 /**
- * Address margin not present in IE 8/9 and Safari.
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
  */
 
 figure {
@@ -214,171 +240,98 @@ figure {
 }
 
 /**
- * Address differences between Firefox and other browsers.
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
  */
 
 hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /* Forms
    ========================================================================== */
 
 /**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 
 button,
 input,
-optgroup,
 select,
 textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * Restore the font weight unset by the previous rule.
  */
 
-button {
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
   overflow: visible;
 }
 
 /**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
  */
 
 button,
-select {
+select { /* 1 */
   text-transform: none;
 }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 
 button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
 }
 
 /**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
+ * Remove the inner border and padding in Firefox.
  */
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0;
 }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Restore the focus styles unset by the previous rule.
  */
 
-input {
-  line-height: normal;
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
 /**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
- */
-
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  box-sizing: content-box; /* 2 */
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
+ * Change the border, margin, and padding in all browsers (opinionated).
  */
 
 fieldset {
@@ -388,17 +341,23 @@ fieldset {
 }
 
 /**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
  */
 
 legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
- * Remove default vertical scrollbar in IE 8/9/10/11.
+ * Remove the default vertical scrollbar in IE.
  */
 
 textarea {
@@ -406,30 +365,63 @@ textarea {
 }
 
 /**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
  */
 
-optgroup {
-  font-weight: bold;
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
-
-/* Tables
-   ========================================================================== */
 
 /**
- * Remove most spacing between table cells.
+ * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
 }
 
-td,
-th {
-  padding: 0;
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
 /**
  * A thin layer on top of normalize.css that provides a starting point more
  * suitable for web applications.
@@ -437,8 +429,8 @@ th {
 
 /**
  * Prevent margin and border from affecting element width.
- * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- * `input[type="search"]` overrides normalize.css more specific rule.
+ * https://goo.gl/pYtbK7
+ *
  */
 
 html {
@@ -447,8 +439,7 @@ html {
 
 *,
 *::before,
-*::after,
-input[type="search"] {
+*::after {
   box-sizing: inherit;
 }
 
@@ -513,7 +504,9 @@ ul {
 [tabindex="-1"]:focus {
   outline: none !important;
 }
+
 /**
+ * @define utilities
  * Vertical alignment utilities
  * Depends on an appropriate `display` value.
  */
@@ -533,7 +526,9 @@ ul {
 .u-alignTop {
   vertical-align: top !important;
 }
+
 /**
+ * @define utilities
  * Display-type utilities
  */
 
@@ -550,13 +545,13 @@ ul {
  */
 
 .u-hiddenVisually {
-  position: absolute !important;
-  overflow: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
 }
 
 .u-inline {
@@ -585,7 +580,9 @@ ul {
 .u-tableRow {
   display: table-row !important;
 }
+
 /**
+ * @define utilities
  * Contain floats
  *
  * Make an element expand to contain floated children.
@@ -599,13 +596,13 @@ ul {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.u-cf:before,
-.u-cf:after {
+.u-cf::before,
+.u-cf::after {
   content: " "; /* 1 */
   display: table; /* 2 */
 }
 
-.u-cf:after {
+.u-cf::after {
   clear: both;
 }
 
@@ -651,7 +648,9 @@ ul {
 .u-floatRight {
   float: right !important;
 }
+
 /**
+ * @define utilities
  * Clean link
  *
  * A link without any text-decoration at all.
@@ -705,7 +704,9 @@ ul {
   display: block !important;
   text-decoration: none !important;
 }
+
 /**
+ * @define utilities
  * Specify the proportional offset after an element.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 4, 5, 6, 8, 10, 12 section
@@ -821,7 +822,9 @@ ul {
 .u-after11of12 {
   margin-right: 91.66667% !important;
 }
+
 /**
+ * @define utilities
  * Offset: breakpoint 1 (small)
  *
  * Specify the proportional offset after an element.
@@ -832,7 +835,7 @@ ul {
 @media (min-width: 48em) {
 
   .u-sm-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-sm-after1of12 {
@@ -947,7 +950,9 @@ ul {
   }
 
 }
+
 /**
+ * @define utilities
  * Offset: breakpoint 2 (medium)
  *
  * Specify the proportional offset after an element.
@@ -958,7 +963,7 @@ ul {
 @media (min-width: 62em) {
 
   .u-md-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-md-after1of12 {
@@ -1073,7 +1078,9 @@ ul {
   }
 
 }
+
 /**
+ * @define utilities
  * Offset: breakpoint 3 (large)
  *
  * Specify the proportional offset after an element.
@@ -1084,7 +1091,7 @@ ul {
 @media (min-width: 75em) {
 
   .u-lg-afterNone {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .u-lg-after1of12 {
@@ -1199,7 +1206,9 @@ ul {
   }
 
 }
+
 /**
+ * @define utilities
  * Specify the proportional offset before an object.
  * Intentional redundancy build into each set of unit classes.
  * Supports: 2, 3, 4, 5, 6, 8, 10, 12 section
@@ -1315,7 +1324,9 @@ ul {
 .u-before11of12 {
   margin-left: 91.66667% !important;
 }
+
 /**
+ * @define utilities
  * Offset: breakpoint 1 (small)
  *
  * Specify the proportional offset before an element.
@@ -1441,7 +1452,9 @@ ul {
   }
 
 }
+
 /**
+ * @define utilities
  * Offset: breakpoint 2 (medium)
  *
  * Specify the proportional offset before an element.
@@ -1567,7 +1580,9 @@ ul {
   }
 
 }
+
 /**
+ * @define utilities
  * Offset: breakpoint 3 (large)
  *
  * Specify the proportional offset before an element.
@@ -1693,21 +1708,33 @@ ul {
   }
 
 }
+
+/** @define utilities */
+
+.u-posFit,
+.u-posAbsoluteCenter,
 .u-posAbsolute {
   position: absolute !important;
 }
 
 /**
- * Pins to all corners by default. But when a width and/or height are
- * provided, the element will be centered in its nearest relatively-positioned
+ * Element will be centered to its nearest relatively-positioned
  * ancestor.
  */
 
+.u-posFixedCenter,
 .u-posAbsoluteCenter {
+  left: 50% !important;
+  top: 50% !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
+.u-posFit,
+.u-posFullScreen {
   bottom: 0 !important;
   left: 0 !important;
   margin: auto !important;
-  position: absolute !important;
   right: 0 !important;
   top: 0 !important;
 }
@@ -1717,10 +1744,12 @@ ul {
  *    reasons.
  */
 
+.u-posFullScreen,
+.u-posFixedCenter,
 .u-posFixed {
-  position: fixed !important;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; /* 1 */
+  position: fixed !important;
 }
 
 .u-posRelative {
@@ -1730,6 +1759,7 @@ ul {
 .u-posStatic {
   position: static !important;
 }
+
 /**
  * @define utilities
  * Sizing utilities
@@ -1747,62 +1777,76 @@ ul {
  *    http://git.io/vllMD
  */
 
-/* postcss-bem-linter: ignore */
-
-[class*="u-size"] {
-  -webkit-flex-basis: auto !important;
-      -ms-flex-preferred-size: auto !important;
-          flex-basis: auto !important; /* 1 */
-}
-
 .u-size1of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 8.33333% !important;
 }
 
 .u-size1of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 10% !important;
 }
 
 .u-size1of8 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 12.5% !important;
 }
 
 .u-size1of6,
 .u-size2of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 16.66667% !important;
 }
 
 .u-size1of5,
 .u-size2of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 20% !important;
 }
 
 .u-size1of4,
 .u-size2of8,
 .u-size3of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 25% !important;
 }
 
 .u-size3of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 30% !important;
 }
 
 .u-size1of3,
 .u-size2of6,
 .u-size4of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 33.33333% !important;
 }
 
 .u-size3of8 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 37.5% !important;
 }
 
 .u-size2of5,
 .u-size4of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 40% !important;
 }
 
 .u-size5of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 41.66667% !important;
 }
 
@@ -1812,57 +1856,81 @@ ul {
 .u-size4of8,
 .u-size5of10,
 .u-size6of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 50% !important;
 }
 
 .u-size7of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 58.33333% !important;
 }
 
 .u-size3of5,
 .u-size6of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 60% !important;
 }
 
 .u-size5of8 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 62.5% !important;
 }
 
 .u-size2of3,
 .u-size4of6,
 .u-size8of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 66.66667% !important;
 }
 
 .u-size7of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 70% !important;
 }
 
 .u-size3of4,
 .u-size6of8,
 .u-size9of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 75% !important;
 }
 
 .u-size4of5,
 .u-size8of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 80% !important;
 }
 
 .u-size5of6,
 .u-size10of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 83.33333% !important;
 }
 
 .u-size7of8 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 87.5% !important;
 }
 
 .u-size9of10 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 90% !important;
 }
 
 .u-size11of12 {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
   width: 91.66667% !important;
 }
 
@@ -1870,20 +1938,29 @@ ul {
    ========================================================================== */
 
 /**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sizeFit {
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
+}
+
+/**
  * Make an element fill the remaining space.
  *
- * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
- * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+ * 1. Be explicit to work around IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+ *    http://git.io/vllMt
  */
 
 .u-sizeFill {
   -webkit-box-flex: 1 !important;
-  -webkit-flex: 1 1 0% !important;
       -ms-flex: 1 1 0% !important;
           flex: 1 1 0% !important; /* 1 */
-  -webkit-flex-basis: 0% !important;
-      -ms-flex-preferred-size: 0% !important;
-          flex-basis: 0% !important; /* 2 */
+  -ms-flex-preferred-size: 0% !important;
+      flex-basis: 0% !important; /* 2 */
 }
 
 /**
@@ -1895,12 +1972,10 @@ ul {
 
 .u-sizeFillAlt {
   -webkit-box-flex: 1 !important;
-  -webkit-flex: 1 1 auto !important;
       -ms-flex: 1 1 auto !important;
           flex: 1 1 auto !important;
-  -webkit-flex-basis: auto !important;
-      -ms-flex-preferred-size: auto !important;
-          flex-basis: auto !important;
+  -ms-flex-preferred-size: auto !important;
+      flex-basis: auto !important;
 }
 
 /**
@@ -1912,6 +1987,7 @@ ul {
   display: block !important;
   width: 100% !important;
 }
+
 /**
  * @define utilities
  * Size: breakpoint 1 (small)
@@ -1920,7 +1996,7 @@ ul {
 @media (min-width: 48em) {
 
   /* Proportional widths: breakpoint 1 (small)
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Specify the proportional width of an object.
@@ -1931,62 +2007,76 @@ ul {
    *    http://git.io/vllMD
    */
 
-  /* postcss-bem-linter: ignore */
-
-  [class*="u-sm-size"] {
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important; /* 1 */
-  }
-
   .u-sm-size1of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 8.33333% !important;
   }
 
   .u-sm-size1of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 10% !important;
   }
 
   .u-sm-size1of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 12.5% !important;
   }
 
   .u-sm-size1of6,
   .u-sm-size2of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 16.66667% !important;
   }
 
   .u-sm-size1of5,
   .u-sm-size2of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 20% !important;
   }
 
   .u-sm-size1of4,
   .u-sm-size2of8,
   .u-sm-size3of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 25% !important;
   }
 
   .u-sm-size3of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 30% !important;
   }
 
   .u-sm-size1of3,
   .u-sm-size2of6,
   .u-sm-size4of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 33.33333% !important;
   }
 
   .u-sm-size3of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 37.5% !important;
   }
 
   .u-sm-size2of5,
   .u-sm-size4of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 40% !important;
   }
 
   .u-sm-size5of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 41.66667% !important;
   }
 
@@ -1996,78 +2086,111 @@ ul {
   .u-sm-size4of8,
   .u-sm-size5of10,
   .u-sm-size6of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 50% !important;
   }
 
   .u-sm-size7of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 58.33333% !important;
   }
 
   .u-sm-size3of5,
   .u-sm-size6of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 60% !important;
   }
 
   .u-sm-size5of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 62.5% !important;
   }
 
   .u-sm-size2of3,
   .u-sm-size4of6,
   .u-sm-size8of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 66.66667% !important;
   }
 
   .u-sm-size7of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 70% !important;
   }
 
   .u-sm-size3of4,
   .u-sm-size6of8,
   .u-sm-size9of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 75% !important;
   }
 
   .u-sm-size4of5,
   .u-sm-size8of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 80% !important;
   }
 
   .u-sm-size5of6,
   .u-sm-size10of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 83.33333% !important;
   }
 
   .u-sm-size7of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 87.5% !important;
   }
 
   .u-sm-size9of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 90% !important;
   }
 
   .u-sm-size11of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 91.66667% !important;
   }
 
   /* Intrinsic widths
-     ========================================================================== */
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-sm-sizeFit {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+  }
 
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
    */
 
   .u-sm-sizeFill {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 0% !important;
         -ms-flex: 1 1 0% !important;
             flex: 1 1 0% !important; /* 1 */
-    -webkit-flex-basis: 0% !important;
-        -ms-flex-preferred-size: 0% !important;
-            flex-basis: 0% !important; /* 2 */
+    -ms-flex-preferred-size: 0% !important;
+        flex-basis: 0% !important; /* 2 */
   }
 
   /**
@@ -2079,12 +2202,10 @@ ul {
 
   .u-sm-sizeFillAlt {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 auto !important;
         -ms-flex: 1 1 auto !important;
             flex: 1 1 auto !important;
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important;
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
   }
 
   /**
@@ -2098,6 +2219,7 @@ ul {
   }
 
 }
+
 /**
  * @define utilities
  * Size: breakpoint 2 (medium)
@@ -2106,7 +2228,7 @@ ul {
 @media (min-width: 62em) {
 
   /* Proportional widths: breakpoint 2 (medium)
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Specify the proportional width of an object.
@@ -2119,60 +2241,76 @@ ul {
 
   /* postcss-bem-linter: ignore */
 
-  [class*="u-md-size"] {
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important; /* 1 */
-  }
-
   .u-md-size1of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 8.33333% !important;
   }
 
   .u-md-size1of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 10% !important;
   }
 
   .u-md-size1of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 12.5% !important;
   }
 
   .u-md-size1of6,
   .u-md-size2of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 16.66667% !important;
   }
 
   .u-md-size1of5,
   .u-md-size2of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 20% !important;
   }
 
   .u-md-size1of4,
   .u-md-size2of8,
   .u-md-size3of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 25% !important;
   }
 
   .u-md-size3of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 30% !important;
   }
 
   .u-md-size1of3,
   .u-md-size2of6,
   .u-md-size4of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 33.33333% !important;
   }
 
   .u-md-size3of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 37.5% !important;
   }
 
   .u-md-size2of5,
   .u-md-size4of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 40% !important;
   }
 
   .u-md-size5of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 41.66667% !important;
   }
 
@@ -2182,78 +2320,111 @@ ul {
   .u-md-size4of8,
   .u-md-size5of10,
   .u-md-size6of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 50% !important;
   }
 
   .u-md-size7of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 58.33333% !important;
   }
 
   .u-md-size3of5,
   .u-md-size6of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 60% !important;
   }
 
   .u-md-size5of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 62.5% !important;
   }
 
   .u-md-size2of3,
   .u-md-size4of6,
   .u-md-size8of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 66.66667% !important;
   }
 
   .u-md-size7of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 70% !important;
   }
 
   .u-md-size3of4,
   .u-md-size6of8,
   .u-md-size9of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 75% !important;
   }
 
   .u-md-size4of5,
   .u-md-size8of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 80% !important;
   }
 
   .u-md-size5of6,
   .u-md-size10of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 83.33333% !important;
   }
 
   .u-md-size7of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 87.5% !important;
   }
 
   .u-md-size9of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 90% !important;
   }
 
   .u-md-size11of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 91.66667% !important;
   }
 
   /* Intrinsic widths
-     ========================================================================== */
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-md-sizeFit {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+  }
 
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
    */
 
   .u-md-sizeFill {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 0% !important;
         -ms-flex: 1 1 0% !important;
             flex: 1 1 0% !important; /* 1 */
-    -webkit-flex-basis: 0% !important;
-        -ms-flex-preferred-size: 0% !important;
-            flex-basis: 0% !important; /* 2 */
+    -ms-flex-preferred-size: 0% !important;
+        flex-basis: 0% !important; /* 2 */
   }
 
   /**
@@ -2265,12 +2436,10 @@ ul {
 
   .u-md-sizeFillAlt {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 auto !important;
         -ms-flex: 1 1 auto !important;
             flex: 1 1 auto !important;
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important;
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
   }
 
   /**
@@ -2284,6 +2453,7 @@ ul {
   }
 
 }
+
 /**
  * @define utilities
  * Size: breakpoint 3 (large)
@@ -2292,7 +2462,7 @@ ul {
 @media (min-width: 75em) {
 
   /* Proportional widths: breakpoint 3 (large)
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Specify the proportional width of an object.
@@ -2303,62 +2473,76 @@ ul {
    *    http://git.io/vllMD
    */
 
-  /* postcss-bem-linter: ignore */
-
-  [class*="u-lg-size"] {
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important; /* 1 */
-  }
-
   .u-lg-size1of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 8.33333% !important;
   }
 
   .u-lg-size1of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 10% !important;
   }
 
   .u-lg-size1of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 12.5% !important;
   }
 
   .u-lg-size1of6,
   .u-lg-size2of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 16.66667% !important;
   }
 
   .u-lg-size1of5,
   .u-lg-size2of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 20% !important;
   }
 
   .u-lg-size1of4,
   .u-lg-size2of8,
   .u-lg-size3of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 25% !important;
   }
 
   .u-lg-size3of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 30% !important;
   }
 
   .u-lg-size1of3,
   .u-lg-size2of6,
   .u-lg-size4of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 33.33333% !important;
   }
 
   .u-lg-size3of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 37.5% !important;
   }
 
   .u-lg-size2of5,
   .u-lg-size4of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 40% !important;
   }
 
   .u-lg-size5of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 41.66667% !important;
   }
 
@@ -2368,78 +2552,111 @@ ul {
   .u-lg-size4of8,
   .u-lg-size5of10,
   .u-lg-size6of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 50% !important;
   }
 
   .u-lg-size7of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 58.33333% !important;
   }
 
   .u-lg-size3of5,
   .u-lg-size6of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 60% !important;
   }
 
   .u-lg-size5of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 62.5% !important;
   }
 
   .u-lg-size2of3,
   .u-lg-size4of6,
   .u-lg-size8of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 66.66667% !important;
   }
 
   .u-lg-size7of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 70% !important;
   }
 
   .u-lg-size3of4,
   .u-lg-size6of8,
   .u-lg-size9of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 75% !important;
   }
 
   .u-lg-size4of5,
   .u-lg-size8of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 80% !important;
   }
 
   .u-lg-size5of6,
   .u-lg-size10of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 83.33333% !important;
   }
 
   .u-lg-size7of8 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 87.5% !important;
   }
 
   .u-lg-size9of10 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 90% !important;
   }
 
   .u-lg-size11of12 {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
     width: 91.66667% !important;
   }
 
   /* Intrinsic widths
-     ========================================================================== */
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-lg-sizeFit {
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
+  }
 
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
    */
 
   .u-lg-sizeFill {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 0% !important;
         -ms-flex: 1 1 0% !important;
             flex: 1 1 0% !important; /* 1 */
-    -webkit-flex-basis: 0% !important;
-        -ms-flex-preferred-size: 0% !important;
-            flex-basis: 0% !important; /* 2 */
+    -ms-flex-preferred-size: 0% !important;
+        flex-basis: 0% !important; /* 2 */
   }
 
   /**
@@ -2451,12 +2668,10 @@ ul {
 
   .u-lg-sizeFillAlt {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 auto !important;
         -ms-flex: 1 1 auto !important;
             flex: 1 1 auto !important;
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important;
+    -ms-flex-preferred-size: auto !important;
+        flex-basis: auto !important;
   }
 
   /**
@@ -2470,6 +2685,7 @@ ul {
   }
 
 }
+
 /**
  * Word breaking
  *
@@ -2508,17 +2724,17 @@ ul {
  * Enables font kerning in all browsers.
  * http://blog.typekit.com/2014/02/05/kerning-on-the-web/
  *
- * 1. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
- * 2. Chrome (not Windows), Firefox, IE 10+
- * 3. Safari 7 and future browsers
+ * 1. Chrome (not Windows), Firefox, IE 10+
+ * 2. Safari 7 and future browsers
+ * 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
  */
 
 .u-textKern {
-  text-rendering: optimizeLegibility; /* 1 */
   -webkit-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1; /* 2 */
+          font-feature-settings: "kern" 1; /* 1 */
   -webkit-font-kerning: normal;
-          font-kerning: normal; /* 3 */
+          font-kerning: normal; /* 2 */
+  text-rendering: optimizeLegibility; /* 3 */
 }
 
 /**
@@ -2548,6 +2764,7 @@ ul {
   white-space: nowrap !important;
   word-wrap: normal !important; /* 2 */
 }
+
 /** @define utilities */
 
 /* Applies to flex container
@@ -2559,14 +2776,12 @@ ul {
 
 .u-flex {
   display: -webkit-box !important;
-  display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
 .u-flexInline {
   display: -webkit-inline-box !important;
-  display: -webkit-inline-flex !important;
   display: -ms-inline-flexbox !important;
   display: inline-flex !important;
 }
@@ -2578,7 +2793,6 @@ ul {
 .u-flexRow {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
-  -webkit-flex-direction: row !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
 }
@@ -2586,7 +2800,6 @@ ul {
 .u-flexRowReverse {
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: reverse !important;
-  -webkit-flex-direction: row-reverse !important;
       -ms-flex-direction: row-reverse !important;
           flex-direction: row-reverse !important;
 }
@@ -2596,19 +2809,17 @@ ul {
  */
 
 .u-flexCol {
-   -webkit-box-orient: vertical !important;
-   -webkit-box-direction: normal !important;
-   -webkit-flex-direction: column !important;
-       -ms-flex-direction: column !important;
-           flex-direction: column !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
 
 .u-flexColReverse {
-   -webkit-box-orient: vertical !important;
-   -webkit-box-direction: reverse !important;
-   -webkit-flex-direction: column-reverse !important;
-       -ms-flex-direction: column-reverse !important;
-           flex-direction: column-reverse !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: reverse !important;
+      -ms-flex-direction: column-reverse !important;
+          flex-direction: column-reverse !important;
 }
 
 /**
@@ -2616,21 +2827,18 @@ ul {
  */
 
 .u-flexWrap {
-  -webkit-flex-wrap: wrap !important;
-      -ms-flex-wrap: wrap !important;
-          flex-wrap: wrap !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
 }
 
 .u-flexNoWrap {
-  -webkit-flex-wrap: nowrap !important;
-      -ms-flex-wrap: nowrap !important;
-          flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
 }
 
 .u-flexWrapReverse {
-  -webkit-flex-wrap: wrap-reverse !important;
-      -ms-flex-wrap: wrap-reverse !important;
-          flex-wrap: wrap-reverse !important;
+  -ms-flex-wrap: wrap-reverse !important;
+      flex-wrap: wrap-reverse !important;
 }
 
 /**
@@ -2639,36 +2847,31 @@ ul {
 
 .u-flexJustifyStart {
   -webkit-box-pack: start !important;
-  -webkit-justify-content: flex-start !important;
       -ms-flex-pack: start !important;
           justify-content: flex-start !important;
 }
 
 .u-flexJustifyEnd {
   -webkit-box-pack: end !important;
-  -webkit-justify-content: flex-end !important;
       -ms-flex-pack: end !important;
           justify-content: flex-end !important;
 }
 
 .u-flexJustifyCenter {
   -webkit-box-pack: center !important;
-  -webkit-justify-content: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
 }
 
 .u-flexJustifyBetween {
   -webkit-box-pack: justify !important;
-  -webkit-justify-content: space-between !important;
       -ms-flex-pack: justify !important;
           justify-content: space-between !important;
 }
 
 .u-flexJustifyAround {
-  -webkit-justify-content: space-around !important;
-      -ms-flex-pack: distribute !important;
-          justify-content: space-around !important;
+  -ms-flex-pack: distribute !important;
+      justify-content: space-around !important;
 }
 
 /**
@@ -2678,7 +2881,6 @@ ul {
 
 .u-flexAlignItemsStart {
   -webkit-box-align: start !important;
-  -webkit-align-items: flex-start !important;
       -ms-flex-align: start !important;
               -ms-grid-row-align: flex-start !important;
           align-items: flex-start !important;
@@ -2686,7 +2888,6 @@ ul {
 
 .u-flexAlignItemsEnd {
   -webkit-box-align: end !important;
-  -webkit-align-items: flex-end !important;
       -ms-flex-align: end !important;
               -ms-grid-row-align: flex-end !important;
           align-items: flex-end !important;
@@ -2694,7 +2895,6 @@ ul {
 
 .u-flexAlignItemsCenter {
   -webkit-box-align: center !important;
-  -webkit-align-items: center !important;
       -ms-flex-align: center !important;
               -ms-grid-row-align: center !important;
           align-items: center !important;
@@ -2702,7 +2902,6 @@ ul {
 
 .u-flexAlignItemsStretch {
   -webkit-box-align: stretch !important;
-  -webkit-align-items: stretch !important;
       -ms-flex-align: stretch !important;
               -ms-grid-row-align: stretch !important;
           align-items: stretch !important;
@@ -2710,63 +2909,58 @@ ul {
 
 .u-flexAlignItemsBaseline {
   -webkit-box-align: baseline !important;
-  -webkit-align-items: baseline !important;
       -ms-flex-align: baseline !important;
               -ms-grid-row-align: baseline !important;
           align-items: baseline !important;
 }
 
 /**
- * Aligns items within the flex container when there is extra space in the cross-axis
+ * Aligns items within the flex container when there is extra
+ * space in the cross-axis
  *
  * Has no effect when there is only one line of flex items.
  */
 
 .u-flexAlignContentStart {
-  -webkit-align-content: flex-start !important;
-      -ms-flex-line-pack: start !important;
-          align-content: flex-start !important;
+  -ms-flex-line-pack: start !important;
+      align-content: flex-start !important;
 }
 
 .u-flexAlignContentEnd {
-  -webkit-align-content: flex-end !important;
-      -ms-flex-line-pack: end !important;
-          align-content: flex-end !important;
+  -ms-flex-line-pack: end !important;
+      align-content: flex-end !important;
 }
 
 .u-flexAlignContentCenter {
-  -webkit-align-content: center !important;
-      -ms-flex-line-pack: center !important;
-          align-content: center !important;
+  -ms-flex-line-pack: center !important;
+      align-content: center !important;
 }
 
 .u-flexAlignContentStretch {
-  -webkit-align-content: stretch !important;
-      -ms-flex-line-pack: stretch !important;
-          align-content: stretch !important;
+  -ms-flex-line-pack: stretch !important;
+      align-content: stretch !important;
 }
 
 .u-flexAlignContentBetween {
-  -webkit-align-content: space-between !important;
-      -ms-flex-line-pack: justify !important;
-          align-content: space-between !important;
+  -ms-flex-line-pack: justify !important;
+      align-content: space-between !important;
 }
 
 .u-flexAlignContentAround {
-  -webkit-align-content: space-around !important;
-      -ms-flex-line-pack: distribute !important;
-          align-content: space-around !important;
+  -ms-flex-line-pack: distribute !important;
+      align-content: space-around !important;
 }
 
 /**
  * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
  */
+
 /* postcss-bem-linter: ignore */
+
 .u-flex > *,
 .u-flexInline > * {
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1; /* 1 */
+  -ms-flex-negative: 1;
+      flex-shrink: 1; /* 1 */
 }
 
 /* Applies to flex items
@@ -2777,39 +2971,33 @@ ul {
  */
 
 .u-flexAlignSelfStart {
-  -webkit-align-self: flex-start !important;
-      -ms-flex-item-align: start !important;
-          align-self: flex-start !important;
+  -ms-flex-item-align: start !important;
+      align-self: flex-start !important;
 }
 
 .u-flexAlignSelfEnd {
-  -webkit-align-self: flex-end !important;
-      -ms-flex-item-align: end !important;
-          align-self: flex-end !important;
+  -ms-flex-item-align: end !important;
+      align-self: flex-end !important;
 }
 
 .u-flexAlignSelfCenter {
-  -webkit-align-self: center !important;
-      -ms-flex-item-align: center !important;
-          align-self: center !important;
+  -ms-flex-item-align: center !important;
+      align-self: center !important;
 }
 
 .u-flexAlignSelfStretch {
-  -webkit-align-self: stretch !important;
-      -ms-flex-item-align: stretch !important;
-          align-self: stretch !important;
+  -ms-flex-item-align: stretch !important;
+      align-self: stretch !important;
 }
 
 .u-flexAlignSelfBaseline {
-  -webkit-align-self: baseline !important;
-      -ms-flex-item-align: baseline !important;
-          align-self: baseline !important;
+  -ms-flex-item-align: baseline !important;
+      align-self: baseline !important;
 }
 
 .u-flexAlignSelfAuto {
-  -webkit-align-self: auto !important;
-      -ms-flex-item-align: auto !important;
-          align-self: auto !important;
+  -ms-flex-item-align: auto !important;
+      align-self: auto !important;
 }
 
 /**
@@ -2818,21 +3006,18 @@ ul {
 
 .u-flexOrderFirst {
   -webkit-box-ordinal-group: 0 !important;
-  -webkit-order: -1 !important;
       -ms-flex-order: -1 !important;
           order: -1 !important;
 }
 
 .u-flexOrderLast {
   -webkit-box-ordinal-group: 2 !important;
-  -webkit-order: 1 !important;
       -ms-flex-order: 1 !important;
           order: 1 !important;
 }
 
 .u-flexOrderNone {
   -webkit-box-ordinal-group: 1 !important;
-  -webkit-order: 0 !important;
       -ms-flex-order: 0 !important;
           order: 0 !important;
 }
@@ -2843,44 +3028,69 @@ ul {
  *
  * Supports 1-5 proportions
  *
- * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
- *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    - http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis. Using this
+ *    instead of `auto` as this matches what the default would be with `flex`
+ *    shorthand - http://git.io/vllWx
  */
 
 .u-flexGrow1 {
   -webkit-box-flex: 1 !important;
-  -webkit-flex: 1 1 0% !important;
       -ms-flex: 1 1 0% !important;
           flex: 1 1 0% !important; /* 1 */
 }
 
 .u-flexGrow2 {
   -webkit-box-flex: 2 !important;
-  -webkit-flex: 2 1 0% !important;
       -ms-flex: 2 1 0% !important;
           flex: 2 1 0% !important;
 }
 
 .u-flexGrow3 {
   -webkit-box-flex: 3 !important;
-  -webkit-flex: 3 1 0% !important;
       -ms-flex: 3 1 0% !important;
           flex: 3 1 0% !important;
 }
 
 .u-flexGrow4 {
   -webkit-box-flex: 4 !important;
-  -webkit-flex: 4 1 0% !important;
       -ms-flex: 4 1 0% !important;
           flex: 4 1 0% !important;
 }
 
 .u-flexGrow5 {
   -webkit-box-flex: 5 !important;
-  -webkit-flex: 5 1 0% !important;
       -ms-flex: 5 1 0% !important;
           flex: 5 1 0% !important;
 }
+
+/**
+ * Aligning with `auto` margins
+ * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+ */
+
+.u-flexExpand {
+  margin: auto !important;
+}
+
+.u-flexExpandLeft {
+  margin-left: auto !important;
+}
+
+.u-flexExpandRight {
+  margin-right: auto !important;
+}
+
+.u-flexExpandTop {
+  margin-top: auto !important;
+}
+
+.u-flexExpandBottom {
+  margin-bottom: auto !important;
+}
+
 /**
  * @define utilities
  * Size: breakpoint 1 (small)
@@ -2889,7 +3099,7 @@ ul {
 @media (min-width: 48em) {
 
   /* Applies to flex container
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Container
@@ -2897,14 +3107,12 @@ ul {
 
   .u-sm-flex {
     display: -webkit-box !important;
-    display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
 
   .u-sm-flexInline {
     display: -webkit-inline-box !important;
-    display: -webkit-inline-flex !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
   }
@@ -2916,7 +3124,6 @@ ul {
   .u-sm-flexRow {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
-    -webkit-flex-direction: row !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
@@ -2924,7 +3131,6 @@ ul {
   .u-sm-flexRowReverse {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: reverse !important;
-    -webkit-flex-direction: row-reverse !important;
         -ms-flex-direction: row-reverse !important;
             flex-direction: row-reverse !important;
   }
@@ -2934,19 +3140,17 @@ ul {
    */
 
   .u-sm-flexCol {
-     -webkit-box-orient: vertical !important;
-     -webkit-box-direction: normal !important;
-     -webkit-flex-direction: column !important;
-         -ms-flex-direction: column !important;
-             flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
 
   .u-sm-flexColReverse {
-     -webkit-box-orient: vertical !important;
-     -webkit-box-direction: reverse !important;
-     -webkit-flex-direction: column-reverse !important;
-         -ms-flex-direction: column-reverse !important;
-             flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
   }
 
   /**
@@ -2954,21 +3158,18 @@ ul {
    */
 
   .u-sm-flexWrap {
-    -webkit-flex-wrap: wrap !important;
-        -ms-flex-wrap: wrap !important;
-            flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
   }
 
   .u-sm-flexNoWrap {
-    -webkit-flex-wrap: nowrap !important;
-        -ms-flex-wrap: nowrap !important;
-            flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
   }
 
   .u-sm-flexWrapReverse {
-    -webkit-flex-wrap: wrap-reverse !important;
-        -ms-flex-wrap: wrap-reverse !important;
-            flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !important;
+        flex-wrap: wrap-reverse !important;
   }
 
   /**
@@ -2977,36 +3178,31 @@ ul {
 
   .u-sm-flexJustifyStart {
     -webkit-box-pack: start !important;
-    -webkit-justify-content: flex-start !important;
         -ms-flex-pack: start !important;
             justify-content: flex-start !important;
   }
 
   .u-sm-flexJustifyEnd {
     -webkit-box-pack: end !important;
-    -webkit-justify-content: flex-end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;
   }
 
   .u-sm-flexJustifyCenter {
     -webkit-box-pack: center !important;
-    -webkit-justify-content: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
 
   .u-sm-flexJustifyBetween {
     -webkit-box-pack: justify !important;
-    -webkit-justify-content: space-between !important;
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;
   }
 
   .u-sm-flexJustifyAround {
-    -webkit-justify-content: space-around !important;
-        -ms-flex-pack: distribute !important;
-            justify-content: space-around !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
   }
 
   /**
@@ -3016,7 +3212,6 @@ ul {
 
   .u-sm-flexAlignItemsStart {
     -webkit-box-align: start !important;
-    -webkit-align-items: flex-start !important;
         -ms-flex-align: start !important;
                 -ms-grid-row-align: flex-start !important;
             align-items: flex-start !important;
@@ -3024,7 +3219,6 @@ ul {
 
   .u-sm-flexAlignItemsEnd {
     -webkit-box-align: end !important;
-    -webkit-align-items: flex-end !important;
         -ms-flex-align: end !important;
                 -ms-grid-row-align: flex-end !important;
             align-items: flex-end !important;
@@ -3032,7 +3226,6 @@ ul {
 
   .u-sm-flexAlignItemsCenter {
     -webkit-box-align: center !important;
-    -webkit-align-items: center !important;
         -ms-flex-align: center !important;
                 -ms-grid-row-align: center !important;
             align-items: center !important;
@@ -3040,7 +3233,6 @@ ul {
 
   .u-sm-flexAlignItemsStretch {
     -webkit-box-align: stretch !important;
-    -webkit-align-items: stretch !important;
         -ms-flex-align: stretch !important;
                 -ms-grid-row-align: stretch !important;
             align-items: stretch !important;
@@ -3048,106 +3240,95 @@ ul {
 
   .u-sm-flexAlignItemsBaseline {
     -webkit-box-align: baseline !important;
-    -webkit-align-items: baseline !important;
         -ms-flex-align: baseline !important;
                 -ms-grid-row-align: baseline !important;
             align-items: baseline !important;
   }
 
   /**
-   * Aligns items within the flex container when there is extra space in the cross-axis
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
    *
    * Has no effect when there is only one line of flex items.
    */
 
   .u-sm-flexAlignContentStart {
-    -webkit-align-content: flex-start !important;
-        -ms-flex-line-pack: start !important;
-            align-content: flex-start !important;
+    -ms-flex-line-pack: start !important;
+        align-content: flex-start !important;
   }
 
   .u-sm-flexAlignContentEnd {
-    -webkit-align-content: flex-end !important;
-        -ms-flex-line-pack: end !important;
-            align-content: flex-end !important;
+    -ms-flex-line-pack: end !important;
+        align-content: flex-end !important;
   }
 
   .u-sm-flexAlignContentCenter {
-    -webkit-align-content: center !important;
-        -ms-flex-line-pack: center !important;
-            align-content: center !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
   }
 
   .u-sm-flexAlignContentStretch {
-    -webkit-align-content: stretch !important;
-        -ms-flex-line-pack: stretch !important;
-            align-content: stretch !important;
+    -ms-flex-line-pack: stretch !important;
+        align-content: stretch !important;
   }
 
   .u-sm-flexAlignContentBetween {
-    -webkit-align-content: space-between !important;
-        -ms-flex-line-pack: justify !important;
-            align-content: space-between !important;
+    -ms-flex-line-pack: justify !important;
+        align-content: space-between !important;
   }
 
   .u-sm-flexAlignContentAround {
-    -webkit-align-content: space-around !important;
-        -ms-flex-line-pack: distribute !important;
-            align-content: space-around !important;
+    -ms-flex-line-pack: distribute !important;
+        align-content: space-around !important;
   }
 
   /**
    * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
    */
+
   /* postcss-bem-linter: ignore */
+
   .u-sm-flex > *,
   .u-sm-flexInline > * {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1; /* 1 */
+    -ms-flex-negative: 1;
+        flex-shrink: 1; /* 1 */
   }
 
   /* Applies to flex items
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Override default alignment of single item when specified by `align-items`
    */
 
   .u-sm-flexAlignSelfStart {
-    -webkit-align-self: flex-start !important;
-        -ms-flex-item-align: start !important;
-            align-self: flex-start !important;
+    -ms-flex-item-align: start !important;
+        align-self: flex-start !important;
   }
 
   .u-sm-flexAlignSelfEnd {
-    -webkit-align-self: flex-end !important;
-        -ms-flex-item-align: end !important;
-            align-self: flex-end !important;
+    -ms-flex-item-align: end !important;
+        align-self: flex-end !important;
   }
 
   .u-sm-flexAlignSelfCenter {
-    -webkit-align-self: center !important;
-        -ms-flex-item-align: center !important;
-            align-self: center !important;
+    -ms-flex-item-align: center !important;
+        align-self: center !important;
   }
 
   .u-sm-flexAlignSelfStretch {
-    -webkit-align-self: stretch !important;
-        -ms-flex-item-align: stretch !important;
-            align-self: stretch !important;
+    -ms-flex-item-align: stretch !important;
+        align-self: stretch !important;
   }
 
   .u-sm-flexAlignSelfBaseline {
-    -webkit-align-self: baseline !important;
-        -ms-flex-item-align: baseline !important;
-            align-self: baseline !important;
+    -ms-flex-item-align: baseline !important;
+        align-self: baseline !important;
   }
 
   .u-sm-flexAlignSelfAuto {
-    -webkit-align-self: auto !important;
-        -ms-flex-item-align: auto !important;
-            align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+        align-self: auto !important;
   }
 
   /**
@@ -3156,21 +3337,18 @@ ul {
 
   .u-sm-flexOrderFirst {
     -webkit-box-ordinal-group: 0 !important;
-    -webkit-order: -1 !important;
         -ms-flex-order: -1 !important;
             order: -1 !important;
   }
 
   .u-sm-flexOrderLast {
     -webkit-box-ordinal-group: 2 !important;
-    -webkit-order: 1 !important;
         -ms-flex-order: 1 !important;
             order: 1 !important;
   }
 
   .u-sm-flexOrderNone {
     -webkit-box-ordinal-group: 1 !important;
-    -webkit-order: 0 !important;
         -ms-flex-order: 0 !important;
             order: 0 !important;
   }
@@ -3181,46 +3359,70 @@ ul {
    *
    * Supports 1-5 proportions
    *
-   * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
-   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
    */
 
   .u-sm-flexGrow1 {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 0% !important;
         -ms-flex: 1 1 0% !important;
             flex: 1 1 0% !important; /* 1 */
   }
 
   .u-sm-flexGrow2 {
     -webkit-box-flex: 2 !important;
-    -webkit-flex: 2 1 0% !important;
         -ms-flex: 2 1 0% !important;
             flex: 2 1 0% !important;
   }
 
   .u-sm-flexGrow3 {
     -webkit-box-flex: 3 !important;
-    -webkit-flex: 3 1 0% !important;
         -ms-flex: 3 1 0% !important;
             flex: 3 1 0% !important;
   }
 
   .u-sm-flexGrow4 {
     -webkit-box-flex: 4 !important;
-    -webkit-flex: 4 1 0% !important;
         -ms-flex: 4 1 0% !important;
             flex: 4 1 0% !important;
   }
 
   .u-sm-flexGrow5 {
     -webkit-box-flex: 5 !important;
-    -webkit-flex: 5 1 0% !important;
         -ms-flex: 5 1 0% !important;
             flex: 5 1 0% !important;
   }
 
+  /**
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-sm-flexExpand {
+    margin: auto !important;
+  }
+
+  .u-sm-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-sm-flexExpandRight {
+    margin-right: auto !important;
+  }
+
+  .u-sm-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-sm-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
 }
+
 /**
  * @define utilities
  * Size: breakpoint 1 (medium)
@@ -3229,7 +3431,7 @@ ul {
 @media (min-width: 62em) {
 
   /* Applies to flex container
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Container
@@ -3237,14 +3439,12 @@ ul {
 
   .u-md-flex {
     display: -webkit-box !important;
-    display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
 
   .u-md-flexInline {
     display: -webkit-inline-box !important;
-    display: -webkit-inline-flex !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
   }
@@ -3256,7 +3456,6 @@ ul {
   .u-md-flexRow {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
-    -webkit-flex-direction: row !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
@@ -3264,7 +3463,6 @@ ul {
   .u-md-flexRowReverse {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: reverse !important;
-    -webkit-flex-direction: row-reverse !important;
         -ms-flex-direction: row-reverse !important;
             flex-direction: row-reverse !important;
   }
@@ -3274,19 +3472,17 @@ ul {
    */
 
   .u-md-flexCol {
-     -webkit-box-orient: vertical !important;
-     -webkit-box-direction: normal !important;
-     -webkit-flex-direction: column !important;
-         -ms-flex-direction: column !important;
-             flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
 
   .u-md-flexColReverse {
-     -webkit-box-orient: vertical !important;
-     -webkit-box-direction: reverse !important;
-     -webkit-flex-direction: column-reverse !important;
-         -ms-flex-direction: column-reverse !important;
-             flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
   }
 
   /**
@@ -3294,21 +3490,18 @@ ul {
    */
 
   .u-md-flexWrap {
-    -webkit-flex-wrap: wrap !important;
-        -ms-flex-wrap: wrap !important;
-            flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
   }
 
   .u-md-flexNoWrap {
-    -webkit-flex-wrap: nowrap !important;
-        -ms-flex-wrap: nowrap !important;
-            flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
   }
 
   .u-md-flexWrapReverse {
-    -webkit-flex-wrap: wrap-reverse !important;
-        -ms-flex-wrap: wrap-reverse !important;
-            flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !important;
+        flex-wrap: wrap-reverse !important;
   }
 
   /**
@@ -3317,36 +3510,31 @@ ul {
 
   .u-md-flexJustifyStart {
     -webkit-box-pack: start !important;
-    -webkit-justify-content: flex-start !important;
         -ms-flex-pack: start !important;
             justify-content: flex-start !important;
   }
 
   .u-md-flexJustifyEnd {
     -webkit-box-pack: end !important;
-    -webkit-justify-content: flex-end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;
   }
 
   .u-md-flexJustifyCenter {
     -webkit-box-pack: center !important;
-    -webkit-justify-content: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
 
   .u-md-flexJustifyBetween {
     -webkit-box-pack: justify !important;
-    -webkit-justify-content: space-between !important;
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;
   }
 
   .u-md-flexJustifyAround {
-    -webkit-justify-content: space-around !important;
-        -ms-flex-pack: distribute !important;
-            justify-content: space-around !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
   }
 
   /**
@@ -3356,7 +3544,6 @@ ul {
 
   .u-md-flexAlignItemsStart {
     -webkit-box-align: start !important;
-    -webkit-align-items: flex-start !important;
         -ms-flex-align: start !important;
                 -ms-grid-row-align: flex-start !important;
             align-items: flex-start !important;
@@ -3364,7 +3551,6 @@ ul {
 
   .u-md-flexAlignItemsEnd {
     -webkit-box-align: end !important;
-    -webkit-align-items: flex-end !important;
         -ms-flex-align: end !important;
                 -ms-grid-row-align: flex-end !important;
             align-items: flex-end !important;
@@ -3372,7 +3558,6 @@ ul {
 
   .u-md-flexAlignItemsCenter {
     -webkit-box-align: center !important;
-    -webkit-align-items: center !important;
         -ms-flex-align: center !important;
                 -ms-grid-row-align: center !important;
             align-items: center !important;
@@ -3380,7 +3565,6 @@ ul {
 
   .u-md-flexAlignItemsStretch {
     -webkit-box-align: stretch !important;
-    -webkit-align-items: stretch !important;
         -ms-flex-align: stretch !important;
                 -ms-grid-row-align: stretch !important;
             align-items: stretch !important;
@@ -3388,106 +3572,95 @@ ul {
 
   .u-md-flexAlignItemsBaseline {
     -webkit-box-align: baseline !important;
-    -webkit-align-items: baseline !important;
         -ms-flex-align: baseline !important;
                 -ms-grid-row-align: baseline !important;
             align-items: baseline !important;
   }
 
   /**
-   * Aligns items within the flex container when there is extra space in the cross-axis
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
    *
    * Has no effect when there is only one line of flex items.
    */
 
   .u-md-flexAlignContentStart {
-    -webkit-align-content: flex-start !important;
-        -ms-flex-line-pack: start !important;
-            align-content: flex-start !important;
+    -ms-flex-line-pack: start !important;
+        align-content: flex-start !important;
   }
 
   .u-md-flexAlignContentEnd {
-    -webkit-align-content: flex-end !important;
-        -ms-flex-line-pack: end !important;
-            align-content: flex-end !important;
+    -ms-flex-line-pack: end !important;
+        align-content: flex-end !important;
   }
 
   .u-md-flexAlignContentCenter {
-    -webkit-align-content: center !important;
-        -ms-flex-line-pack: center !important;
-            align-content: center !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
   }
 
   .u-md-flexAlignContentStretch {
-    -webkit-align-content: stretch !important;
-        -ms-flex-line-pack: stretch !important;
-            align-content: stretch !important;
+    -ms-flex-line-pack: stretch !important;
+        align-content: stretch !important;
   }
 
   .u-md-flexAlignContentBetween {
-    -webkit-align-content: space-between !important;
-        -ms-flex-line-pack: justify !important;
-            align-content: space-between !important;
+    -ms-flex-line-pack: justify !important;
+        align-content: space-between !important;
   }
 
   .u-md-flexAlignContentAround {
-    -webkit-align-content: space-around !important;
-        -ms-flex-line-pack: distribute !important;
-            align-content: space-around !important;
+    -ms-flex-line-pack: distribute !important;
+        align-content: space-around !important;
   }
 
   /**
    * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
    */
+
   /* postcss-bem-linter: ignore */
+
   .u-md-flex > *,
   .u-md-flexInline > * {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1; /* 1 */
+    -ms-flex-negative: 1;
+        flex-shrink: 1; /* 1 */
   }
 
   /* Applies to flex items
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Override default alignment of single item when specified by `align-items`
    */
 
   .u-md-flexAlignSelfStart {
-    -webkit-align-self: flex-start !important;
-        -ms-flex-item-align: start !important;
-            align-self: flex-start !important;
+    -ms-flex-item-align: start !important;
+        align-self: flex-start !important;
   }
 
   .u-md-flexAlignSelfEnd {
-    -webkit-align-self: flex-end !important;
-        -ms-flex-item-align: end !important;
-            align-self: flex-end !important;
+    -ms-flex-item-align: end !important;
+        align-self: flex-end !important;
   }
 
   .u-md-flexAlignSelfCenter {
-    -webkit-align-self: center !important;
-        -ms-flex-item-align: center !important;
-            align-self: center !important;
+    -ms-flex-item-align: center !important;
+        align-self: center !important;
   }
 
   .u-md-flexAlignSelfStretch {
-    -webkit-align-self: stretch !important;
-        -ms-flex-item-align: stretch !important;
-            align-self: stretch !important;
+    -ms-flex-item-align: stretch !important;
+        align-self: stretch !important;
   }
 
   .u-md-flexAlignSelfBaseline {
-    -webkit-align-self: baseline !important;
-        -ms-flex-item-align: baseline !important;
-            align-self: baseline !important;
+    -ms-flex-item-align: baseline !important;
+        align-self: baseline !important;
   }
 
   .u-md-flexAlignSelfAuto {
-    -webkit-align-self: auto !important;
-        -ms-flex-item-align: auto !important;
-            align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+        align-self: auto !important;
   }
 
   /**
@@ -3496,21 +3669,18 @@ ul {
 
   .u-md-flexOrderFirst {
     -webkit-box-ordinal-group: 0 !important;
-    -webkit-order: -1 !important;
         -ms-flex-order: -1 !important;
             order: -1 !important;
   }
 
   .u-md-flexOrderLast {
     -webkit-box-ordinal-group: 2 !important;
-    -webkit-order: 1 !important;
         -ms-flex-order: 1 !important;
             order: 1 !important;
   }
 
   .u-md-flexOrderNone {
     -webkit-box-ordinal-group: 1 !important;
-    -webkit-order: 0 !important;
         -ms-flex-order: 0 !important;
             order: 0 !important;
   }
@@ -3521,46 +3691,70 @@ ul {
    *
    * Supports 1-5 proportions
    *
-   * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
-   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
    */
 
   .u-md-flexGrow1 {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 0% !important;
         -ms-flex: 1 1 0% !important;
             flex: 1 1 0% !important; /* 1 */
   }
 
   .u-md-flexGrow2 {
     -webkit-box-flex: 2 !important;
-    -webkit-flex: 2 1 0% !important;
         -ms-flex: 2 1 0% !important;
             flex: 2 1 0% !important;
   }
 
   .u-md-flexGrow3 {
     -webkit-box-flex: 3 !important;
-    -webkit-flex: 3 1 0% !important;
         -ms-flex: 3 1 0% !important;
             flex: 3 1 0% !important;
   }
 
   .u-md-flexGrow4 {
     -webkit-box-flex: 4 !important;
-    -webkit-flex: 4 1 0% !important;
         -ms-flex: 4 1 0% !important;
             flex: 4 1 0% !important;
   }
 
   .u-md-flexGrow5 {
     -webkit-box-flex: 5 !important;
-    -webkit-flex: 5 1 0% !important;
         -ms-flex: 5 1 0% !important;
             flex: 5 1 0% !important;
   }
 
+  /**
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-md-flexExpand {
+    margin: auto !important;
+  }
+
+  .u-md-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-md-flexExpandRight {
+    margin-right: auto !important;
+  }
+
+  .u-md-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-md-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
 }
+
 /**
  * @define utilities
  * Size: breakpoint 1 (large)
@@ -3569,7 +3763,7 @@ ul {
 @media (min-width: 75em) {
 
   /* Applies to flex container
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Container
@@ -3577,14 +3771,12 @@ ul {
 
   .u-lg-flex {
     display: -webkit-box !important;
-    display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
 
   .u-lg-flexInline {
     display: -webkit-inline-box !important;
-    display: -webkit-inline-flex !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
   }
@@ -3596,7 +3788,6 @@ ul {
   .u-lg-flexRow {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
-    -webkit-flex-direction: row !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
   }
@@ -3604,7 +3795,6 @@ ul {
   .u-lg-flexRowReverse {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: reverse !important;
-    -webkit-flex-direction: row-reverse !important;
         -ms-flex-direction: row-reverse !important;
             flex-direction: row-reverse !important;
   }
@@ -3614,19 +3804,17 @@ ul {
    */
 
   .u-lg-flexCol {
-     -webkit-box-orient: vertical !important;
-     -webkit-box-direction: normal !important;
-     -webkit-flex-direction: column !important;
-         -ms-flex-direction: column !important;
-             flex-direction: column !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
 
   .u-lg-flexColReverse {
-     -webkit-box-orient: vertical !important;
-     -webkit-box-direction: reverse !important;
-     -webkit-flex-direction: column-reverse !important;
-         -ms-flex-direction: column-reverse !important;
-             flex-direction: column-reverse !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
   }
 
   /**
@@ -3634,21 +3822,18 @@ ul {
    */
 
   .u-lg-flexWrap {
-    -webkit-flex-wrap: wrap !important;
-        -ms-flex-wrap: wrap !important;
-            flex-wrap: wrap !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
   }
 
   .u-lg-flexNoWrap {
-    -webkit-flex-wrap: nowrap !important;
-        -ms-flex-wrap: nowrap !important;
-            flex-wrap: nowrap !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
   }
 
   .u-lg-flexWrapReverse {
-    -webkit-flex-wrap: wrap-reverse !important;
-        -ms-flex-wrap: wrap-reverse !important;
-            flex-wrap: wrap-reverse !important;
+    -ms-flex-wrap: wrap-reverse !important;
+        flex-wrap: wrap-reverse !important;
   }
 
   /**
@@ -3657,36 +3842,31 @@ ul {
 
   .u-lg-flexJustifyStart {
     -webkit-box-pack: start !important;
-    -webkit-justify-content: flex-start !important;
         -ms-flex-pack: start !important;
             justify-content: flex-start !important;
   }
 
   .u-lg-flexJustifyEnd {
     -webkit-box-pack: end !important;
-    -webkit-justify-content: flex-end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;
   }
 
   .u-lg-flexJustifyCenter {
     -webkit-box-pack: center !important;
-    -webkit-justify-content: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
 
   .u-lg-flexJustifyBetween {
     -webkit-box-pack: justify !important;
-    -webkit-justify-content: space-between !important;
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;
   }
 
   .u-lg-flexJustifyAround {
-    -webkit-justify-content: space-around !important;
-        -ms-flex-pack: distribute !important;
-            justify-content: space-around !important;
+    -ms-flex-pack: distribute !important;
+        justify-content: space-around !important;
   }
 
   /**
@@ -3696,7 +3876,6 @@ ul {
 
   .u-lg-flexAlignItemsStart {
     -webkit-box-align: start !important;
-    -webkit-align-items: flex-start !important;
         -ms-flex-align: start !important;
                 -ms-grid-row-align: flex-start !important;
             align-items: flex-start !important;
@@ -3704,7 +3883,6 @@ ul {
 
   .u-lg-flexAlignItemsEnd {
     -webkit-box-align: end !important;
-    -webkit-align-items: flex-end !important;
         -ms-flex-align: end !important;
                 -ms-grid-row-align: flex-end !important;
             align-items: flex-end !important;
@@ -3712,7 +3890,6 @@ ul {
 
   .u-lg-flexAlignItemsCenter {
     -webkit-box-align: center !important;
-    -webkit-align-items: center !important;
         -ms-flex-align: center !important;
                 -ms-grid-row-align: center !important;
             align-items: center !important;
@@ -3720,7 +3897,6 @@ ul {
 
   .u-lg-flexAlignItemsStretch {
     -webkit-box-align: stretch !important;
-    -webkit-align-items: stretch !important;
         -ms-flex-align: stretch !important;
                 -ms-grid-row-align: stretch !important;
             align-items: stretch !important;
@@ -3728,106 +3904,95 @@ ul {
 
   .u-lg-flexAlignItemsBaseline {
     -webkit-box-align: baseline !important;
-    -webkit-align-items: baseline !important;
         -ms-flex-align: baseline !important;
                 -ms-grid-row-align: baseline !important;
             align-items: baseline !important;
   }
 
   /**
-   * Aligns items within the flex container when there is extra space in the cross-axis
+   * Aligns items within the flex container when there is extra
+   * space in the cross-axis
    *
    * Has no effect when there is only one line of flex items.
    */
 
   .u-lg-flexAlignContentStart {
-    -webkit-align-content: flex-start !important;
-        -ms-flex-line-pack: start !important;
-            align-content: flex-start !important;
+    -ms-flex-line-pack: start !important;
+        align-content: flex-start !important;
   }
 
   .u-lg-flexAlignContentEnd {
-    -webkit-align-content: flex-end !important;
-        -ms-flex-line-pack: end !important;
-            align-content: flex-end !important;
+    -ms-flex-line-pack: end !important;
+        align-content: flex-end !important;
   }
 
   .u-lg-flexAlignContentCenter {
-    -webkit-align-content: center !important;
-        -ms-flex-line-pack: center !important;
-            align-content: center !important;
+    -ms-flex-line-pack: center !important;
+        align-content: center !important;
   }
 
   .u-lg-flexAlignContentStretch {
-    -webkit-align-content: stretch !important;
-        -ms-flex-line-pack: stretch !important;
-            align-content: stretch !important;
+    -ms-flex-line-pack: stretch !important;
+        align-content: stretch !important;
   }
 
   .u-lg-flexAlignContentBetween {
-    -webkit-align-content: space-between !important;
-        -ms-flex-line-pack: justify !important;
-            align-content: space-between !important;
+    -ms-flex-line-pack: justify !important;
+        align-content: space-between !important;
   }
 
   .u-lg-flexAlignContentAround {
-    -webkit-align-content: space-around !important;
-        -ms-flex-line-pack: distribute !important;
-            align-content: space-around !important;
+    -ms-flex-line-pack: distribute !important;
+        align-content: space-around !important;
   }
 
   /**
    * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
    */
+
   /* postcss-bem-linter: ignore */
+
   .u-lg-flex > *,
   .u-lg-flexInline > * {
-    -webkit-flex-shrink: 1;
-        -ms-flex-negative: 1;
-            flex-shrink: 1; /* 1 */
+    -ms-flex-negative: 1;
+        flex-shrink: 1; /* 1 */
   }
 
   /* Applies to flex items
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Override default alignment of single item when specified by `align-items`
    */
 
   .u-lg-flexAlignSelfStart {
-    -webkit-align-self: flex-start !important;
-        -ms-flex-item-align: start !important;
-            align-self: flex-start !important;
+    -ms-flex-item-align: start !important;
+        align-self: flex-start !important;
   }
 
   .u-lg-flexAlignSelfEnd {
-    -webkit-align-self: flex-end !important;
-        -ms-flex-item-align: end !important;
-            align-self: flex-end !important;
+    -ms-flex-item-align: end !important;
+        align-self: flex-end !important;
   }
 
   .u-lg-flexAlignSelfCenter {
-    -webkit-align-self: center !important;
-        -ms-flex-item-align: center !important;
-            align-self: center !important;
+    -ms-flex-item-align: center !important;
+        align-self: center !important;
   }
 
   .u-lg-flexAlignSelfStretch {
-    -webkit-align-self: stretch !important;
-        -ms-flex-item-align: stretch !important;
-            align-self: stretch !important;
+    -ms-flex-item-align: stretch !important;
+        align-self: stretch !important;
   }
 
   .u-lg-flexAlignSelfBaseline {
-    -webkit-align-self: baseline !important;
-        -ms-flex-item-align: baseline !important;
-            align-self: baseline !important;
+    -ms-flex-item-align: baseline !important;
+        align-self: baseline !important;
   }
 
   .u-lg-flexAlignSelfAuto {
-    -webkit-align-self: auto !important;
-        -ms-flex-item-align: auto !important;
-            align-self: auto !important;
+    -ms-flex-item-align: auto !important;
+        align-self: auto !important;
   }
 
   /**
@@ -3836,21 +4001,18 @@ ul {
 
   .u-lg-flexOrderFirst {
     -webkit-box-ordinal-group: 0 !important;
-    -webkit-order: -1 !important;
         -ms-flex-order: -1 !important;
             order: -1 !important;
   }
 
   .u-lg-flexOrderLast {
     -webkit-box-ordinal-group: 2 !important;
-    -webkit-order: 1 !important;
         -ms-flex-order: 1 !important;
             order: 1 !important;
   }
 
   .u-lg-flexOrderNone {
     -webkit-box-ordinal-group: 1 !important;
-    -webkit-order: 0 !important;
         -ms-flex-order: 0 !important;
             order: 0 !important;
   }
@@ -3861,47 +4023,71 @@ ul {
    *
    * Supports 1-5 proportions
    *
-   * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
-   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+   * 1. Provide all values to avoid IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   *
+   *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+   *    http://git.io/vllWx
    */
 
   .u-lg-flexGrow1 {
     -webkit-box-flex: 1 !important;
-    -webkit-flex: 1 1 0% !important;
         -ms-flex: 1 1 0% !important;
             flex: 1 1 0% !important; /* 1 */
   }
 
   .u-lg-flexGrow2 {
     -webkit-box-flex: 2 !important;
-    -webkit-flex: 2 1 0% !important;
         -ms-flex: 2 1 0% !important;
             flex: 2 1 0% !important;
   }
 
   .u-lg-flexGrow3 {
     -webkit-box-flex: 3 !important;
-    -webkit-flex: 3 1 0% !important;
         -ms-flex: 3 1 0% !important;
             flex: 3 1 0% !important;
   }
 
   .u-lg-flexGrow4 {
     -webkit-box-flex: 4 !important;
-    -webkit-flex: 4 1 0% !important;
         -ms-flex: 4 1 0% !important;
             flex: 4 1 0% !important;
   }
 
   .u-lg-flexGrow5 {
     -webkit-box-flex: 5 !important;
-    -webkit-flex: 5 1 0% !important;
         -ms-flex: 5 1 0% !important;
             flex: 5 1 0% !important;
   }
 
+  /**
+   * Aligning with `auto` margins
+   * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+   */
+
+  .u-lg-flexExpand {
+    margin: auto !important;
+  }
+
+  .u-lg-flexExpandLeft {
+    margin-left: auto !important;
+  }
+
+  .u-lg-flexExpandRight {
+    margin-right: auto !important;
+  }
+
+  .u-lg-flexExpandTop {
+    margin-top: auto !important;
+  }
+
+  .u-lg-flexExpandBottom {
+    margin-bottom: auto !important;
+  }
+
 }
-/** @define Arrange */
+
+/** @define Arrange; weak */
 
 /**
  * This component lets you lay out a row of cells in various ways. You can
@@ -4052,37 +4238,33 @@ ul {
 .Arrange--withGutter > .Arrange-row > .Arrange-sizeFill {
   padding: 0 5px;
 }
-/** @define Button; use strict */
+
+/** @define Button */
 
 /**
- * The button classes are best applied to links, buttons, and submit inputs.
+ * The button classes are best applied to links and buttons.
  * These components can be used in forms, as calls to action, or as part of the
  * general UI of the site/app.
  */
 
 /**
- * 1. Corrects inability to style clickable `input` types in iOS.
- * 2. Normalize `box-sizing` across all elements that this component could be
+ * 1. Normalize `box-sizing` across all elements that this component could be
  *    applied to.
- * 3. Inherit text color from ancestor.
- * 4. Inherit font styles from ancestor.
- * 5. Normalize `line-height`. For `input`, it can't be changed from `normal` in Firefox 4+.
- * 6. Prevent button text from being selectable.
- * 7. Make sure `input` will wrap text across multiple lines.
+ * 2. Inherit text color from ancestor.
+ * 3. Inherit font styles from ancestor.
+ * 4. Prevent button text from being selectable.
  */
 
 .Button {
-  -webkit-appearance: none; /* 1 */
   background: transparent;
   border-color: currentcolor;
   border-style: solid;
   border-width: 1px;
-  box-sizing: border-box; /* 2 */
-  color: inherit; /* 3 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
   cursor: pointer;
   display: inline-block;
-  font: inherit; /* 4 */
-  line-height: normal; /* 5 */
+  font: inherit; /* 3 */
   margin: 0;
   padding: 0.4em 0.75em;
   position: relative;
@@ -4091,8 +4273,7 @@ ul {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; /* 6 */
-  white-space: normal; /* 7 */
+          user-select: none; /* 4 */
 }
 
 /**
@@ -4129,6 +4310,7 @@ ul {
   cursor: default;
   opacity: 0.6;
 }
+
 /** @define FlexEmbed */
 
 /**
@@ -4202,6 +4384,7 @@ ul {
   top: 0;
   width: 100%;
 }
+
 /** @define Grid */
 
 /**
@@ -4224,12 +4407,10 @@ ul {
 .Grid {
   box-sizing: border-box;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; /* 1 */
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
   margin: 0; /* 1 */
   padding: 0; /* 1 */
 }
@@ -4240,7 +4421,6 @@ ul {
 
 .Grid--alignCenter {
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -4251,7 +4431,6 @@ ul {
 
 .Grid--alignRight {
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
@@ -4262,7 +4441,6 @@ ul {
 
 .Grid--alignMiddle {
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
               -ms-grid-row-align: center;
           align-items: center;
@@ -4274,7 +4452,6 @@ ul {
 
 .Grid--alignBottom {
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
       -ms-flex-align: end;
               -ms-grid-row-align: flex-end;
           align-items: flex-end;
@@ -4283,13 +4460,15 @@ ul {
 /**
  * Modifier: allow cells to equal distribute width
  *
- * 1. Provide all values to avoid IE10 bug with shorthand flex - http://git.io/vllC7
- *    Use `0%` to avoid bug in IE10/11 with unitless flex basis - http://git.io/vllWx
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+ *    http://git.io/vllWx
  */
 
 .Grid--fit > .Grid-cell {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0%;
       -ms-flex: 1 1 0%;
           flex: 1 1 0%; /* 1 */
 }
@@ -4300,7 +4479,6 @@ ul {
 
 .Grid--equalHeight > .Grid-cell {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -4325,14 +4503,15 @@ ul {
  * utility or a component class that extends 'Grid'.
  *
  * 1. Set flex items to full width by default
+ * 2. Fix issue where elements with overflow extend past the
+ *    `Grid-cell` container - https://git.io/vw5oF
  */
 
 .Grid-cell {
   box-sizing: inherit;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%; /* 1 */
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%; /* 1 */
+  min-width: 0; /* 2 */
 }
 
 /**
@@ -4344,36 +4523,34 @@ ul {
 .Grid-cell--center {
   margin: 0 auto;
 }
+
 /**
- * @define utilities
- * Text replacement
- */
-.u-textHide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
+* Base styles and any SUIT vars
+*/
+
 html {
   font-size: 16px;
 }
+
 body {
   font-family: "Raleway Regular", sans-serif;
   line-height: 1.4;
   color: #091d5c;
   background-color: #fff;
 }
+
 a {
   color: #091d5c;
   text-decoration: underline;
 }
+
 a:hover,
 a:focus,
 a:active {
   color: #091d5c;
   text-decoration: none;
 }
+
 hr {
   display: block;
   height: 1px;
@@ -4382,15 +4559,19 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
+
 iframe {
   max-width: 100%;
 }
+
 textarea {
   resize: vertical;
 }
+
 #wpadminbar {
   background-color: #777;
 }
+
 @font-face {
   font-family: "Raleway Regular";
   src: url("assets/fonts/raleway-regular-webfont.eot");
@@ -4398,19 +4579,23 @@ textarea {
   font-weight: normal;
   font-style: normal;
 }
+
 .alignleft,
 .alignright {
   display: block;
   margin-bottom: 20px;
 }
+
 .aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 .alignnone {
   margin: 5px 20px 20px 0;
 }
+
 @media (min-width: 768px) {
   .alignleft {
     float: left;
@@ -4421,12 +4606,14 @@ textarea {
     margin: 0 0 20px 20px;
   }
 }
+
 .wp-caption {
   text-align: center;
   max-width: 96%;
   background-color: #eee;
   padding: 5px 3px 10px;
 }
+
 .wp-caption img {
   width: auto;
   height: auto;
@@ -4435,69 +4622,87 @@ textarea {
   max-width: 98.5%;
   padding: 0;
 }
+
 .wp-caption p.wp-caption-text {
   font-size: 11px;
   line-height: 17px;
   margin: 0;
   padding: 0 4px 5px;
 }
+
 .gallery-caption {
   border: 1px solid #f0f0f0;
   padding: 5px 3px 10px;
 }
+
 /** @define Entry; weak */
+
 .Entry-header {
   border-bottom: 3px solid #bbb;
   padding: 15px 20px;
 }
+
 .Entry-title a {
   text-decoration: none;
 }
+
 .Entry-title a:hover {
   text-decoration: underline;
 }
+
 .Entry-meta {
   font-size: 14px;
 }
+
 .Entry-summary {
   padding: 20px 20px 30px;
 }
+
 .Entry-content {
   padding: 30px 20px 40px;
 }
+
 .Entry-content h2,
 .Entry-content h3 {
   padding-bottom: 10px;
 }
+
 .Entry-content p {
   padding-bottom: 20px;
 }
+
 .Entry-content img {
   height: auto;
   max-width: 100%;
 }
+
 .Entry-content ul {
   list-style: disc;
   margin-bottom: 20px;
   padding-left: 20px;
 }
+
 .Entry-content ol {
   list-style: decimal;
   margin-bottom: 20px;
   padding-left: 20px;
 }
+
 .Entry-content li {
   margin-bottom: 10px;
 }
+
 .Entry-content .lead {
   font-size: 22px;
 }
+
 .Entry-footer {
   font-size: 15px;
   background-color: #eee;
   margin-bottom: 20px;
   padding: 15px 20px;
 }
+
 @media (min-width: 768px) {
   .Entry-content {
     padding: 50px 40px 60px;
@@ -4511,80 +4716,112 @@ textarea {
     width: 35%;
   }
 }
+
 /** @define Button */
+
 .Button {
   font-size: 16px;
   border-width: 2px;
   border-radius: 5px;
 }
+
 .Button--sm {
   font-size: 14px;
   border-width: 1px;
   padding: 4px 9px;
 }
+
 .Button--lg {
   font-size: 18px;
   padding: 10px 20px;
 }
+
 .Button--default {
   color: #444;
   border-color: #bbb;
   background-color: #fff;
 }
+
 .Button--default:hover {
   color: #444;
   background-color: #c9c9c9;
 }
+
 .Button--primary {
   color: #fff;
   border-color: #ee5455;
   background-color: #ee5455;
 }
+
 .Button--primary:hover {
   color: #091d5c;
   background-color: #fff;
 }
+
 .Button--success {
   color: #fff;
   border-color: #1aa331;
   background-color: #1aa331;
 }
+
 .Button--success:hover {
   color: #091d5c;
   background-color: #fff;
 }
+
+/**
+ * @define utilities
+ * Text replacement
+ */
+
+.u-textHide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
 body.mce-content-body {
   color: #091d5c;
   font: 16px "Raleway Regular", sans-serif;
   padding: 30px 20px 40px !important;
 }
+
 h2,
 h3 {
   padding-bottom: 10px;
 }
+
 p {
   padding-bottom: 20px;
 }
+
 img {
   height: auto;
   max-width: 100%;
 }
+
 ul {
   list-style: disc;
   margin-bottom: 20px;
   padding-left: 20px;
 }
+
 ol {
   list-style: decimal;
   margin-bottom: 20px;
   padding-left: 20px;
 }
+
 li {
   margin-bottom: 10px;
 }
+
 .lead {
   font-size: 22px;
 }
+
 img {
   height: auto;
   max-width: 100%;
