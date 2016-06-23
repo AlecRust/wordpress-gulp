@@ -83,7 +83,7 @@ function wpg_widgets_init() {
   register_sidebar( array(
     'name'          => esc_html__( 'Blog Sidebar', 'wpg' ),
     'id'            => 'blog-sidebar',
-    'description'   => '',
+    'description'   => esc_html__( 'Sidebar shown on all Blog pages.', 'wpg' ),
     'before_widget' => '<div class="Sidebar-widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h2 class="Sidebar-title">',
@@ -93,7 +93,7 @@ function wpg_widgets_init() {
   register_sidebar( array(
     'name'          => esc_html__( 'Contact Sidebar', 'wpg' ),
     'id'            => 'contact-sidebar',
-    'description'   => '',
+    'description'   => esc_html__( 'Sidebar shown on Contact page only.', 'wpg' ),
     'before_widget' => '<div class="Sidebar-widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h2 class="Sidebar-title">',
