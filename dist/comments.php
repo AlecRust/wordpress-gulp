@@ -1,8 +1,8 @@
 <?php
 /**
- * Template for displaying comments.
+ * The template for displaying comments.
  *
- * The area of the page that contains both current comments
+ * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
  *
  * @package wordpress-gulp
@@ -31,15 +31,15 @@ if ( post_password_required() ) {
       ?>
     </h2>
 
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-      <nav id="comment-nav-above" class="Pager" role="navigation" aria-labelledby="comment-nav-above-heading">
-        <p id="comment-nav-above-heading" class="screen-reader-text">Comment navigation</p>
-        <ul class="Pager-list u-cf">
-          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments', 'wpg' ) ); ?></li>
-          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments', 'wpg' ) ); ?></li>
-        </ul>
-      </nav>
-    <?php endif; // check for comment navigation ?>
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+    <nav id="comment-nav-above" class="Pager" role="navigation" aria-labelledby="comment-nav-above-heading">
+      <h2 id="comment-nav-above-heading" class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wpg' ); ?></h2>
+      <ul class="Pager-list u-cf">
+        <li class="Pager-listItem Pager-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'wpg' ) ); ?></li>
+        <li class="Pager-listItem Pager-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'wpg' ) ); ?></li>
+      </ul>
+    </nav>
+    <?php endif; ?>
 
     <ol class="Comments-list">
       <?php
@@ -50,25 +50,27 @@ if ( post_password_required() ) {
       ?>
     </ol>
 
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-      <nav id="comment-nav-below" class="Pager" role="navigation" aria-labelledby="comment-nav-below-heading">
-        <p id="comment-nav-below-heading" class="screen-reader-text">Comment navigation</p>
-        <ul class="Pager-list u-cf">
-          <li class="Pager-listItem Pager-previous"><?php previous_comments_link( __( 'Older Comments', 'wpg' ) ); ?></li>
-          <li class="Pager-listItem Pager-next"><?php next_comments_link( __( 'Newer Comments', 'wpg' ) ); ?></li>
-        </ul>
-      </nav>
-    <?php endif; // check for comment navigation ?>
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+    <nav id="comment-nav-below" class="Pager" role="navigation" aria-labelledby="comment-nav-below-heading">
+      <h2 id="comment-nav-below-heading" class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wpg' ); ?></h2>
+      <ul class="Pager-list u-cf">
+        <li class="Pager-listItem Pager-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'wpg' ) ); ?></li>
+        <li class="Pager-listItem Pager-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'wpg' ) ); ?></li>
+      </ul>
+    </nav>
+    <?php
+    endif;
 
-  <?php endif; // have_comments() ?>
+  endif;
 
-  <?php
-    // If comments are closed and there are comments, let's leave a little note, shall we?
-    if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-  ?>
+
+  // If comments are closed and there are comments, leave a note
+  if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
     <p class="Comments-closed"><?php esc_html_e( 'Comments are closed.', 'wpg' ); ?></p>
-  <?php endif; ?>
+  <?php
+  endif;
 
-  <?php comment_form(array( 'comment_notes_after' => '' )); ?>
+  comment_form();
+  ?>
 
 </div>
