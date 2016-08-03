@@ -17,7 +17,7 @@
     "suitcss-utils-text": "^1.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^6.4.0",
     "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
