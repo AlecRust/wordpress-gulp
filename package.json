@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "del": "^2.2.1",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-clip-empty-files": "^0.1.2",
