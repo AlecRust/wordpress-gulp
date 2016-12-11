@@ -1,0 +1,29 @@
+version: '2'
+services:
+  wordpress:
+    image: visiblevc/wordpress:latest
+    ports:
+      - 8080:80
+      - 443:443
+    volumes:
+      - ./data:/data
+      - ./data/uploads:/app/wp-content/uploads
+      - ./src:/app/wp-content/themes/wordpress-gulp
+    environment:
+      DB_NAME: wordpressgulp
+      DB_PASS: root
+      THEMES: >-
+         [local]wordpress-gulp
+      PLUGINS: >-
+        contact-form-7,
+        theme-check,
+        sendgrid-email-delivery-simplified,
+      WP_DEBUG: 'true'
+  db:
+    image: mysql:5.7
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+volumes:
+  data: {}

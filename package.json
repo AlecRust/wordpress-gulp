@@ -9,6 +9,10 @@
   "engines": {
     "node": ">=0.12.0"
   },
+  "scripts": {
+    "start": "docker-compose up",
+    "wp": "wpcmd() { docker exec $(docker ps -lq) /bin/bash -c \"sudo -u www-data wp $(echo $@)\"; };wpcmd "
+  },
   "dependencies": {
     "suitcss-base": "^2.0.0",
     "suitcss-components-button": "^5.0.0",

@@ -14,9 +14,14 @@ A simple WordPress starter theme powered by [gulp](http://gulpjs.com/) for task 
 6. Run `gulp` to compile theme to `/dist`
 
 ## Development
-1. You'll want to see your theme changes locally as you develop within the `/src` directory. As an example using [MAMP](http://www.mamp.info/) you could symlink `/projects/theme-name/src` -> `/Applications/MAMP/htdocs/site-name/wp-content/themes/theme-name` to achieve this. When up and running, run `gulp watch` to start watching your files for changes.
-2. Navigate to Appearance > Themes in the WordPress Admin Panel and activate your new theme
-3. Navigate to Appearance > Menus in the WordPress Admin Panel and create a menu called "Main Menu" assigned to "Site Header" location and one called "Social Icons" assigned to "Site Footer - Right" location. These are referenced in your theme's `header.php` and `footer.php` files
+
+[Docker Compose](https://docs.docker.com/compose/) is used to spin up a dev environment (`npm start`) based on [Visible WordPress Starter](https://github.com/visiblevc/wordpress-starter). See the Compose file at [docker-compose.yml](docker-compose.yml). You can access [wp-cli](http://wp-cli.org/) by running `npm run wp ...` e.g.
+
+    npm run wp plugin install <some-plugin>
+    npm run wp db import /data/database.sql
+
+### Menus
+Navigate to Appearance > Menus in the WordPress Admin Panel and create a menu called "Main Menu" assigned to "Site Header" location and one called "Social Icons" assigned to "Site Footer - Right" location. These are referenced in your theme's `header.php` and `footer.php` files
 
 ## Distribution
 The distributable folder is compiled by gulp to `/dist`.
