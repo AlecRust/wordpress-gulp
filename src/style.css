@@ -1095,7 +1095,7 @@ div.wpcf7 .wpcf7-not-valid-tip {
   margin: -10px 0 10px;
 }
 
-div.wpcf7 img.ajax-loader {
+div.wpcf7 .ajax-loader {
   display: block;
   margin: 10px auto;
 }
@@ -1391,7 +1391,7 @@ div.wpcf7 .wpcf7-not-valid-tip {
   margin: -10px 0 10px;
 }
 
-div.wpcf7 img.ajax-loader {
+div.wpcf7 .ajax-loader {
   display: block;
   margin: 10px auto;
 }
