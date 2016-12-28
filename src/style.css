@@ -1836,6 +1836,10 @@ div.wpcf7 .ajax-loader {
   margin: 0 10px;
 }
 
+.SocialIcons-list li:first-child {
+  margin-left: 0;
+}
+
 .SocialIcons-list a {
   width: 30px;
   height: 30px;

@@ -41,10 +41,11 @@ function wpg_setup() {
    */
   // add_theme_support( 'post-thumbnails' );
 
-  // This theme uses wp_nav_menu() for the main menu and social icons.
+  // Setup theme menu locations.
   register_nav_menus( array(
     'site_header' => __( 'Site Header', 'wpg' ),
     'site_footer_right' => __( 'Site Footer - Right', 'wpg' ),
+    'contact_sidebar' => __( 'Contact Page Sidebar', 'wpg' ),
   ) );
 
   /*
