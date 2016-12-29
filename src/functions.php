@@ -14,7 +14,6 @@ if ( ! function_exists( 'wpg_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function wpg_setup() {
-
   /*
    * Make theme available for translation.
    * Translations can be filed in the /languages/ directory.
@@ -60,7 +59,7 @@ function wpg_setup() {
     'caption',
   ) );
 }
-endif; // wpg_setup
+endif;
 add_action( 'after_setup_theme', 'wpg_setup' );
 
 /**

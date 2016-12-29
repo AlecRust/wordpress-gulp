@@ -102,3 +102,13 @@ function wpg_add_editor_styles() {
   add_editor_style( 'editor-style.css' );
 }
 add_action( 'init', 'wpg_add_editor_styles' );
+
+/**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function wpg_pingback_header() {
+  if ( is_singular() && pings_open() ) {
+    echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+  }
+}
+add_action( 'wp_head', 'wpg_pingback_header' );
