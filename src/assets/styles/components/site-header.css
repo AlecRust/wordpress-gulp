@@ -5,7 +5,7 @@
 }
 
 .SiteHeader-wrapBranding {
-  position: relative; /* For absolute positioning at $screen-sm */
+  position: relative; /* For absolute positioning at --sm-viewport */
   text-align: center;
   padding: 20px 0;
 }
@@ -26,7 +26,7 @@
   padding-top: 20px;
 }
 
-@media (min-width: $screen-sm) {
+@media (--sm-viewport) {
   .SiteHeader-logo {
     float: left;
     margin: 20px 0 0 20px;
@@ -50,7 +50,7 @@
   }
 }
 
-@media (min-width: $screen-md) {
+@media (--md-viewport) {
   .SiteHeader-tagline {
     right: 0;
   }

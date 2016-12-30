@@ -60,7 +60,7 @@ Comments
     margin-bottom: 10px;
   }
 
-  @media (min-width: $screen-sm) {
+  @media (--sm-viewport) {
     input[type="text"],
     input[type="email"],
     input[type="url"] {

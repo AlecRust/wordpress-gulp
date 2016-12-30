@@ -12,7 +12,7 @@ $SocialIcons-icon-size: 30px;
       margin-left: 0;
     }
 
-    @media (min-width: $screen-sm) {
+    @media (--sm-viewport) {
       margin: 0 0 0 25px;
     }
   }

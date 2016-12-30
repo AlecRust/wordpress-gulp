@@ -3,6 +3,7 @@ var postcss =          require('gulp-postcss');
 var atImport =         require('postcss-import');
 var at2x =             require('postcss-at2x');
 var customProperties = require('postcss-custom-properties');
+var customMedia =      require('postcss-custom-media');
 var shortSize =        require('postcss-short-size');
 var simpleVars =       require('postcss-simple-vars');
 var nested =           require('postcss-nested');
@@ -23,6 +24,7 @@ gulp.task('postcss', function () {
       simpleVars(),
       at2x(),
       customProperties(),
+      customMedia(),
       shortSize(),
       colorFunction(),
       calc(),

@@ -23,7 +23,7 @@
   }
 }
 
-@media (min-width: $screen-xs) {
+@media (--xs-viewport) {
   .SiteHeaderMenu-list {
     text-align: center;
   }
@@ -38,7 +38,7 @@
   }
 }
 
-@media (min-width: $screen-sm) {
+@media (--sm-viewport) {
   .SiteHeaderMenu-list {
     text-align: right;
     margin-right: 15px;
@@ -49,7 +49,7 @@
   }
 }
 
-@media (min-width: $screen-md) {
+@media (--md-viewport) {
   .SiteHeaderMenu-list {
     margin-right: 0;
   }

@@ -1,12 +1,12 @@
 /** @define Container */
 
 .Container {
-  max-width: $screen-md;
+  max-width: 992px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (min-width: $screen-sm) {
+@media (--sm-viewport) {
   .Container-mainColumn {
     float: left;
     width: 75%;

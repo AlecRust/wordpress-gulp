@@ -18,7 +18,7 @@ WordPress Core alignment
   margin: 5px 20px 20px 0;
 }
 
-@media (min-width: $screen-sm) {
+@media (--sm-viewport) {
   .alignleft {
     float: left;
     margin: 0 20px 20px 0;

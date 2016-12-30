@@ -1688,7 +1688,7 @@ Sidebar
 }
 
 .SiteHeader-wrapBranding {
-  position: relative; /* For absolute positioning at $screen-sm */
+  position: relative; /* For absolute positioning at --sm-viewport */
   text-align: center;
   padding: 20px 0;
 }
