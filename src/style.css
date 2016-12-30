@@ -1285,7 +1285,7 @@ div.wpcf7-response-output {
 
 .Button--default:hover {
   color: #444;
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(186, 51, 51);
 }
 
 .Button--primary {
@@ -1831,7 +1831,7 @@ Sidebar
 }
 
 .TagList-item a:hover {
-  background-color: rgb(50, 31, 1);
+  background-color: rgb(250, 164, 26);
 }
 
 /** @define utilities */

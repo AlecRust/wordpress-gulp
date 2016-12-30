@@ -24,7 +24,7 @@
 
   &:hover {
     color: #444;
-    background-color: color($color-brand-gray lightness(20%));
+    background-color: color($color-brand-gray whiteness(20%));
   }
 }
 
