@@ -12,7 +12,7 @@ WordPress Core screen reader text
     size: auto;
     background-color: #f1f1f1;
     border-radius: $border-radius-base;
-    box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     color: $text-color;
     display: block;

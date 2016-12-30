@@ -5,6 +5,7 @@
 }
 
 .SiteHeaderMenu-item {
+  /* stylelint-disable-next-line */
   &.current_page_item a,
   &.current_page_parent a {
     background-color: #ddd;

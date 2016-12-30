@@ -2,13 +2,13 @@
 Alerts
 */
 
-/* Provide class for links that match alerts */
 /* Improve alignment and spacing of inner content */
 .Alert,
 div.wpcf7-response-output {
   padding: 20px;
 }
 
+/* Provide class for links that match alerts */
 .Alert .Alert-link,
 div.wpcf7-response-output .Alert-link {
   font-weight: bold;
@@ -25,6 +25,7 @@ div.wpcf7-response-output > ul {
 div.wpcf7-response-output > p + p {
   margin-top: 5px;
 }
+
 /* Modifiers */
 .Alert--success,
 div.wpcf7-response-output.wpcf7-mail-sent-ok {

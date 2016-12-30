@@ -22,7 +22,7 @@ WordPress Core nav links
       background-color: #fff;
     }
 
-    &:after {
+    &::after {
       color: #777;
     }
   }
@@ -30,7 +30,7 @@ WordPress Core nav links
   .nav-previous {
     float: left;
 
-    a:before {
+    a::before {
       content: "← ";
     }
   }
@@ -38,7 +38,7 @@ WordPress Core nav links
   .nav-next {
     float: right;
 
-    a:after {
+    a::after {
       content: " →";
     }
   }

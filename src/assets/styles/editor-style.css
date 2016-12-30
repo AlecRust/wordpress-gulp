@@ -1,4 +1,4 @@
-/*!
+/* !
 Editor stylesheet
 */
 
@@ -7,7 +7,6 @@ Editor stylesheet
 @import "suitcss-utils-display";
 @import "suitcss-utils-layout";
 @import "suitcss-utils-text";
-
 @import "./base/variables";
 @import "./base/base";
 @import "./base/fonts";

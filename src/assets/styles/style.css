@@ -1,4 +1,4 @@
-/*!
+/* !
 Theme Name: WordPress Gulp
 Theme URI: https://github.com/AlecRust/wordpress-gulp
 Author: Alec Rust
@@ -16,7 +16,6 @@ Tags: one-column, right-sidebar, editor-style, translation-ready
 @import "suitcss-utils-display";
 @import "suitcss-utils-layout";
 @import "suitcss-utils-text";
-
 @import "./base/variables";
 @import "./base/base";
 @import "./base/fonts";

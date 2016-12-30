@@ -1,4 +1,4 @@
-/*!
+/* !
 Theme Name: WordPress Gulp
 Theme URI: https://github.com/AlecRust/wordpress-gulp
 Author: Alec Rust
@@ -804,8 +804,8 @@ Base variables
 
 /* Media query breakpoints */
 
-/**
-* Base styles and any SUIT vars
+/*
+Base
 */
 
 html {
@@ -869,11 +869,12 @@ Fonts
 @font-face {
   font-family: "Raleway Regular";
   src: url("assets/fonts/raleway-regular-webfont.eot");
-  src: url("assets/fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"),
-       url("assets/fonts/raleway-regular-webfont.woff2") format("woff2"),
-       url("assets/fonts/raleway-regular-webfont.woff") format("woff"),
-       url("assets/fonts/raleway-regular-webfont.ttf") format("truetype"),
-       url("assets/fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
+  src:
+    url("assets/fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("assets/fonts/raleway-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/raleway-regular-webfont.woff") format("woff"),
+    url("assets/fonts/raleway-regular-webfont.ttf") format("truetype"),
+    url("assets/fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -980,7 +981,7 @@ WordPress Core nav links
   background-color: #fff;
 }
 
-.nav-links > div a:after {
+.nav-links > div a::after {
   color: #777;
 }
 
@@ -988,7 +989,7 @@ WordPress Core nav links
   float: left;
 }
 
-.nav-links .nav-previous a:before {
+.nav-links .nav-previous a::before {
   content: "← ";
 }
 
@@ -996,7 +997,7 @@ WordPress Core nav links
   float: right;
 }
 
-.nav-links .nav-next a:after {
+.nav-links .nav-next a::after {
   content: " →";
 }
 
@@ -1017,7 +1018,7 @@ WordPress Core screen reader text
   height: auto;
   background-color: #f1f1f1;
   border-radius: 5px;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #091d5c;
   display: block;
@@ -1115,8 +1116,8 @@ Print
 
 @media print {
   *,
-  *:before,
-  *:after {
+  *::before,
+  *::after {
     background: transparent !important;
     color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
@@ -1128,16 +1129,16 @@ Print
     text-decoration: underline;
   }
 
-  a[href]:after {
+  a[href]::after {
     content: " (" attr(href) ")";
   }
 
-  abbr[title]:after {
+  abbr[title]::after {
     content: " (" attr(title) ")";
   }
 
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
     content: "";
   }
 
@@ -1177,14 +1178,14 @@ Print
 Alerts
 */
 
-/* Provide class for links that match alerts */
-
 /* Improve alignment and spacing of inner content */
 
 .Alert,
 div.wpcf7-response-output {
   padding: 20px;
 }
+
+/* Provide class for links that match alerts */
 
 .Alert .Alert-link,
 div.wpcf7-response-output .Alert-link {
@@ -1630,6 +1631,8 @@ Sidebar
 .SiteHeaderMenu {
   background-color: #f2f2f2;
 }
+
+/* stylelint-disable-next-line */
 
 .SiteHeaderMenu-item.current_page_item a,
   .SiteHeaderMenu-item.current_page_parent a {
