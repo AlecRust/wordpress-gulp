@@ -1,0 +1,16 @@
+/** @define PageHeader */
+
+.PageHeader {
+  border-bottom: 3px solid $color-brand-gray;
+  padding: 23px 20px;
+}
+
+.PageHeader-title {
+  color: $color-brand-gray;
+}
+
+.PageHeader-description {
+  color: $color-brand-gray;
+  font-size: 15px;
+  padding-top: 5px;
+}

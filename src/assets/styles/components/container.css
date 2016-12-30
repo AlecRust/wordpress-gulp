@@ -1,0 +1,15 @@
+/** @define Container */
+
+.Container {
+  max-width: $screen-md;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: $screen-sm) {
+  .Container-mainColumn {
+    float: left;
+    width: 75%;
+    padding-right: 30px;
+  }
+}

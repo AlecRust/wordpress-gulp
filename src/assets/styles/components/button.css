@@ -1,0 +1,51 @@
+/** @define Button */
+
+.Button {
+  font-size: $font-size-base;
+  border-width: 2px;
+  border-radius: $border-radius-base;
+}
+
+.Button--sm {
+  font-size: 14px;
+  border-width: 1px;
+  padding: 4px 9px;
+}
+
+.Button--lg {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.Button--default {
+  color: #444;
+  border-color: $color-brand-gray;
+  background-color: #fff;
+
+  &:hover {
+    color: #444;
+    background-color: color($color-brand-gray lightness(20%));
+  }
+}
+
+.Button--primary {
+  color: #fff;
+  border-color: $color-brand-primary;
+  background-color: $color-brand-primary;
+
+  &:hover {
+    color: $text-color;
+    background-color: #fff;
+  }
+}
+
+.Button--success {
+  color: #fff;
+  border-color: $color-brand-success;
+  background-color: $color-brand-success;
+
+  &:hover {
+    color: $text-color;
+    background-color: #fff;
+  }
+}

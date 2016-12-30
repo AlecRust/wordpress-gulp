@@ -1,0 +1,10 @@
+/*
+WordPress Login Page
+*/
+
+.login #login h1 a {
+  size: 190px 165px;
+  display: inline-block;
+  background: url("assets/images/site-logo.svg") no-repeat;
+  background-size: 190px 165px;
+}

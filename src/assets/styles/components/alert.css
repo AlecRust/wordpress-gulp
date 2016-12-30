@@ -1,0 +1,79 @@
+/*
+Alerts
+*/
+
+/* Provide class for links that match alerts */
+/* Improve alignment and spacing of inner content */
+.Alert,
+div.wpcf7-response-output {
+  padding: 20px;
+}
+
+.Alert .Alert-link,
+div.wpcf7-response-output .Alert-link {
+  font-weight: bold;
+}
+
+.Alert > p,
+div.wpcf7-response-output > p,
+.Alert > ul,
+div.wpcf7-response-output > ul {
+  margin-bottom: 0;
+}
+
+.Alert > p + p,
+div.wpcf7-response-output > p + p {
+  margin-top: 5px;
+}
+/* Modifiers */
+.Alert--success,
+div.wpcf7-response-output.wpcf7-mail-sent-ok {
+  color: $alert-success-text;
+  background-color: $alert-success-bg;
+}
+
+.Alert--success .Alert-link,
+div.wpcf7-response-output.wpcf7-mail-sent-ok .Alert-link {
+  color: color($alert-success-text blackness(10%));
+}
+
+.Alert--info,
+div.wpcf7-response-output.wpcf7-mail-sent-ng {
+  color: $alert-info-text;
+  background-color: $alert-info-bg;
+}
+
+.Alert--info .Alert-link,
+div.wpcf7-response-output.wpcf7-mail-sent-ng .Alert-link {
+  color: color($alert-info-text blackness(10%));
+}
+
+.Alert--warning,
+div.wpcf7-response-output.wpcf7-spam-warning,
+div.wpcf7-response-output.wpcf7-spam-blocked {
+  color: $alert-warning-text;
+  background-color: $alert-warning-bg;
+}
+
+.Alert--warning .Alert-link,
+div.wpcf7-response-output.wpcf7-spam-warning .Alert-link,
+div.wpcf7-response-output.wpcf7-spam-blocked .Alert-link {
+  color: color($alert-warning-text blackness(10%));
+}
+
+.Alert--danger,
+div.wpcf7-response-output.wpcf7-validation-errors {
+  color: $alert-danger-text;
+  background-color: $alert-danger-bg;
+}
+
+.Alert--danger .Alert-link,
+div.wpcf7-response-output.wpcf7-validation-errors .Alert-link {
+  color: color($alert-danger-text blackness(10%));
+}
+
+/* Contact Form 7 alerts */
+div.wpcf7-response-output {
+  border: 0;
+  margin: 20px 0;
+}

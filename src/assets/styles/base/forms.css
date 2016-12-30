@@ -1,0 +1,76 @@
+/*
+Forms
+*/
+
+.InputText {
+  border: 2px solid $color-brand-gray;
+  border-radius: $border-radius-base;
+  padding: 6px 9px 7px;
+
+  &:hover {
+    border-color: color($color-brand-gray blackness(10%));
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $color-brand-pink;
+  }
+}
+
+.InputText--sm {
+  font-size: 13px;
+  border-width: 1px;
+  padding: 3px 6px 4px;
+}
+
+.InputSelect {
+  size: 30% 34px;
+  border: 1px solid $color-brand-gray;
+}
+
+.InputLabel {
+  font-weight: bold;
+}
+
+.InputRequired {
+  color: $alert-danger-text;
+  font-weight: normal;
+}
+
+/* Contact Form 7 */
+div.wpcf7 {
+  .InputText {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .InputCheckbox {
+    display: block;
+    margin-bottom: 15px;
+
+    .wpcf7-list-item {
+      margin-left: 0;
+    }
+
+    label {
+      cursor: pointer;
+      padding-left: 20px;
+    }
+
+    input {
+      margin-top: 0.25rem;
+      margin-left: -20px;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    font-size: 80%;
+    color: $alert-danger-text;
+    margin: -10px 0 10px;
+  }
+
+  .ajax-loader {
+    display: block;
+    margin: 10px auto;
+  }
+}

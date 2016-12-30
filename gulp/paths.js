@@ -7,9 +7,8 @@ var imagesDir =  path.join(srcDir, 'assets/images');
 var paths = {
   distDir: path.resolve('./dist'),
   styles: {
-    stylusSrc: path.join(stylesDir, '**/*.styl'),
-    dest: srcDir,
-    tmpDir: path.resolve('./.temp')
+    cssSrc: path.join(stylesDir, '*.css'),
+    dest: srcDir
   },
   scripts: {
     jsSrc: path.join(scriptsDir, '**/*.js'),

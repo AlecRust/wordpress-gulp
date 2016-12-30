@@ -1,0 +1,106 @@
+/*
+Comments
+*/
+
+.Comments {
+  padding: 30px 20px 40px;
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  #comment {
+    width: 100%;
+    border: 2px solid $color-brand-gray;
+    border-radius: $border-radius-base;
+    margin-bottom: 15px;
+    padding: 6px 9px 7px;
+
+    &:hover {
+      border-color: color($color-brand-gray blackness(10%));
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: $color-brand-pink;
+    }
+  }
+
+  .form-submit {
+    text-align: center;
+  }
+
+  #submit {
+    font-size: $font-size-base;
+    border-width: 2px;
+    border-radius: $border-radius-base;
+    color: #fff;
+    border-color: $color-brand-primary;
+    background-color: $color-brand-primary;
+    border-style: solid; /* From SUIT's .Button */
+    padding: 0.4em 0.75em; /* From SUIT's .Button */
+
+    &:hover {
+      color: $text-color;
+      background-color: #fff;
+    }
+  }
+
+  .comment-subscription-form {
+    padding-top: 15px;
+  }
+
+  .logged-in-as,
+  .comment-notes {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $screen-sm) {
+    input[type="text"],
+    input[type="email"],
+    input[type="url"] {
+      width: 60%;
+    }
+  }
+}
+
+.Comments-title {
+  margin-bottom: 20px;
+}
+
+.Comments-list {
+  .comment {
+    font-size: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: $border-radius-base;
+    margin-bottom: 20px;
+  }
+
+  .comment-body,
+  .comment-respond {
+    padding: 20px;
+  }
+
+  .children {
+    margin-left: 30px;
+
+    .comment {
+      border: 0;
+      border-top: 1px solid #ddd;
+      border-radius: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.Comments-closed {
+  color: $alert-info-text;
+  background-color: $alert-info-bg;
+  padding: 20px;
+}

@@ -1,0 +1,25 @@
+/** @define TagList; weak */
+
+.TagList {
+  display: inline;
+}
+
+.TagList-item {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    background-color: $color-brand-secondary;
+    padding: 3px 6px;
+
+    &:hover {
+      background-color: color($color-brand-secondary lightness(10%));
+    }
+  }
+}

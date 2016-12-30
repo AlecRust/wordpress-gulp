@@ -1,0 +1,33 @@
+/** @define SiteFooter; weak */
+
+.SiteFooter {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  background-color: $color-brand-primary;
+  padding: 30px 20px;
+
+  a {
+    color: #fff;
+  }
+
+  .SocialIcons-list {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .SiteFooter {
+    padding: 50px 20px 40px;
+
+    .SocialIcons-list {
+      float: right;
+      margin-bottom: 0;
+    }
+  }
+
+  .SiteFooter-copyright {
+    float: left;
+    padding-top: 6px;
+  }
+}

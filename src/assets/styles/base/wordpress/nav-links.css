@@ -1,0 +1,45 @@
+/*
+WordPress Core nav links
+*/
+
+.nav-links {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  > div a {
+    display: block;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    color: #666;
+    background-color: #efefef;
+    padding: 5px 14px;
+
+    &:hover {
+      text-decoration: none;
+      border-color: #ccc;
+      background-color: #fff;
+    }
+
+    &:after {
+      color: #777;
+    }
+  }
+
+  .nav-previous {
+    float: left;
+
+    a:before {
+      content: "← ";
+    }
+  }
+
+  .nav-next {
+    float: right;
+
+    a:after {
+      content: " →";
+    }
+  }
+}

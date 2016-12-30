@@ -790,6 +790,20 @@ ul {
   word-wrap: normal !important; /* 2 */
 }
 
+/*
+Base variables
+*/
+
+/* Typography */
+
+/* Colours */
+
+/* Alerts */
+
+/* Border radius */
+
+/* Media query breakpoints */
+
 /**
 * Base styles and any SUIT vars
 */
@@ -817,6 +831,8 @@ a:active {
   text-decoration: none;
 }
 
+/* A better looking default horizontal rule */
+
 hr {
   display: block;
   height: 1px;
@@ -826,25 +842,45 @@ hr {
   padding: 0;
 }
 
+/* Prevent iframes from overflowing */
+
 iframe {
   max-width: 100%;
 }
+
+/* Allow only vertical resizing of textareas */
 
 textarea {
   resize: vertical;
 }
 
+/* Override WP Admin Bar color */
+
 #wpadminbar {
   background-color: #777;
 }
 
+/*
+Fonts
+*/
+
+/* Raleway Regular - https://www.google.com/fonts/specimen/Raleway */
+
 @font-face {
   font-family: "Raleway Regular";
   src: url("assets/fonts/raleway-regular-webfont.eot");
-  src: url("assets/fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/raleway-regular-webfont.woff2") format("woff2"), url("assets/fonts/raleway-regular-webfont.woff") format("woff"), url("assets/fonts/raleway-regular-webfont.ttf") format("truetype"), url("assets/fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
+  src: url("assets/fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"),
+       url("assets/fonts/raleway-regular-webfont.woff2") format("woff2"),
+       url("assets/fonts/raleway-regular-webfont.woff") format("woff"),
+       url("assets/fonts/raleway-regular-webfont.ttf") format("truetype"),
+       url("assets/fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+
+/*
+WordPress Core alignment
+*/
 
 .alignleft,
 .alignright {
@@ -867,15 +903,20 @@ textarea {
     float: left;
     margin: 0 20px 20px 0;
   }
+
   .alignright {
     float: right;
     margin: 0 0 20px 20px;
   }
 }
 
+/*
+WordPress Core captions
+*/
+
 .wp-caption {
   text-align: center;
-  max-width: 96%;
+  max-width: 96%; /* Image does not overflow the content area */
   background-color: #eee;
   padding: 5px 3px 10px;
 }
@@ -901,6 +942,10 @@ textarea {
   padding: 5px 3px 10px;
 }
 
+/*
+WordPress Core features
+*/
+
 .bypostauthor {
   border-top: 10px solid #ee5455;
 }
@@ -908,6 +953,10 @@ textarea {
 .sticky .Entry-header {
   border-bottom-color: #ee5455;
 }
+
+/*
+WordPress Core nav links
+*/
 
 .nav-links {
   overflow: hidden;
@@ -951,6 +1000,10 @@ textarea {
   content: " →";
 }
 
+/*
+WordPress Core screen reader text
+*/
+
 .screen-reader-text {
   width: 1px;
   height: 1px;
@@ -975,59 +1028,13 @@ textarea {
   left: 5px;
   line-height: normal;
   text-decoration: none;
-  z-index: 100000;
+  z-index: 100000;/* Above WP toolbar */
   padding: 15px 23px 14px;
 }
 
-.Button {
-  font-size: 16px;
-  border-width: 2px;
-  border-radius: 5px;
-}
-
-.Button--sm {
-  font-size: 14px;
-  border-width: 1px;
-  padding: 4px 9px;
-}
-
-.Button--lg {
-  font-size: 18px;
-  padding: 10px 20px;
-}
-
-.Button--default {
-  color: #444;
-  border-color: #bbb;
-  background-color: #fff;
-}
-
-.Button--default:hover {
-  color: #444;
-  background-color: #c9c9c9;
-}
-
-.Button--primary {
-  color: #fff;
-  border-color: #ee5455;
-  background-color: #ee5455;
-}
-
-.Button--primary:hover {
-  color: #091d5c;
-  background-color: #fff;
-}
-
-.Button--success {
-  color: #fff;
-  border-color: #1aa331;
-  background-color: #1aa331;
-}
-
-.Button--success:hover {
-  color: #091d5c;
-  background-color: #fff;
-}
+/*
+Forms
+*/
 
 .InputText {
   border: 2px solid #bbb;
@@ -1036,7 +1043,7 @@ textarea {
 }
 
 .InputText:hover {
-  border-color: #a8a8a8;
+  border-color: rgb(230, 186, 186);
 }
 
 .InputText:focus {
@@ -1064,6 +1071,8 @@ textarea {
   color: #a94442;
   font-weight: normal;
 }
+
+/* Contact Form 7 */
 
 div.wpcf7 .InputText {
   width: 100%;
@@ -1100,55 +1109,77 @@ div.wpcf7 .ajax-loader {
   margin: 10px auto;
 }
 
+/*
+Print
+*/
+
 @media print {
   *,
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
+    color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
   }
+
   a,
   a:visited {
     text-decoration: underline;
   }
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
+
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
+
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
   }
+
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
+
   thead {
     display: table-header-group;
   }
+
   tr,
   img {
     page-break-inside: avoid;
   }
+
   img {
     max-width: 100% !important;
   }
+
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3;
   }
+
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
+
+/*
+Alerts
+*/
+
+/* Provide class for links that match alerts */
+
+/* Improve alignment and spacing of inner content */
 
 .Alert,
 div.wpcf7-response-output {
@@ -1172,6 +1203,8 @@ div.wpcf7-response-output > p + p {
   margin-top: 5px;
 }
 
+/* Modifiers */
+
 .Alert--success,
 div.wpcf7-response-output.wpcf7-mail-sent-ok {
   color: #3c763d;
@@ -1180,7 +1213,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ok {
 
 .Alert--success .Alert-link,
 div.wpcf7-response-output.wpcf7-mail-sent-ok .Alert-link {
-  color: #366a37;
+  color: rgb(61, 230, 64);
 }
 
 .Alert--info,
@@ -1191,7 +1224,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ng {
 
 .Alert--info .Alert-link,
 div.wpcf7-response-output.wpcf7-mail-sent-ng .Alert-link {
-  color: #2c6581;
+  color: rgb(48, 169, 230);
 }
 
 .Alert--warning,
@@ -1204,7 +1237,7 @@ div.wpcf7-response-output.wpcf7-spam-blocked {
 .Alert--warning .Alert-link,
 div.wpcf7-response-output.wpcf7-spam-warning .Alert-link,
 div.wpcf7-response-output.wpcf7-spam-blocked .Alert-link {
-  color: #7c6235;
+  color: rgb(230, 167, 59);
 }
 
 .Alert--danger,
@@ -1215,8 +1248,10 @@ div.wpcf7-response-output.wpcf7-validation-errors {
 
 .Alert--danger .Alert-link,
 div.wpcf7-response-output.wpcf7-validation-errors .Alert-link {
-  color: #983d3b;
+  color: rgb(230, 69, 66);
 }
+
+/* Contact Form 7 alerts */
 
 div.wpcf7-response-output {
   border: 0;
@@ -1250,7 +1285,7 @@ div.wpcf7-response-output {
 
 .Button--default:hover {
   color: #444;
-  background-color: #c9c9c9;
+  background-color: rgb(51, 51, 51);
 }
 
 .Button--primary {
@@ -1275,126 +1310,9 @@ div.wpcf7-response-output {
   background-color: #fff;
 }
 
-.Button {
-  font-size: 16px;
-  border-width: 2px;
-  border-radius: 5px;
-}
-
-.Button--sm {
-  font-size: 14px;
-  border-width: 1px;
-  padding: 4px 9px;
-}
-
-.Button--lg {
-  font-size: 18px;
-  padding: 10px 20px;
-}
-
-.Button--default {
-  color: #444;
-  border-color: #bbb;
-  background-color: #fff;
-}
-
-.Button--default:hover {
-  color: #444;
-  background-color: #c9c9c9;
-}
-
-.Button--primary {
-  color: #fff;
-  border-color: #ee5455;
-  background-color: #ee5455;
-}
-
-.Button--primary:hover {
-  color: #091d5c;
-  background-color: #fff;
-}
-
-.Button--success {
-  color: #fff;
-  border-color: #1aa331;
-  background-color: #1aa331;
-}
-
-.Button--success:hover {
-  color: #091d5c;
-  background-color: #fff;
-}
-
-.InputText {
-  border: 2px solid #bbb;
-  border-radius: 5px;
-  padding: 6px 9px 7px;
-}
-
-.InputText:hover {
-  border-color: #a8a8a8;
-}
-
-.InputText:focus {
-  outline: 0;
-  border-color: #ee5455;
-}
-
-.InputText--sm {
-  font-size: 13px;
-  border-width: 1px;
-  padding: 3px 6px 4px;
-}
-
-.InputSelect {
-  width: 30%;
-  height: 34px;
-  border: 1px solid #bbb;
-}
-
-.InputLabel {
-  font-weight: bold;
-}
-
-.InputRequired {
-  color: #a94442;
-  font-weight: normal;
-}
-
-div.wpcf7 .InputText {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-div.wpcf7 .InputCheckbox {
-  display: block;
-  margin-bottom: 15px;
-}
-
-div.wpcf7 .InputCheckbox .wpcf7-list-item {
-  margin-left: 0;
-}
-
-div.wpcf7 .InputCheckbox label {
-  cursor: pointer;
-  padding-left: 20px;
-}
-
-div.wpcf7 .InputCheckbox input {
-  margin-top: 0.25rem;
-  margin-left: -20px;
-}
-
-div.wpcf7 .wpcf7-not-valid-tip {
-  font-size: 80%;
-  color: #a94442;
-  margin: -10px 0 10px;
-}
-
-div.wpcf7 .ajax-loader {
-  display: block;
-  margin: 10px auto;
-}
+/*
+Comments
+*/
 
 .Comments {
   padding: 30px 20px 40px;
@@ -1407,9 +1325,9 @@ div.wpcf7 .ajax-loader {
 }
 
 .Comments input[type="text"],
-.Comments input[type="email"],
-.Comments input[type="url"],
-.Comments #comment {
+  .Comments input[type="email"],
+  .Comments input[type="url"],
+  .Comments #comment {
   width: 100%;
   border: 2px solid #bbb;
   border-radius: 5px;
@@ -1417,17 +1335,11 @@ div.wpcf7 .ajax-loader {
   padding: 6px 9px 7px;
 }
 
-.Comments input[type="text"]:hover,
-.Comments input[type="email"]:hover,
-.Comments input[type="url"]:hover,
-.Comments #comment:hover {
-  border-color: #a8a8a8;
+.Comments input[type="text"]:hover, .Comments input[type="email"]:hover, .Comments input[type="url"]:hover, .Comments #comment:hover {
+  border-color: rgb(230, 186, 186);
 }
 
-.Comments input[type="text"]:focus,
-.Comments input[type="email"]:focus,
-.Comments input[type="url"]:focus,
-.Comments #comment:focus {
+.Comments input[type="text"]:focus, .Comments input[type="email"]:focus, .Comments input[type="url"]:focus, .Comments #comment:focus {
   outline: 0;
   border-color: #ee5455;
 }
@@ -1443,9 +1355,11 @@ div.wpcf7 .ajax-loader {
   color: #fff;
   border-color: #ee5455;
   background-color: #ee5455;
-  border-style: solid;
+  border-style: solid;/* From SUIT's .Button */
   padding: 0.4em 0.75em;
 }
+
+/* From SUIT's .Button */
 
 .Comments #submit:hover {
   color: #091d5c;
@@ -1457,8 +1371,17 @@ div.wpcf7 .ajax-loader {
 }
 
 .Comments .logged-in-as,
-.Comments .comment-notes {
+  .Comments .comment-notes {
   margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+
+  .Comments input[type="text"],
+    .Comments input[type="email"],
+    .Comments input[type="url"] {
+    width: 60%;
+  }
 }
 
 .Comments-title {
@@ -1474,7 +1397,7 @@ div.wpcf7 .ajax-loader {
 }
 
 .Comments-list .comment-body,
-.Comments-list .comment-respond {
+  .Comments-list .comment-respond {
   padding: 20px;
 }
 
@@ -1493,14 +1416,6 @@ div.wpcf7 .ajax-loader {
   color: #31708f;
   background-color: #d9edf7;
   padding: 20px;
-}
-
-@media (min-width: 768px) {
-  .Comments input[type="text"],
-  .Comments input[type="email"],
-  .Comments input[type="url"] {
-    width: 60%;
-  }
 }
 
 /** @define Container */
@@ -1547,7 +1462,7 @@ div.wpcf7 .ajax-loader {
 }
 
 .Entry-content h2,
-.Entry-content h3 {
+  .Entry-content h3 {
   padding-bottom: 10px;
 }
 
@@ -1591,10 +1506,12 @@ div.wpcf7 .ajax-loader {
   .Entry-content {
     padding: 50px 40px 60px;
   }
+
   .Entry-mainColumn {
     float: left;
     width: 60%;
   }
+
   .Entry-sidebar {
     float: right;
     width: 35%;
@@ -1618,6 +1535,10 @@ div.wpcf7 .ajax-loader {
   padding-top: 5px;
 }
 
+/*
+WordPress Login Page
+*/
+
 .login #login h1 a {
   width: 190px;
   height: 165px;
@@ -1626,13 +1547,17 @@ div.wpcf7 .ajax-loader {
   background-size: 190px 165px;
 }
 
+/*
+Sidebar
+*/
+
 .Sidebar {
   background-color: #efefef;
   padding: 20px;
 }
 
 .Sidebar-widget {
-  overflow: hidden;
+  overflow: hidden; /* Can't extend SUIT's .u-cf */
   margin-bottom: 20px;
 }
 
@@ -1643,6 +1568,8 @@ div.wpcf7 .ajax-loader {
 .Sidebar-title {
   font-size: 22px;
 }
+
+/* Recent posts widget */
 
 .widget_recent_entries ul {
   list-style-type: disc;
@@ -1691,6 +1618,7 @@ div.wpcf7 .ajax-loader {
     float: right;
     margin-bottom: 0;
   }
+
   .SiteFooter-copyright {
     float: left;
     padding-top: 6px;
@@ -1703,10 +1631,8 @@ div.wpcf7 .ajax-loader {
   background-color: #f2f2f2;
 }
 
-/* postcss-bem-linter: ignore */
-
 .SiteHeaderMenu-item.current_page_item a,
-.SiteHeaderMenu-item.current_page_parent a {
+  .SiteHeaderMenu-item.current_page_parent a {
   background-color: #ddd;
 }
 
@@ -1724,9 +1650,11 @@ div.wpcf7 .ajax-loader {
   .SiteHeaderMenu-list {
     text-align: center;
   }
+
   .SiteHeaderMenu-item {
     display: inline-block;
   }
+
   .SiteHeaderMenu-item a {
     padding-left: 20px;
     padding-right: 20px;
@@ -1738,6 +1666,7 @@ div.wpcf7 .ajax-loader {
     text-align: right;
     margin-right: 15px;
   }
+
   .SiteHeaderMenu-item {
     font-size: 19px;
   }
@@ -1756,7 +1685,7 @@ div.wpcf7 .ajax-loader {
 }
 
 .SiteHeader-wrapBranding {
-  position: relative;
+  position: relative; /* For absolute positioning at $screen-sm */
   text-align: center;
   padding: 20px 0;
 }
@@ -1783,6 +1712,7 @@ div.wpcf7 .ajax-loader {
     float: left;
     margin: 20px 0 0 20px;
   }
+
   .SiteHeader-tagline {
     position: absolute;
     top: 40px;
@@ -1792,6 +1722,7 @@ div.wpcf7 .ajax-loader {
     max-width: 380px;
     padding: 0;
   }
+
   .SiteHeader-search {
     position: absolute;
     top: 120px;
@@ -1804,6 +1735,7 @@ div.wpcf7 .ajax-loader {
   .SiteHeader-tagline {
     right: 0;
   }
+
   .SiteHeader-search {
     right: 0;
   }
@@ -1832,12 +1764,19 @@ div.wpcf7 .ajax-loader {
 
 .SocialIcons-list li {
   display: inline-block;
-  overflow: hidden;
+  overflow: hidden;/* TODO: Find out why this is necessary */
   margin: 0 10px;
 }
 
 .SocialIcons-list li:first-child {
   margin-left: 0;
+}
+
+@media (min-width: 768px) {
+
+  .SocialIcons-list li {
+    margin: 0 0 0 25px;
+  }
 }
 
 .SocialIcons-list a {
@@ -1869,12 +1808,6 @@ div.wpcf7 .ajax-loader {
   background-image: url("assets/images/social-icon-pinterest.svg");
 }
 
-@media (min-width: 768px) {
-  .SocialIcons-list li {
-    margin: 0 0 0 25px;
-  }
-}
-
 /** @define TagList; weak */
 
 .TagList {
@@ -1898,13 +1831,10 @@ div.wpcf7 .ajax-loader {
 }
 
 .TagList-item a:hover {
-  background-color: #fbb84f;
+  background-color: rgb(50, 31, 1);
 }
 
-/**
- * @define utilities
- * Text replacement
- */
+/** @define utilities */
 
 .u-textHide {
   font: 0/0 a;
