@@ -19,7 +19,7 @@
     padding: 3px 6px;
 
     &:hover {
-      background-color: color($color-brand-secondary whiteness(10%));
+      background-color: color($color-brand-secondary shade(10));
     }
   }
 }

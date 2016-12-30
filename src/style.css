@@ -1044,7 +1044,7 @@ Forms
 }
 
 .InputText:hover {
-  border-color: rgb(230, 186, 186);
+  border-color: rgb(168, 168, 168);
 }
 
 .InputText:focus {
@@ -1214,7 +1214,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ok {
 
 .Alert--success .Alert-link,
 div.wpcf7-response-output.wpcf7-mail-sent-ok .Alert-link {
-  color: rgb(61, 230, 64);
+  color: rgb(54, 106, 55);
 }
 
 .Alert--info,
@@ -1225,7 +1225,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ng {
 
 .Alert--info .Alert-link,
 div.wpcf7-response-output.wpcf7-mail-sent-ng .Alert-link {
-  color: rgb(48, 169, 230);
+  color: rgb(44, 101, 129);
 }
 
 .Alert--warning,
@@ -1238,7 +1238,7 @@ div.wpcf7-response-output.wpcf7-spam-blocked {
 .Alert--warning .Alert-link,
 div.wpcf7-response-output.wpcf7-spam-warning .Alert-link,
 div.wpcf7-response-output.wpcf7-spam-blocked .Alert-link {
-  color: rgb(230, 167, 59);
+  color: rgb(124, 98, 53);
 }
 
 .Alert--danger,
@@ -1249,7 +1249,7 @@ div.wpcf7-response-output.wpcf7-validation-errors {
 
 .Alert--danger .Alert-link,
 div.wpcf7-response-output.wpcf7-validation-errors .Alert-link {
-  color: rgb(230, 69, 66);
+  color: rgb(152, 61, 59);
 }
 
 /* Contact Form 7 alerts */
@@ -1286,7 +1286,7 @@ div.wpcf7-response-output {
 
 .Button--default:hover {
   color: #444;
-  background-color: rgb(186, 51, 51);
+  background-color: rgb(150, 150, 150);
 }
 
 .Button--primary {
@@ -1337,7 +1337,7 @@ Comments
 }
 
 .Comments input[type="text"]:hover, .Comments input[type="email"]:hover, .Comments input[type="url"]:hover, .Comments #comment:hover {
-  border-color: rgb(230, 186, 186);
+  border-color: rgb(168, 168, 168);
 }
 
 .Comments input[type="text"]:focus, .Comments input[type="email"]:focus, .Comments input[type="url"]:focus, .Comments #comment:focus {
@@ -1834,7 +1834,7 @@ Sidebar
 }
 
 .TagList-item a:hover {
-  background-color: rgb(250, 164, 26);
+  background-color: rgb(226, 158, 53);
 }
 
 /** @define utilities */

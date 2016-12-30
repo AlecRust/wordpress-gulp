@@ -35,7 +35,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ok {
 
 .Alert--success .Alert-link,
 div.wpcf7-response-output.wpcf7-mail-sent-ok .Alert-link {
-  color: color($alert-success-text blackness(10%));
+  color: color($alert-success-text shade(10));
 }
 
 .Alert--info,
@@ -46,7 +46,7 @@ div.wpcf7-response-output.wpcf7-mail-sent-ng {
 
 .Alert--info .Alert-link,
 div.wpcf7-response-output.wpcf7-mail-sent-ng .Alert-link {
-  color: color($alert-info-text blackness(10%));
+  color: color($alert-info-text shade(10));
 }
 
 .Alert--warning,
@@ -59,7 +59,7 @@ div.wpcf7-response-output.wpcf7-spam-blocked {
 .Alert--warning .Alert-link,
 div.wpcf7-response-output.wpcf7-spam-warning .Alert-link,
 div.wpcf7-response-output.wpcf7-spam-blocked .Alert-link {
-  color: color($alert-warning-text blackness(10%));
+  color: color($alert-warning-text shade(10));
 }
 
 .Alert--danger,
@@ -70,7 +70,7 @@ div.wpcf7-response-output.wpcf7-validation-errors {
 
 .Alert--danger .Alert-link,
 div.wpcf7-response-output.wpcf7-validation-errors .Alert-link {
-  color: color($alert-danger-text blackness(10%));
+  color: color($alert-danger-text shade(10));
 }
 
 /* Contact Form 7 alerts */

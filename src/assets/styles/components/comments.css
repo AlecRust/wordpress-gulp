@@ -22,7 +22,7 @@ Comments
     padding: 6px 9px 7px;
 
     &:hover {
-      border-color: color($color-brand-gray blackness(10%));
+      border-color: color($color-brand-gray shade(10));
     }
 
     &:focus {
