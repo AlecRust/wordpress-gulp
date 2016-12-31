@@ -38,7 +38,7 @@ function wpg_setup() {
    *
    * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
    */
-  // add_theme_support( 'post-thumbnails' );
+  add_theme_support( 'post-thumbnails' );
 
   // Setup theme menu locations.
   register_nav_menus( array(

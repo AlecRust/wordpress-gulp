@@ -6,6 +6,17 @@
  */
 ?>
 
+<?php if ( has_post_thumbnail() ) : ?>
+  <?php $post_thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+  <style>
+    .Entry-header {
+      background-image: url("<?php echo $post_thumbnail_url; ?>");
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+  </style>
+<?php endif; ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'Entry' ); ?>>
   <header class="Entry-header">
     <?php the_title( '<h1 class="Entry-title entry-title">', '</h1>' ); ?>
