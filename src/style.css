@@ -1569,6 +1569,7 @@ Sidebar
 
 .Sidebar-title {
   font-size: 22px;
+  margin-bottom: 10px;
 }
 
 /* Recent posts widget */
@@ -1766,6 +1767,10 @@ Sidebar
 
 /** @define SocialIcons; weak */
 
+.SocialIcons-list {
+  text-align: center;
+}
+
 .SocialIcons-list li {
   display: inline-block;
   overflow: hidden;/* TODO: Find out why this is necessary */
@@ -1774,6 +1779,10 @@ Sidebar
 
 .SocialIcons-list li:first-child {
   margin-left: 0;
+}
+
+.SocialIcons-list li:last-child {
+  margin-right: 0;
 }
 
 @media (min-width: 768px) {

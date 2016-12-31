@@ -3,6 +3,8 @@
 $SocialIcons-icon-size: 30px;
 
 .SocialIcons-list {
+  text-align: center;
+
   li {
     display: inline-block;
     overflow: hidden; /* TODO: Find out why this is necessary */
@@ -10,6 +12,10 @@ $SocialIcons-icon-size: 30px;
 
     &:first-child {
       margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
 
     @media (--sm-viewport) {
