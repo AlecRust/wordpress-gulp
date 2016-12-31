@@ -19,7 +19,7 @@ Comments
     border: 2px solid $color-brand-gray;
     border-radius: $border-radius-base;
     margin-bottom: 15px;
-    padding: 6px 9px 7px;
+    padding: 6px 9px;
 
     &:hover {
       border-color: color($color-brand-gray shade(10));

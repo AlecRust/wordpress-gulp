@@ -1040,7 +1040,7 @@ Forms
 .InputText {
   border: 2px solid #bbb;
   border-radius: 5px;
-  padding: 6px 9px 7px;
+  padding: 6px 9px;
 }
 
 .InputText:hover {
@@ -1055,7 +1055,8 @@ Forms
 .InputText--sm {
   font-size: 13px;
   border-width: 1px;
-  padding: 3px 6px 4px;
+  line-height: 1.2;
+  padding: 6px;
 }
 
 .InputSelect {
@@ -1286,7 +1287,7 @@ div.wpcf7-response-output {
 
 .Button--default:hover {
   color: #444;
-  background-color: rgb(150, 150, 150);
+  background-color: rgb(230, 230, 230);
 }
 
 .Button--primary {
@@ -1333,7 +1334,7 @@ Comments
   border: 2px solid #bbb;
   border-radius: 5px;
   margin-bottom: 15px;
-  padding: 6px 9px 7px;
+  padding: 6px 9px;
 }
 
 .Comments input[type="text"]:hover, .Comments input[type="email"]:hover, .Comments input[type="url"]:hover, .Comments #comment:hover {
