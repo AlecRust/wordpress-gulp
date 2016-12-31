@@ -24,8 +24,7 @@
           Copyright <time datetime="<?php echo date( 'Y' ); ?>"><?php echo date( 'Y' ); ?></time> -
           <a class="u-linkClean" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
-          </a> |
-          <a class="u-linkClean" href="<?php echo get_permalink(get_page_by_path( 'terms' )); ?>">Terms</a>
+          </a>
         </p>
       </div>
     </footer>
