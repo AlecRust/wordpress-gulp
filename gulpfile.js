@@ -2,12 +2,9 @@ var gulp = require('gulp');
 var gulpIf = require('gulp-if');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-cssnano');
-var path = require('path');
 var del = require('del');
-var size = require('gulp-size');
 var cache = require('gulp-cache');
 var imagemin = require('gulp-imagemin');
-var eslint = require('gulp-eslint');
 var concat = require('gulp-concat');
 var postcss = require('gulp-postcss');
 var atImport = require('postcss-import');
@@ -37,12 +34,11 @@ var paths = {
   }
 };
 
-gulp.task('clean', del.bind(null, [paths.dist]));
+function clean() {
+  return del([ paths.dist ]);
+}
 
-/**
- * Styles
- */
-gulp.task('postcss', function () {
+function styles() {
   return gulp.src(paths.styles.src)
     .pipe(postcss([
       atImport(),
@@ -57,47 +53,25 @@ gulp.task('postcss', function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest(paths.styles.dest));
-});
+}
 
-gulp.task('styles', ['postcss']);
-
-/**
- * Scripts
- */
-gulp.task('lint', function () {
-  return gulp.src([paths.scripts.src, '!node_modules/**'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
-
-gulp.task('compile', ['lint'], function() {
+function scripts() {
   return gulp.src(paths.scripts.src)
     .pipe(concat('script.js'))
     .pipe(gulp.dest(paths.scripts.dest));
-});
+}
 
-gulp.task('scripts', ['lint', 'compile']);
-
-/**
- * Images
- */
-gulp.task('images', function () {
+function images() {
   return gulp.src(paths.images.src)
     .pipe(cache(imagemin({
       progressive: true,
       interlaced: true,
-      // don't remove IDs from SVGs, they are often used
-      // as hooks for embedding and styling
       svgoPlugins: [{ cleanupIDs: false }]
     })))
     .pipe(gulp.dest(paths.images.dest));
-});
+}
 
-/**
- * Copy
- */
-gulp.task('copy', ['styles'], function () {
+function copy() {
   return gulp.src([
     'src/**/*',
     '!src/assets/scripts',
@@ -110,26 +84,22 @@ gulp.task('copy', ['styles'], function () {
   .pipe(gulpIf('*.js', uglify()))
   .pipe(gulpIf('*.css', minifyCss()))
   .pipe(gulp.dest(paths.dist));
-});
+}
 
-/**
- * Watch
- */
-gulp.task('watch', ['build'], function() {
-  gulp.watch('src/assets/styles/**/*.css', ['styles']);
-  gulp.watch(paths.scripts.src, ['scripts']);
-  gulp.watch(paths.images.src, ['images']);
-  gulp.watch('src/**/*.php', ['copy']);
-});
+function watch() {
+  gulp.watch('src/assets/styles/**/*.css', styles);
+  gulp.watch(paths.scripts.src, scripts);
+  gulp.watch(paths.images.src, images);
+  gulp.watch('src/**/*.php', copy);
+}
 
-/**
- * Main tasks config
- */
+exports.clean = clean;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.images = images;
 
-gulp.task('build', ['scripts', 'images', 'copy'], function () {
-  return gulp.src(path.join(paths.dist, '**/*')).pipe(size({ title: 'build', gzip: true }));
-});
+var build = gulp.series(clean, gulp.parallel(styles, scripts, images), copy);
 
-gulp.task('default', ['clean'], function () {
-  gulp.start('build');
-});
+gulp.task('watch', gulp.series(build, watch));
+gulp.task('build', build);
+gulp.task('default', build);
