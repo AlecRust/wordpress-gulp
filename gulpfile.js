@@ -22,7 +22,7 @@ var calc = require('postcss-calc');
 var autoprefixer = require('autoprefixer');
 
 var paths = {
-  distDir: 'dist',
+  dist: 'dist',
   styles: {
     src: 'src/assets/styles/*.css',
     dest: 'src'
@@ -37,7 +37,7 @@ var paths = {
   }
 };
 
-gulp.task('clean', del.bind(null, [paths.distDir]));
+gulp.task('clean', del.bind(null, [paths.dist]));
 
 /**
  * Styles
@@ -109,7 +109,7 @@ gulp.task('copy', ['styles'], function () {
   })
   .pipe(gulpIf('*.js', uglify()))
   .pipe(gulpIf('*.css', minifyCss()))
-  .pipe(gulp.dest(paths.distDir));
+  .pipe(gulp.dest(paths.dist));
 });
 
 /**
@@ -127,7 +127,7 @@ gulp.task('watch', ['build'], function() {
  */
 
 gulp.task('build', ['scripts', 'images', 'copy'], function () {
-  return gulp.src(path.join(paths.distDir, '**/*')).pipe(size({ title: 'build', gzip: true }));
+  return gulp.src(path.join(paths.dist, '**/*')).pipe(size({ title: 'build', gzip: true }));
 });
 
 gulp.task('default', ['clean'], function () {
