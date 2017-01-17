@@ -106,12 +106,10 @@ add_action( 'widgets_init', 'wpg_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wpg_scripts() {
+  $theme_version = '1.6.0';
   wp_enqueue_script( 'jquery' );
-
-  wp_enqueue_style( 'wpg-style', get_stylesheet_uri(), array(), '1.6.0' );
-
-  wp_enqueue_script( 'wpg-script', get_template_directory_uri() . '/script.js', array(), '1.6.0', true );
-
+  wp_enqueue_style( 'wpg-style', get_stylesheet_uri(), array(), $theme_version );
+  wp_enqueue_script( 'wpg-script', get_template_directory_uri() . '/script.js', array(), $theme_version, true );
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }
