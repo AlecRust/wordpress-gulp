@@ -30,7 +30,6 @@
     "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
-    "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.2.0",
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^2.0.0",
@@ -43,7 +42,6 @@
     "postcss-nested": "^1.0.0",
     "postcss-short-size": "^2.0.1",
     "postcss-simple-vars": "^3.0.0",
-    "require-dir": "^0.3.1",
     "stylelint-config-suitcss": "^8.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0"
   }
