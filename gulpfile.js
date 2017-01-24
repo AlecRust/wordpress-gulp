@@ -107,7 +107,7 @@ function watch() {
 function bumpVersion() {
   return gulp.src([
     'package.json',
-    'src/assets/styles/style.styl',
+    'src/assets/styles/style.css',
     'src/functions.php',
     'src/readme.txt',
   ], { base: './' })
