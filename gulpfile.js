@@ -10,7 +10,6 @@ var touch = require('gulp-touch');
 var concat = require('gulp-concat');
 var git = require('gulp-git');
 var fs = require('fs');
-var clip = require('gulp-clip-empty-files');
 var postcss = require('gulp-postcss');
 var atImport = require('postcss-import');
 var at2x = require('postcss-at2x');
