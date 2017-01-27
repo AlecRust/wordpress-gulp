@@ -2,6 +2,7 @@
 
 .Button {
   font-size: $font-size-base;
+  cursor: pointer;
   border-width: 2px;
   border-radius: $border-radius-base;
 }

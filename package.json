@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "suitcss-base": "^2.0.0",
-    "suitcss-components-button": "^5.0.0",
+    "suitcss-components-button": "^6.0.0",
     "suitcss-utils-display": "^1.0.2",
     "suitcss-utils-layout": "^1.0.1",
     "suitcss-utils-text": "^1.0.0"
@@ -24,7 +24,7 @@
     "autoprefixer": "^6.7.0",
     "del": "^2.2.2",
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-bump": "^2.5.1",
+    "gulp-bump": "^2.6.1",
     "gulp-cache": "^0.4.5",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
