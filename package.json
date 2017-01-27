@@ -1,6 +1,6 @@
 {
   "name": "wordpress-gulp",
-  "version": "1.6.0",
+  "version": "2.0.0",
   "private": true,
   "description": "WordPress starter theme powered by gulp",
   "readmeFilename": "README.md",

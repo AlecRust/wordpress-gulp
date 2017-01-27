@@ -4,8 +4,8 @@ Contributors: Alec Rust
 Tags: responsive, mobile-first
 
 Requires at least: 4.3
-Tested up to: 4.3.1
-Version: 1.6.0
+Tested up to: 4.7.2
+Version: 2.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

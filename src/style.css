@@ -4,7 +4,7 @@ Theme URI: https://github.com/AlecRust/wordpress-gulp
 Author: Alec Rust
 Author URI: https://www.alecrust.com/
 Description: WordPress starter theme powered by gulp
-Version: 1.6.0
+Version: 2.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wpg
@@ -540,7 +540,6 @@ ul {
   border-width: 1px;
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
-  cursor: pointer;
   display: inline-block;
   font: inherit; /* 3 */
   margin: 0;
@@ -1264,6 +1263,7 @@ div.wpcf7-response-output {
 
 .Button {
   font-size: 16px;
+  cursor: pointer;
   border-width: 2px;
   border-radius: 5px;
 }

@@ -106,7 +106,7 @@ add_action( 'widgets_init', 'wpg_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wpg_scripts() {
-  $theme_version = '1.6.0';
+  $theme_version = '2.0.0';
   wp_enqueue_script( 'jquery' );
   wp_enqueue_style( 'wpg-style', get_stylesheet_uri(), array(), $theme_version );
   wp_enqueue_script( 'wpg-script', get_template_directory_uri() . '/script.js', array(), $theme_version, true );
