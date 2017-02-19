@@ -3,7 +3,7 @@ Base variables
 */
 
 /* Typography */
-$font-family-base: "Raleway Regular", sans-serif;
+$font-family-base: "Roboto Regular", Arial, sans-serif;
 $font-size-base:   16px;
 $font-size-lg:     27px;
 

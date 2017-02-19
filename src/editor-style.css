@@ -531,7 +531,6 @@ ul {
   border-width: 1px;
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
-  cursor: pointer;
   display: inline-block;
   font: inherit; /* 3 */
   margin: 0;
@@ -804,7 +803,7 @@ html {
 }
 
 body {
-  font-family: "Raleway Regular", sans-serif;
+  font-family: "Roboto Regular", Arial, sans-serif;
   line-height: 1.4;
   color: #091d5c;
   background-color: #fff;
@@ -855,17 +854,13 @@ textarea {
 Fonts
 */
 
-/* Raleway Regular - https://www.google.com/fonts/specimen/Raleway */
+/* Roboto - https://fonts.google.com/specimen/Roboto */
 
 @font-face {
-  font-family: "Raleway Regular";
-  src: url("assets/fonts/raleway-regular-webfont.eot");
+  font-family: "Roboto Regular";
   src:
-    url("assets/fonts/raleway-regular-webfont.eot?#iefix") format("embedded-opentype"),
-    url("assets/fonts/raleway-regular-webfont.woff2") format("woff2"),
-    url("assets/fonts/raleway-regular-webfont.woff") format("woff"),
-    url("assets/fonts/raleway-regular-webfont.ttf") format("truetype"),
-    url("assets/fonts/raleway-regular-webfont.svg#ralewayregular") format("svg");
+    url("assets/fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("assets/fonts/roboto-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -1022,6 +1017,7 @@ WordPress Core captions
 
 .Button {
   font-size: 16px;
+  cursor: pointer;
   border-width: 2px;
   border-radius: 5px;
 }
@@ -1084,7 +1080,7 @@ WordPress Core captions
 
 body.mce-content-body {
   color: #091d5c;
-  font: 16px "Raleway Regular", sans-serif;
+  font: 16px "Roboto Regular", Arial, sans-serif;
   padding: 30px 20px 40px !important;
 }
 
