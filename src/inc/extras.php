@@ -31,22 +31,6 @@ function wpg_body_classes( $classes ) {
 add_filter( 'body_class', 'wpg_body_classes' );
 
 /**
- * Adds Google Analytics tracking snippet to footer
- */
-function wpg_google_analytics() { ?>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-XXXXXXX-XX', 'auto');
-    ga('send', 'pageview');
-  </script>
-<?php }
-add_action( 'wp_footer', 'wpg_google_analytics' );
-
-/**
  * Loads main stylesheet containing override styles for login page
  */
 function wpg_login_styles() {
