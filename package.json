@@ -35,7 +35,6 @@
     "gulp-postcss": "^6.2.0",
     "gulp-touch": "^1.0.1",
     "gulp-uglify": "^2.0.1",
-    "postcss-at2x": "^2.0.0",
     "postcss-calc": "^5.3.1",
     "postcss-color-function": "^2.0.1",
     "postcss-custom-media": "^5.0.1",

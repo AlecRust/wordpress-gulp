@@ -13,7 +13,6 @@ var githubReleaser = require('conventional-github-releaser');
 var fs = require('fs');
 var postcss = require('gulp-postcss');
 var atImport = require('postcss-import');
-var at2x = require('postcss-at2x');
 var customProperties = require('postcss-custom-properties');
 var customMedia = require('postcss-custom-media');
 var shortSize = require('postcss-short-size');
@@ -55,7 +54,6 @@ function styles() {
       atImport(),
       nested(),
       simpleVars(),
-      at2x(),
       customProperties(),
       customMedia(),
       shortSize(),
