@@ -9,6 +9,7 @@ var bump = require('gulp-bump');
 var touch = require('gulp-touch');
 var concat = require('gulp-concat');
 var git = require('gulp-git');
+var githubReleaser = require('conventional-github-releaser');
 var fs = require('fs');
 var postcss = require('gulp-postcss');
 var atImport = require('postcss-import');
@@ -133,6 +134,17 @@ function createNewTag(cb) {
   });
 }
 
+function pushChanges(cb) {
+  return git.push('origin', 'master', cb);
+}
+
+function createRelease(done) {
+  githubReleaser({
+    type: 'oauth',
+    token: process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN
+  }, done);
+}
+
 exports.clean = clean;
 exports.styles = styles;
 exports.scripts = scripts;
@@ -141,6 +153,6 @@ exports.images = images;
 var build = gulp.series(clean, gulp.parallel(styles, scripts, images), copy);
 
 gulp.task('watch', gulp.series(build, watch));
-gulp.task('release', gulp.series(bumpVersion, build, commitChanges, createNewTag));
+gulp.task('release', gulp.series(bumpVersion, build, commitChanges, createNewTag, pushChanges, createRelease));
 gulp.task('build', build);
 gulp.task('default', build);
