@@ -31,6 +31,16 @@ function wpg_body_classes( $classes ) {
 add_filter( 'body_class', 'wpg_body_classes' );
 
 /**
+ * Set favicon on login and admin pages
+ */
+function wpg_add_admin_favicon() {
+  $favicon_url = get_template_directory_uri() . '/favicon.ico';
+  echo '<link rel="shortcut icon" href="' . $favicon_url . '">';
+}
+add_action('login_head', 'wpg_add_admin_favicon');
+add_action('admin_head', 'wpg_add_admin_favicon');
+
+/**
  * Loads main stylesheet containing override styles for login page
  */
 function wpg_login_styles() {
