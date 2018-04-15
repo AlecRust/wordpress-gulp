@@ -12,8 +12,6 @@ services:
     environment:
       DB_NAME: wordpressgulp
       DB_PASS: root
-      THEMES: >-
-         [local]wordpress-gulp
       PLUGINS: >-
         contact-form-7,
         theme-check,
