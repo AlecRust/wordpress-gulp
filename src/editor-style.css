@@ -527,6 +527,7 @@ ul {
 .Button {
   background: transparent;
   border-color: currentcolor;
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
   box-sizing: border-box; /* 1 */

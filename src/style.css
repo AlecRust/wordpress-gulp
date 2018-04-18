@@ -536,6 +536,7 @@ ul {
 .Button {
   background: transparent;
   border-color: currentcolor;
+  border-radius: 0;
   border-style: solid;
   border-width: 1px;
   box-sizing: border-box; /* 1 */
@@ -1088,11 +1089,6 @@ div.wpcf7 .InputCheckbox .wpcf7-list-item {
 div.wpcf7 .InputCheckbox label {
   cursor: pointer;
   padding-left: 20px;
-}
-
-div.wpcf7 .InputCheckbox input {
-  margin-top: 0.25rem;
-  margin-left: -20px;
 }
 
 div.wpcf7 .wpcf7-not-valid-tip {
@@ -1745,20 +1741,16 @@ Sidebar
 /** @define Site */
 
 .Site {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .Site-content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+      flex: 1;
 }
 
 /** @define SocialIcons; weak */
